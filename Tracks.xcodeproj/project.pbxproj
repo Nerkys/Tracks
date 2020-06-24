@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F6DF824A34D5B009BD28D /* TripCell.swift */; };
+		690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F6DFA24A35D83009BD28D /* StatisticsCell.swift */; };
 		6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E04224A1BD23001CDBB7 /* AppDelegate.swift */; };
 		6924E04524A1BD23001CDBB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */; };
 		6924E04724A1BD23001CDBB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E04624A1BD23001CDBB7 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690F6DF824A34D5B009BD28D /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		690F6DFA24A35D83009BD28D /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		6924E03F24A1BD23001CDBB7 /* Tracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6924E04224A1BD23001CDBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +49,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690F6DF724A34CEF009BD28D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				690F6DF824A34D5B009BD28D /* TripCell.swift */,
+				690F6DFA24A35D83009BD28D /* StatisticsCell.swift */,
+			);
+			name = Cells;
+			path = Tracks/Cells;
+			sourceTree = "<group>";
+		};
 		6924E03624A1BD23001CDBB7 = {
 			isa = PBXGroup;
 			children = (
+				690F6DF724A34CEF009BD28D /* Cells */,
 				6924E05624A1C0AD001CDBB7 /* Model */,
 				6924E04124A1BD23001CDBB7 /* tracks */,
 				6924E04024A1BD23001CDBB7 /* Products */,
@@ -162,10 +177,12 @@
 			files = (
 				6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */,
 				6924E04724A1BD23001CDBB7 /* ViewController.swift in Sources */,
+				690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */,
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
 				6924E04524A1BD23001CDBB7 /* SceneDelegate.swift in Sources */,
 				6924E06224A1E90E001CDBB7 /* SeasonHeaderView.swift in Sources */,
 				6924E05824A1C18B001CDBB7 /* Models.swift in Sources */,
+				690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

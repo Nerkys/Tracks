@@ -11,6 +11,7 @@ import UIKit
 struct Season {
     let title: String
     let resort: [Trip]
+    //let averageSpeed : Int
 }
 
 struct Trip {

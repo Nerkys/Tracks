@@ -14,13 +14,21 @@ class ViewController: UIViewController {
     
     private var dataSource = [Season]()
     
+    
     let headerID = String(describing: SeasonHeaderView.self)
     let tripImage = UIImage(named: "Andorra")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        }
         dataSource = getDataSourceInitialValue()
+        
+        seasonTableView.rowHeight = UITableView.automaticDimension
+        //seasonTableView.tableFooterView = UIView(frame: .zero)
+        //seasonTableView.reloadData()
         
         tableViewConfig()
     }
@@ -30,6 +38,7 @@ class ViewController: UIViewController {
         seasonTableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
         
         seasonTableView.tableFooterView = UIView()
+        
     }
     
 
@@ -45,11 +54,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
         let trip = dataSource[indexPath.section].resort[indexPath.row]
+        cell.titleLabel?.text = trip.title
+        
         
         cell.imageView?.image = tripImage
-        cell.textLabel?.text = trip.title
+        //cell.textLabel?.text = trip.title
         
         return cell
     }
@@ -60,6 +71,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         header.titleLabel.text = dataSource[section].title
 
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        300
     }
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
