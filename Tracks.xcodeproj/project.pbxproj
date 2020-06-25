@@ -16,9 +16,9 @@
 		6924E04C24A1BD26001CDBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6924E04B24A1BD26001CDBB7 /* Assets.xcassets */; };
 		6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */; };
 		6924E05824A1C18B001CDBB7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E05724A1C18B001CDBB7 /* Models.swift */; };
-		6924E06224A1E90E001CDBB7 /* SeasonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06124A1E90E001CDBB7 /* SeasonHeaderView.swift */; };
-		6924E06424A1E920001CDBB7 /* SeasonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6924E06324A1E920001CDBB7 /* SeasonHeaderView.xib */; };
 		6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06524A21D8C001CDBB7 /* DataSource.swift */; };
+		69575D3224A4961B00EA61B7 /* SeasonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */; };
+		69D2517F24A49EAF00908C96 /* SeasonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		6924E04E24A1BD26001CDBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6924E05024A1BD26001CDBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6924E05724A1C18B001CDBB7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		6924E06124A1E90E001CDBB7 /* SeasonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonHeaderView.swift; sourceTree = "<group>"; };
-		6924E06324A1E920001CDBB7 /* SeasonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonHeaderView.xib; sourceTree = "<group>"; };
 		6924E06524A21D8C001CDBB7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SeasonHeaderView.xib; path = Tracks/SeasonHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderView.swift; path = Tracks/SeasonHeaderView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 				6924E04224A1BD23001CDBB7 /* AppDelegate.swift */,
 				6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */,
 				6924E04624A1BD23001CDBB7 /* ViewController.swift */,
-				6924E06124A1E90E001CDBB7 /* SeasonHeaderView.swift */,
-				6924E06324A1E920001CDBB7 /* SeasonHeaderView.xib */,
 				6924E04824A1BD23001CDBB7 /* Main.storyboard */,
+				69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */,
 				6924E04B24A1BD26001CDBB7 /* Assets.xcassets */,
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
+				69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */,
 			);
 			path = tracks;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			files = (
 				6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */,
 				6924E04C24A1BD26001CDBB7 /* Assets.xcassets in Resources */,
-				6924E06424A1E920001CDBB7 /* SeasonHeaderView.xib in Resources */,
+				69575D3224A4961B00EA61B7 /* SeasonHeaderView.xib in Resources */,
 				6924E04A24A1BD23001CDBB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,8 +180,8 @@
 				690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */,
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
 				6924E04524A1BD23001CDBB7 /* SceneDelegate.swift in Sources */,
-				6924E06224A1E90E001CDBB7 /* SeasonHeaderView.swift in Sources */,
 				6924E05824A1C18B001CDBB7 /* Models.swift in Sources */,
+				69D2517F24A49EAF00908C96 /* SeasonHeaderView.swift in Sources */,
 				690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

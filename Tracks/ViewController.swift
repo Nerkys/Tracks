@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     let headerID = String(describing: SeasonHeaderView.self)
     let tripImage = UIImage(named: "Andorra")
+    //let tripImage = UIImage(named: "Andorra")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         //seasonTableView.reloadData()
         
         tableViewConfig()
+        self.hideNavigationBar()
     }
     
     private func tableViewConfig() {
@@ -61,6 +63,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
             let trip = dataSource[indexPath.section].resort[indexPath.row - 1]
             cell.titleLabel?.text = trip.title
+            cell.tripImage?.image = tripImage
             return cell
         }
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
@@ -77,10 +80,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! SeasonHeaderView
         
-        header.titleLabel.text = dataSource[section].title
+      header.titleLabel.text = dataSource[section].title
 
         return header
     }
+    
+
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        300
@@ -89,8 +94,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 60
 //    }
+    
+    
+}
 
-    
-    
-    
+extension UIViewController {
+    func hideNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    func showNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }

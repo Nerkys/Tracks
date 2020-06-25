@@ -14,20 +14,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTr-0R-SEY">
-                    <rect key="frame" x="20" y="42" width="320" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЕЗОН 2018/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-gG-L2x">
+                    <rect key="frame" x="17" y="54" width="380" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="gzg-wv-YDI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="3Qt-gG-L2x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="5c1-lX-Vg2"/>
+                <constraint firstItem="3Qt-gG-L2x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="17" id="I42-s1-ngY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3Qt-gG-L2x" secondAttribute="trailing" constant="17" id="Srp-zn-p6w"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="titleLabel" destination="aTr-0R-SEY" id="632-cv-ti6"/>
+                <outlet property="titleLabel" destination="3Qt-gG-L2x" id="86m-Gf-RfI"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+            <point key="canvasLocation" x="134.78260869565219" y="152.67857142857142"/>
         </view>
     </objects>
 </document>

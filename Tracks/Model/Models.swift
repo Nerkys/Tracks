@@ -18,7 +18,7 @@ struct Trip {
     let title: String
     let statedAt: String
     let finishedAt: String
-    //let resortImage: String
+    let image: String
     
 }
 

@@ -12,6 +12,7 @@ class TripCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var tripImage: UIImageView!
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
