@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     
     let headerID = String(describing: SeasonHeaderView.self)
-    let tripImage = UIImage(named: "Andorra")
-    //let tripImage = UIImage(named: "Andorra")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +30,7 @@ class ViewController: UIViewController {
         //seasonTableView.reloadData()
         
         tableViewConfig()
+        
         self.hideNavigationBar()
     }
     
@@ -63,17 +62,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
             let trip = dataSource[indexPath.section].resort[indexPath.row - 1]
             cell.titleLabel?.text = trip.title
+            let tripImage = UIImage(named: trip.image)
             cell.tripImage?.image = tripImage
             return cell
         }
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
-//        let trip = dataSource[indexPath.section].resort[indexPath.row]
-//        cell.titleLabel?.text = trip.title
-        
-        
-        //cell.imageView?.image = tripImage
-        //cell.textLabel?.text = trip.title
-        
         
     }
     
