@@ -50,19 +50,28 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource[section].resort.count
+        return dataSource[section].resort.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
-        let trip = dataSource[indexPath.section].resort[indexPath.row]
-        cell.titleLabel?.text = trip.title
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
+            let trip = dataSource[indexPath.section].resort[indexPath.row - 1]
+            cell.titleLabel?.text = trip.title
+            return cell
+        }
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
+//        let trip = dataSource[indexPath.section].resort[indexPath.row]
+//        cell.titleLabel?.text = trip.title
         
         
-        cell.imageView?.image = tripImage
+        //cell.imageView?.image = tripImage
         //cell.textLabel?.text = trip.title
         
-        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -73,9 +82,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return header
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        300
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        300
+//    }
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 60
