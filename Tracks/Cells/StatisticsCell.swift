@@ -11,6 +11,7 @@ import UIKit
 class StatisticsCell: UITableViewCell {
 
     
+
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     

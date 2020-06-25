@@ -137,6 +137,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="6aj-zX-qzY" id="FZ6-gd-Ng2"/>
                                             <outlet property="titleLabel" destination="dJE-Jk-mlS" id="IbH-7c-Hb6"/>
                                             <outlet property="tripImage" destination="7iY-kF-0OA" id="7sG-BQ-Xpi"/>
                                             <outlet property="view" destination="BE7-eo-FJ3" id="bP7-96-CYW"/>

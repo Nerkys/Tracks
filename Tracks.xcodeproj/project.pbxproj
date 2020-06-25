@@ -52,8 +52,8 @@
 		690F6DF724A34CEF009BD28D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				690F6DF824A34D5B009BD28D /* TripCell.swift */,
 				690F6DFA24A35D83009BD28D /* StatisticsCell.swift */,
+				690F6DF824A34D5B009BD28D /* TripCell.swift */,
 			);
 			name = Cells;
 			path = Tracks/Cells;

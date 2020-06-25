@@ -12,10 +12,10 @@ func getDataSourceInitialValue() -> [Season] {
     return [
         Season(title: "СЕЗОН 2018/19", resort:
             [
-                Trip(title: "Сольдэу - Эль-Тартер, Андорра", statedAt: "2020.02.13", finishedAt: "2020.02.20", image: "Andorra"),
-                Trip(title: "Уистлер-Блэккомб, Канада", statedAt: "2020.03.03", finishedAt: "2020.03.10", image: "Canada")]),
+                Trip(title: "Сольдэу - Эль-Тартер, Андорра", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "Andorra"),
+                Trip(title: "Уистлер-Блэккомб, Канада", startedAt: "2020.03.03", finishedAt: "2020.03.10", image: "Canada")]),
         Season(title: "СЕЗОН 2019/20", resort:
             [
-                Trip(title: "Куршевель, Франция", statedAt: "2020.02.13", finishedAt: "2020.02.20", image: "France")])
+                Trip(title: "Куршевель, Франция", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "France")])
     ]
 }

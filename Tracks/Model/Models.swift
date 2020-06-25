@@ -16,7 +16,7 @@ struct Season {
 
 struct Trip {
     let title: String
-    let statedAt: String
+    let startedAt: String
     let finishedAt: String
     let image: String
     

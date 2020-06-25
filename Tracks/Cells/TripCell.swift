@@ -10,6 +10,7 @@ import UIKit
 
 class TripCell: UITableViewCell {
 
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var tripImage: UIImageView!
@@ -37,4 +38,8 @@ class TripCell: UITableViewCell {
     
     
 
+}
+
+extension TripCell {
+    
 }
