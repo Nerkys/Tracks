@@ -14,7 +14,9 @@ class StatisticsCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet var maxSpeedLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var numberOfTracksLabel: UILabel!
     //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code

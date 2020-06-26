@@ -10,8 +10,10 @@ import UIKit
 
 struct Season {
     let title: String
-    let resort: [Trip]
-    //let averageSpeed : Int
+    let trip: [Trip]
+    let maxSpeed : Int
+    let distance: Int
+    let numberOfTracks: Int
 }
 
 struct Trip {
