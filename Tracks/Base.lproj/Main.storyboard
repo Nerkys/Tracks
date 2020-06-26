@@ -55,7 +55,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="спусков" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCg-gX-hcl">
-                                                            <rect key="frame" x="318.5" y="43" width="72.5" height="12"/>
+                                                            <rect key="frame" x="318.5" y="43" width="42.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -63,6 +63,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="1nA-mM-yBF" firstAttribute="leading" relation="lessThanOrEqual" secondItem="uxK-eb-agY" secondAttribute="trailing" constant="80" id="0mu-KX-oA4"/>
                                                         <constraint firstAttribute="height" constant="105" id="IXS-iQ-nGy"/>
                                                         <constraint firstItem="ntc-eT-aeJ" firstAttribute="top" secondItem="32b-zB-dRi" secondAttribute="top" constant="16" id="aOX-zm-l2r"/>
                                                         <constraint firstItem="uxK-eb-agY" firstAttribute="leading" secondItem="32b-zB-dRi" secondAttribute="leading" constant="15" id="cZm-M4-8CL"/>
@@ -80,7 +81,7 @@
                                                 <constraint firstItem="32b-zB-dRi" firstAttribute="top" secondItem="ESA-Aw-n4d" secondAttribute="top" constant="10" id="R4H-zT-TYR"/>
                                                 <constraint firstAttribute="bottom" secondItem="32b-zB-dRi" secondAttribute="bottom" constant="6" id="dEI-Vx-dmJ"/>
                                                 <constraint firstItem="32b-zB-dRi" firstAttribute="leading" secondItem="ESA-Aw-n4d" secondAttribute="leading" constant="8" id="n39-zy-LEy"/>
-                                                <constraint firstAttribute="trailing" secondItem="CCg-gX-hcl" secondAttribute="trailing" constant="15" id="tH6-Wo-OBz"/>
+                                                <constraint firstAttribute="trailing" secondItem="CCg-gX-hcl" secondAttribute="trailing" constant="45" id="tH6-Wo-OBz"/>
                                                 <constraint firstAttribute="trailing" secondItem="32b-zB-dRi" secondAttribute="trailing" constant="8" id="zDH-lQ-eux"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -109,7 +110,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="0.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.02 - 20.02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aj-zX-qzY">
-                                                            <rect key="frame" x="12" y="37.5" width="102" height="21"/>
+                                                            <rect key="frame" x="12" y="37.5" width="374" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -117,6 +118,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="6aj-zX-qzY" secondAttribute="trailing" constant="12" id="6yh-XC-9wQ"/>
                                                         <constraint firstItem="7iY-kF-0OA" firstAttribute="leading" secondItem="BE7-eo-FJ3" secondAttribute="leading" id="7yK-Jx-N88"/>
                                                         <constraint firstAttribute="trailing" secondItem="7iY-kF-0OA" secondAttribute="trailing" id="8JH-Dn-IA7"/>
                                                         <constraint firstItem="dJE-Jk-mlS" firstAttribute="top" secondItem="7iY-kF-0OA" secondAttribute="bottom" constant="8" id="BrQ-ov-fkm"/>
