@@ -75,6 +75,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.titleLabel?.text = trip.title
             cell.tripImage?.image = tripImage
             cell.tripImage?.contentMode = .scaleAspectFill
+            //cell.tripImage?.cornerRadius(usingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10))
             return cell
         }
         
@@ -110,3 +111,13 @@ extension UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
+
+//extension UIImageView {
+//    func cornerRadius(usingCorners corners: UIRectCorner, cornerRadii: CGSize) {
+//        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: cornerRadii)
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.path = path.cgPath
+//        
+//        self.layer.mask = maskLayer
+//    }
+//}
