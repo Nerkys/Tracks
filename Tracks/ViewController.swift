@@ -61,9 +61,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let distance = String(dataSource[indexPath.section].distance)
             let numberOfTracks = String(dataSource[indexPath.section].numberOfTracks)
             
-            cell.maxSpeedLabel?.text = maxSpeed
-            cell.distanceLabel?.text = distance
-            cell.numberOfTracksLabel?.text = numberOfTracks
+//            cell.maxSpeedLabel?.text = maxSpeed
+//            cell.distanceLabel?.text = distance
+//            cell.numberOfTracksLabel?.text = numberOfTracks
             
             return cell
             

@@ -8,20 +8,28 @@
 
 import UIKit
 
-class StatisticsCell: UITableViewCell {
-
+class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     
 
+//    static func nib() -> UINib {
+//        return UINib(nibName: "CollectionViewCell", bundle: nil)
+//    }
+
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet var maxSpeedLabel: UILabel!
-    @IBOutlet var distanceLabel: UILabel!
-    @IBOutlet var numberOfTracksLabel: UILabel!
-    //    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+//        collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: "CollectionViewCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        // Initialization code
+    }
+
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
 //
@@ -37,6 +45,15 @@ class StatisticsCell: UITableViewCell {
         view.clipsToBounds = false
 
         layer.zPosition = 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        return cell
     }
 
 }
