@@ -27,6 +27,8 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 //        collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        pageControl.hidesForSinglePage = true
         // Initialization code
     }
 
@@ -55,5 +57,23 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 100, height: 100)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControl.currentPage = indexPath.section
+    }
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if pageControl.currentPage == indexPath.section {
+            pageControl.currentPage = collectionView.indexPath(for: collectionView.visibleCells.first!)!.section
+        }
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    let thisWidth = CGFloat(self.frame.width)
+//    return CGSize(width: thisWidth, height: self.frame.height)
+//    }
 
 }
