@@ -177,17 +177,26 @@
                                                         <constraint firstItem="dJE-Jk-mlS" firstAttribute="leading" secondItem="BE7-eo-FJ3" secondAttribute="leading" constant="12" id="taz-nB-eno"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ob3-ui-u31">
+                                                    <rect key="frame" x="8" y="6" width="398" height="60.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ob3-ui-u31" secondAttribute="trailing" constant="8" id="1Vy-qr-QcB"/>
                                                 <constraint firstAttribute="bottom" secondItem="6aj-zX-qzY" secondAttribute="bottom" constant="8" id="I7k-Jx-na1"/>
                                                 <constraint firstAttribute="trailing" secondItem="BE7-eo-FJ3" secondAttribute="trailing" constant="8" id="NJe-e0-KEo"/>
                                                 <constraint firstItem="BE7-eo-FJ3" firstAttribute="top" secondItem="v83-ty-jRI" secondAttribute="top" constant="6" id="Ymi-Cz-rtL"/>
+                                                <constraint firstItem="Ob3-ui-u31" firstAttribute="leading" secondItem="v83-ty-jRI" secondAttribute="leading" constant="8" id="eh8-g8-KVF"/>
                                                 <constraint firstItem="BE7-eo-FJ3" firstAttribute="leading" secondItem="v83-ty-jRI" secondAttribute="leading" constant="8" id="h2f-Cu-hrb"/>
                                                 <constraint firstAttribute="bottom" secondItem="BE7-eo-FJ3" secondAttribute="bottom" constant="6" id="ph1-5g-Xa9"/>
+                                                <constraint firstItem="Ob3-ui-u31" firstAttribute="top" secondItem="v83-ty-jRI" secondAttribute="top" constant="6" id="seI-B5-u3a"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ob3-ui-u31" secondAttribute="bottom" constant="6" id="v7Z-hW-v45"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="6aj-zX-qzY" id="FZ6-gd-Ng2"/>
+                                            <outlet property="shadowView" destination="Ob3-ui-u31" id="RwX-RG-HuQ"/>
                                             <outlet property="titleLabel" destination="dJE-Jk-mlS" id="IbH-7c-Hb6"/>
                                             <outlet property="tripImage" destination="7iY-kF-0OA" id="7sG-BQ-Xpi"/>
                                             <outlet property="view" destination="BE7-eo-FJ3" id="bP7-96-CYW"/>

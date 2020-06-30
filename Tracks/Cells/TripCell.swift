@@ -14,24 +14,26 @@ class TripCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var tripImage: UIImageView!
+    @IBOutlet weak var shadowView: UIView!
     
     override func layoutSubviews() {
-        //view.layer.cornerRadius = 10.0
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        view.layer.shadowRadius = 3
-        view.layer.shadowOpacity = 0.2
-       // view.clipsToBounds = true
-        //view.layer.masksToBounds = true
-
-        layer.zPosition = 1
-        
-        let borderView = UIView()
-        borderView.frame = view.bounds
         view.layer.cornerRadius = 10.0
-        borderView.layer.masksToBounds = true
-        view.addSubview(borderView)
+//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+//        view.layer.shadowRadius = 3
+//        view.layer.shadowOpacity = 0.2
+       // view.clipsToBounds = true
+        view.layer.masksToBounds = true
+
+        //layer.zPosition = 1
         
+        shadowView.layer.cornerRadius = 10.0
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        shadowView.layer.shadowRadius = 3
+        shadowView.layer.shadowOpacity = 0.2
+        
+        shadowView.layer.zPosition = -1
         
     }
     //    override func awakeFromNib() {
