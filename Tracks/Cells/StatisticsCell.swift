@@ -16,6 +16,8 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 //        return UINib(nibName: "CollectionViewCell", bundle: nil)
 //    }
 
+    
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var view: UIView!
@@ -28,7 +30,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        pageControl.hidesForSinglePage = true
+        //pageControl.hidesForSinglePage = true
         // Initialization code
     }
 
@@ -46,11 +48,16 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         view.layer.shadowOpacity = 0.2
         view.clipsToBounds = false
 
-        layer.zPosition = 1
+        //layer.zPosition = 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        let numberOfPages = 2
+        
+        pageControl.numberOfPages = numberOfPages
+        pageControl.isHidden = !(numberOfPages > 1)
+        
+        return numberOfPages
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,18 +65,24 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
+//    func collectionView
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        pageControl?.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
+    }
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: 100, height: 100)
 //    }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        pageControl.currentPage = indexPath.section
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if pageControl.currentPage == indexPath.section {
-            pageControl.currentPage = collectionView.indexPath(for: collectionView.visibleCells.first!)!.section
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        pageControl.currentPage = indexPath.item
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if pageControl.currentPage == indexPath.item {
+//            pageControl.currentPage = collectionView.indexPath(for: collectionView.visibleCells.first!)!.item
+//        }
+//    }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //    let thisWidth = CGFloat(self.frame.width)
