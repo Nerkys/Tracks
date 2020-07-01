@@ -51,6 +51,4 @@ class TripCell: UITableViewCell {
 
 }
 
-extension TripCell {
-    
-}
+

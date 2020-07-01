@@ -23,8 +23,8 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     
     
-    private let itemsInSection: CGFloat = 2
-    private let itemInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    private let itemsInSection: CGFloat = 3
+    private let sectionInsets = UIEdgeInsets(top: 0.0, left: 2.5, bottom: 0.0, right: 0)
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,15 +53,12 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 
         //layer.zPosition = 1
     }
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let numberOfPages = 2
-        
-        pageControl.numberOfPages = numberOfPages
-        pageControl.isHidden = !(numberOfPages > 1)
-        
-        return numberOfPages
+        return Int(itemsInSection)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,6 +72,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     }
     
     
+    
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 //        pageControl?.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
 //    }
@@ -84,24 +82,24 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        let availableWidth = collectionView.bounds.inset(by: collectionView.layoutMargins).width
 //        let cellWidth = (availableWidth / CGFloat(2)).rounded(.down)
-//        let paggingSpace = itemInsets.left * (itemsInSection + 1)
-//        let availableWidth = collectionView.bounds.width - paggingSpace
-//        let widthPerItem = availableWidth / itemsInSection
+        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
+        let availableWidth = collectionView.frame.width - paggingSpace
+        let widthPerItem = availableWidth / itemsInSection
 //        return CGSize(width: cellWidth, height: collectionView.frame.height)
 //        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
+        return CGSize(width: widthPerItem, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        itemInsets
+        sectionInsets
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if DeviceType.IS_IPHONE_5 {
-            return  -16.0
-        }
-        return 0.0
+//        if DeviceType.IS_IPHONE_5 {
+//            return  -16.0
+//        }
+        return sectionInsets.left
     }
     
     
