@@ -40,10 +40,10 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-y7-EBx">
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-y7-EBx">
                                                             <rect key="frame" x="0.0" y="39" width="398" height="61"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qGy-ZY-iLh">
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qGy-ZY-iLh">
                                                                 <size key="itemSize" width="399" height="61"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -115,7 +115,6 @@
                                                                             <constraint firstItem="1RB-jT-g6V" firstAttribute="top" secondItem="1DR-YC-eZ5" secondAttribute="top" id="R66-ng-mpS"/>
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
-                                                                    <size key="customSize" width="399" height="61"/>
                                                                     <connections>
                                                                         <outlet property="view" destination="1RB-jT-g6V" id="UuP-zh-oMt"/>
                                                                     </connections>
@@ -155,6 +154,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="collectionLayout" destination="qGy-ZY-iLh" id="PYT-oS-RgC"/>
                                             <outlet property="collectionView" destination="pqz-y7-EBx" id="pXf-7e-1ge"/>
                                             <outlet property="pageControl" destination="8N8-1F-fe0" id="SG0-6d-L1g"/>
                                             <outlet property="titleLabel" destination="ntc-eT-aeJ" id="3K8-YT-K22"/>
