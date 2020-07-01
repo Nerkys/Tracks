@@ -17,6 +17,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 //    }
 
     
+
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
