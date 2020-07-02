@@ -42,26 +42,26 @@
                                                         </label>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-y7-EBx">
                                                             <rect key="frame" x="0.0" y="39" width="398" height="61"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qGy-ZY-iLh">
-                                                                <size key="itemSize" width="121" height="61"/>
+                                                                <size key="itemSize" width="116" height="61"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="qKs-Pd-RAi" customClass="CollectionViewCell" customModule="Tracks" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="121" height="61"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="61"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1DR-YC-eZ5">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="61"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="61"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RB-jT-g6V">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="121" height="61"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="61"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="макс. скорость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxK-eb-agY">
-                                                                                        <rect key="frame" x="10" y="14" width="76.5" height="12"/>
+                                                                                        <rect key="frame" x="15" y="14" width="76.5" height="12"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="12" id="VZ4-hy-Csk"/>
                                                                                         </constraints>
@@ -86,7 +86,7 @@
                                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uxK-eb-agY" secondAttribute="trailing" constant="10" id="CWS-JQ-HYt"/>
                                                                                     <constraint firstItem="uxK-eb-agY" firstAttribute="top" secondItem="1RB-jT-g6V" secondAttribute="top" constant="14" id="L0W-7L-mp7"/>
                                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hr3-Ba-gbe" secondAttribute="trailing" constant="10" id="PAH-dp-gFw"/>
-                                                                                    <constraint firstItem="uxK-eb-agY" firstAttribute="leading" secondItem="1RB-jT-g6V" secondAttribute="leading" constant="10" id="mDm-RJ-4Pm"/>
+                                                                                    <constraint firstItem="uxK-eb-agY" firstAttribute="leading" secondItem="1RB-jT-g6V" secondAttribute="leading" constant="15" id="mDm-RJ-4Pm"/>
                                                                                     <constraint firstItem="Hr3-Ba-gbe" firstAttribute="leading" secondItem="1RB-jT-g6V" secondAttribute="leading" constant="40" id="vZv-WI-3jW"/>
                                                                                 </constraints>
                                                                             </view>
@@ -99,7 +99,7 @@
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
                                                                     <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <size key="customSize" width="121" height="61"/>
+                                                                    <size key="customSize" width="116" height="61"/>
                                                                     <connections>
                                                                         <outlet property="view" destination="1RB-jT-g6V" id="UuP-zh-oMt"/>
                                                                     </connections>

@@ -11,9 +11,10 @@ import UIKit
 struct Season {
     let title: String
     let trip: [Trip]
-    let maxSpeed : Int
-    let distance: Int
-    let numberOfTracks: Int
+    let statistics: [Statistics]
+//    let maxSpeed : Int
+//    let distance: Int
+//    let numberOfTracks: Int
 }
 
 struct Trip {
@@ -24,3 +25,8 @@ struct Trip {
     
 }
 
+struct Statistics {
+    let title: String
+//    let image: String
+//    let value: Int
+}

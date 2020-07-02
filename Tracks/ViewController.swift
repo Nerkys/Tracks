@@ -57,9 +57,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
-            let maxSpeed = String(dataSource[indexPath.section].maxSpeed)
-            let distance = String(dataSource[indexPath.section].distance)
-            let numberOfTracks = String(dataSource[indexPath.section].numberOfTracks)
+//            let maxSpeed = String(dataSource[indexPath.section].maxSpeed)
+//            let distance = String(dataSource[indexPath.section].distance)
+//            let numberOfTracks = String(dataSource[indexPath.section].numberOfTracks)
+            
             
 //            cell.maxSpeedLabel?.text = maxSpeed
 //            cell.distanceLabel?.text = distance

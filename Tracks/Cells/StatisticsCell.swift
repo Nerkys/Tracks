@@ -24,11 +24,11 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     
     private let itemsInSection: CGFloat = 3
-    private let sectionInsets = UIEdgeInsets(top: 0.0, left: 2.5, bottom: 0.0, right: 0)
+    private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         //collectionView.translatesAutoresizingMaskIntoConstraints = false
         
 //        NSLayoutConstraint.activate([
@@ -40,6 +40,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         
     }
     
@@ -63,19 +64,20 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        
         return cell
     }
     
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        pageControl?.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
-    }
-    
-    
-    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        pageControl?.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        pageControl.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
 //    }
+    
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        pageControl?.currentPage = Int(ceil(collectionView.contentOffset.x / collectionView.frame.width))
+    }
     
     
     
@@ -99,14 +101,14 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 //        if DeviceType.IS_IPHONE_5 {
 //            return  -16.0
 //        }
-        return sectionInsets.left
+        return 0.0
     }
     
     
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0.0
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
     
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 //        pageControl.currentPage = indexPath.item
