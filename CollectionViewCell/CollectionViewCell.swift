@@ -11,7 +11,10 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
+    
+
     //    static func nib() -> UINib {
 //        return UINib(nibName: "CollectionViewCell", bundle: nil)
 //    }

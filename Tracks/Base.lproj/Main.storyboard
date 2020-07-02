@@ -101,6 +101,7 @@
                                                                     <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <size key="customSize" width="116" height="61"/>
                                                                     <connections>
+                                                                        <outlet property="titleLabel" destination="uxK-eb-agY" id="uTx-AS-XHN"/>
                                                                         <outlet property="view" destination="1RB-jT-g6V" id="UuP-zh-oMt"/>
                                                                     </connections>
                                                                 </collectionViewCell>
@@ -142,7 +143,6 @@
                                             <outlet property="collectionLayout" destination="qGy-ZY-iLh" id="PYT-oS-RgC"/>
                                             <outlet property="collectionView" destination="pqz-y7-EBx" id="pXf-7e-1ge"/>
                                             <outlet property="pageControl" destination="8N8-1F-fe0" id="SG0-6d-L1g"/>
-                                            <outlet property="titleLabel" destination="ntc-eT-aeJ" id="3K8-YT-K22"/>
                                             <outlet property="view" destination="32b-zB-dRi" id="z7a-65-0yP"/>
                                         </connections>
                                     </tableViewCell>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! {
         didSet {
@@ -19,10 +19,10 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var view: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
     
     
     
+    //private var dataSource = [Season]()
     private let itemsInSection: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 

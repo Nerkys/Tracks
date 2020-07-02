@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var seasonTableView: UITableView!
     
-    private var dataSource = [Season]()
+    var dataSource = [Season]()
     
     
     let headerID = String(describing: SeasonHeaderView.self)
