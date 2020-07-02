@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var seasonTableView: UITableView!
     
     var dataSource = [Season]()
-    var dataSource2 = [Statistics]()
-    
-    
-    
     let headerID = String(describing: SeasonHeaderView.self)
     
     override func viewDidLoad() {
@@ -25,8 +21,6 @@ class ViewController: UIViewController {
         if #available(iOS 13.0, *) {
             self.overrideUserInterfaceStyle = .light
         }
-        
-        dataSource2 = getDataSourceInitialValue2()
         
         dataSource = getDataSourceInitialValue()
         

@@ -13,6 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var actionImage: UIImageView!
     
 
     //    static func nib() -> UINib {

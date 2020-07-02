@@ -16,12 +16,12 @@ func getDataSourceInitialValue() -> [Season] {
                 [Trip(title: "Сольдэу - Эль-Тартер, Андорра", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "Andorra"),
                  Trip(title: "Уистлер-Блэккомб, Канада", startedAt: "2020.03.03", finishedAt: "2020.03.10", image: "Canada")],
             statistics:
-                [Statistics(title: "макс. скорость"),
-                 Statistics(title: "расстояние"),
-                 Statistics(title: "спуски"),
-                 Statistics(title: "на горе"),
-                 Statistics(title: "время спуска"),
-                 Statistics(title: "skillcoin")]
+            [Statistics(title: "макс. скорость", image: "MaxSpeed"),
+                 Statistics(title: "расстояние", image: "Distance"),
+                 Statistics(title: "спуски", image: "NumberOfTracks"),
+                 Statistics(title: "на горе", image: "ActivityTime"),
+                 Statistics(title: "время спуска", image: "ActivityTime"),
+                 Statistics(title: "skillcoin", image: "SkillCoin")]
             ),
         
         Season(
@@ -29,23 +29,13 @@ func getDataSourceInitialValue() -> [Season] {
             trip:
                 [Trip(title: "Куршевель, Франция", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "France")],
             statistics:
-                [Statistics(title: "макс. скорость"),
-                 Statistics(title: "расстояние"),
-                 Statistics(title: "спуски"),
-                 Statistics(title: "на горе"),
-                 Statistics(title: "время спуска"),
-                 Statistics(title: "skillcoin")]
+                [Statistics(title: "макс. скорость", image: "MaxSpeed"),
+                 Statistics(title: "расстояние", image: "Distance"),
+                 Statistics(title: "спуски", image: "NumberOfTracks"),
+                 Statistics(title: "на горе", image: "ActivityTime"),
+                 Statistics(title: "время спуска", image: "ActivityTime"),
+                 Statistics(title: "skillcoin", image: "SkillCoin")]
             )
     ]
 }
 
-func getDataSourceInitialValue2() -> [Statistics] {
-    return [
-        Statistics(title: "макс.скорость"),
-        Statistics(title: "расстояние"),
-        Statistics(title: "спуски"),
-        Statistics(title: "ss"),
-        Statistics(title: "dd"),
-        Statistics(title: "ff")
-    ]
-}

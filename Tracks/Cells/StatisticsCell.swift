@@ -20,15 +20,13 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var view: UIView!
     
-    
-
-    func configure(with model: [Statistics]) {
-        self.dataSource = model
-    }
-    
     private var dataSource = [Statistics]()
     private let itemsInSection: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    
+    func configure(with model: [Statistics]) {
+        self.dataSource = model
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,31 +59,19 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
         cell.titleLabel.text = statistics.title
+        cell.actionImage.image = UIImage(named: statistics.image)
         return cell
     }
-    
-
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        pageControl.currentPage = Int(ceil(scrollView.contentOffset.x / scrollView.frame.width))
-//    }
-    
-    
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl?.currentPage = Int(ceil(collectionView.contentOffset.x / collectionView.frame.width))
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let availableWidth = collectionView.bounds.inset(by: collectionView.layoutMargins).width
-//        let cellWidth = (availableWidth / CGFloat(2)).rounded(.down)
         let paggingSpace = sectionInsets.left * (itemsInSection + 1)
         let availableWidth = collectionView.frame.width - paggingSpace
         let widthPerItem = availableWidth / itemsInSection
-//        return CGSize(width: cellWidth, height: collectionView.frame.height)
-//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-        return CGSize(width: widthPerItem, height: collectionView.bounds.height)
+        return CGSize(width: widthPerItem, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -94,13 +80,8 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        if DeviceType.IS_IPHONE_5 {
-//            return  -16.0
-//        }
         return 0.0
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
