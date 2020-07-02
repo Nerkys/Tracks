@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var seasonTableView: UITableView!
     
-    var dataSource = [Season]()
+    private var dataSource = [Season]()
+    var dataSource2 = [Statistics]()
+    
     
     
     let headerID = String(describing: SeasonHeaderView.self)
@@ -23,6 +25,13 @@ class ViewController: UIViewController {
         if #available(iOS 13.0, *) {
             self.overrideUserInterfaceStyle = .light
         }
+        dataSource2.append(Statistics(title: "макс.скорость"))
+        dataSource2.append(Statistics(title: "расстояние"))
+        dataSource2.append(Statistics(title: "спуски"))
+        dataSource2.append(Statistics(title: "макс.скорость"))
+        dataSource2.append(Statistics(title: "макс.скорость"))
+        dataSource2.append(Statistics(title: "макс.скорость"))
+        
         dataSource = getDataSourceInitialValue()
         
         seasonTableView.rowHeight = UITableView.automaticDimension
@@ -57,6 +66,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
+            cell.configure(with: dataSource2)
 //            let maxSpeed = String(dataSource[indexPath.section].maxSpeed)
 //            let distance = String(dataSource[indexPath.section].distance)
 //            let numberOfTracks = String(dataSource[indexPath.section].numberOfTracks)
