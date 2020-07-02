@@ -22,11 +22,11 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     
 
-    func configure(with models: [Statistics]) {
-        self.dataSource2 = models
+    func configure(with model: [Statistics]) {
+        self.dataSource = model
     }
     
-    private var dataSource2 = [Statistics]()
+    private var dataSource = [Statistics]()
     private let itemsInSection: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 
@@ -59,7 +59,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        let statistics = dataSource2[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
+        let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
         cell.titleLabel.text = statistics.title
         return cell
     }
