@@ -20,12 +20,14 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var view: UIView!
     
+    
+
     func configure(with models: [Statistics]) {
         self.dataSource2 = models
     }
     
     private var dataSource2 = [Statistics]()
-    private let itemsInSection: CGFloat = 6
+    private let itemsInSection: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 
     override func awakeFromNib() {
@@ -47,9 +49,9 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 
         //layer.zPosition = 1
     }
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Int(itemsInSection)
@@ -57,7 +59,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        let statistics = dataSource2[indexPath.row]
+        let statistics = dataSource2[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
         cell.titleLabel.text = statistics.title
         return cell
     }

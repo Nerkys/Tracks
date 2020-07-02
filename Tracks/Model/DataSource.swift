@@ -38,3 +38,14 @@ func getDataSourceInitialValue() -> [Season] {
             )
     ]
 }
+
+func getDataSourceInitialValue2() -> [Statistics] {
+    return [
+        Statistics(title: "макс.скорость"),
+        Statistics(title: "расстояние"),
+        Statistics(title: "спуски"),
+        Statistics(title: "ss"),
+        Statistics(title: "dd"),
+        Statistics(title: "ff")
+    ]
+}

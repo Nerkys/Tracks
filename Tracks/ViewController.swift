@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var seasonTableView: UITableView!
     
-    private var dataSource = [Season]()
+    var dataSource = [Season]()
     var dataSource2 = [Statistics]()
     
     
@@ -25,12 +25,8 @@ class ViewController: UIViewController {
         if #available(iOS 13.0, *) {
             self.overrideUserInterfaceStyle = .light
         }
-        dataSource2.append(Statistics(title: "макс.скорость"))
-        dataSource2.append(Statistics(title: "расстояние"))
-        dataSource2.append(Statistics(title: "спуски"))
-        dataSource2.append(Statistics(title: "макс.скорость"))
-        dataSource2.append(Statistics(title: "макс.скорость"))
-        dataSource2.append(Statistics(title: "макс.скорость"))
+        
+        dataSource2 = getDataSourceInitialValue2()
         
         dataSource = getDataSourceInitialValue()
         
