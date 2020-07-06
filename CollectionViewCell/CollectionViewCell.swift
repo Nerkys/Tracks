@@ -14,6 +14,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var actionImage: UIImageView!
+    @IBOutlet weak var valueLabel: UILabel!
     
 
     //    static func nib() -> UINib {

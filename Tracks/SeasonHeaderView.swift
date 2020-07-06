@@ -11,4 +11,6 @@ import UIKit
 class SeasonHeaderView: UITableViewHeaderFooterView {
     
     @IBOutlet var titleLabel: UILabel!
+    
+    
 }

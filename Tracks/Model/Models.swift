@@ -28,5 +28,5 @@ struct Trip {
 struct Statistics {
     let title: String
     let image: String
-//    let value: Int
+    let value: Int
 }

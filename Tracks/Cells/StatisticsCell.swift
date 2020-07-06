@@ -12,7 +12,8 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! {
         didSet {
-            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            
+            //collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
     }
     
@@ -60,6 +61,7 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
         cell.titleLabel.text = statistics.title
         cell.actionImage.image = UIImage(named: statistics.image)
+        cell.valueLabel.text = String(statistics.value)
         return cell
     }
     
