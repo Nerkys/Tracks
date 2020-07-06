@@ -8,9 +8,11 @@
 
 import UIKit
 
-class SeasonHeaderView: UITableViewHeaderFooterView {
+class SeasonHeaderView: UITableViewCell {
     
+    //@IBOutlet var titleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var view: UIView!
     
     
 }

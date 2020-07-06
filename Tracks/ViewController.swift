@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var seasonTableView: UITableView!
     
     var dataSource = [Season]()
-    let headerID = String(describing: SeasonHeaderView.self)
+    //let headerID = String(describing: SeasonHeaderView.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +28,18 @@ class ViewController: UIViewController {
         //seasonTableView.tableFooterView = UIView(frame: .zero)
         //seasonTableView.reloadData()
         
-        tableViewConfig()
+        //tableViewConfig()
         
         self.hideNavigationBar()
     }
     
-    private func tableViewConfig() {
-        let nib = UINib(nibName: headerID, bundle: nil)
-        seasonTableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
-        
-        seasonTableView.tableFooterView = UIView()
-        
-    }
+//    private func tableViewConfig() {
+//        let nib = UINib(nibName: headerID, bundle: nil)
+//        seasonTableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
+//
+//        seasonTableView.tableFooterView = UIView()
+//
+//    }
     
 
 }
@@ -78,7 +78,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             cell.titleLabel?.text = trip.title
             cell.tripImage?.image = tripImage
-            cell.tripImage?.contentMode = .scaleAspectFill
+            //cell.tripImage?.contentMode = .scaleAspectFill
             //cell.tripImage?.cornerRadius(usingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10))
             return cell
         }
@@ -86,11 +86,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! SeasonHeaderView
+        let header = tableView.dequeueReusableCell(withIdentifier: "SeasonHeaderView") as! SeasonHeaderView
         
-      header.titleLabel.text = dataSource[section].title
+        header.titleLabel.text = dataSource[section].title
 
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
 

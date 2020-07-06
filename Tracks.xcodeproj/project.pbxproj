@@ -17,7 +17,6 @@
 		6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */; };
 		6924E05824A1C18B001CDBB7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E05724A1C18B001CDBB7 /* Models.swift */; };
 		6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06524A21D8C001CDBB7 /* DataSource.swift */; };
-		69575D3224A4961B00EA61B7 /* SeasonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */; };
 		69D2517F24A49EAF00908C96 /* SeasonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */; };
 		69F1C84024AC81B00018FDF4 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F1C83F24AC81B00018FDF4 /* Devices.swift */; };
 		69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */; };
@@ -36,7 +35,6 @@
 		6924E05024A1BD26001CDBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6924E05724A1C18B001CDBB7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6924E06524A21D8C001CDBB7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SeasonHeaderView.xib; path = Tracks/SeasonHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderView.swift; path = Tracks/SeasonHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		69F1C83F24AC81B00018FDF4 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */,
 				6924E04624A1BD23001CDBB7 /* ViewController.swift */,
 				6924E04824A1BD23001CDBB7 /* Main.storyboard */,
-				69575D3124A4961B00EA61B7 /* SeasonHeaderView.xib */,
 				6924E04B24A1BD26001CDBB7 /* Assets.xcassets */,
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
@@ -185,7 +182,6 @@
 			files = (
 				6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */,
 				6924E04C24A1BD26001CDBB7 /* Assets.xcassets in Resources */,
-				69575D3224A4961B00EA61B7 /* SeasonHeaderView.xib in Resources */,
 				6924E04A24A1BD23001CDBB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
