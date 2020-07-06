@@ -15,6 +15,12 @@ class TripCell: UITableViewCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var tripImage: UIImageView!
     @IBOutlet weak var shadowView: UIView!
+    @IBOutlet var numberOfActiveDaysLabel: UILabel!
+    @IBOutlet var numberOfTracksLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    
+    
+    let coverLayer = CALayer()
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
@@ -22,10 +28,9 @@ class TripCell: UITableViewCell {
 //        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
 //        view.layer.shadowRadius = 3
 //        view.layer.shadowOpacity = 0.2
-       // view.clipsToBounds = true
         view.layer.masksToBounds = true
+        view.layer.zPosition = 2
 
-        //layer.zPosition = 1
         
         shadowView.layer.cornerRadius = 10.0
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -33,19 +38,16 @@ class TripCell: UITableViewCell {
         shadowView.layer.shadowRadius = 3
         shadowView.layer.shadowOpacity = 0.2
         
-        shadowView.layer.zPosition = -1
+        shadowView.layer.zPosition = 1
+        
+        coverLayer.frame = tripImage.bounds
+        coverLayer.backgroundColor = UIColor.black.cgColor
+        coverLayer.opacity = 0.25
+        tripImage.layer.addSublayer(coverLayer)
         
     }
-    //    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+
     
     
 

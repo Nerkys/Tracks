@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SeasonHeaderView: UITableViewCell {
+class SeasonHeaderCell: UITableViewCell {
     
     //@IBOutlet var titleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!

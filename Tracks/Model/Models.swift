@@ -22,6 +22,10 @@ struct Trip {
     let startedAt: String
     let finishedAt: String
     let image: String
+    let numberOfActiveDays: Int
+    let numberOfTracks: Int
+    let distance: Int
+    let flag: String
     
 }
 

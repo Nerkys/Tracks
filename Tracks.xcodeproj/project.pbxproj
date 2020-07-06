@@ -17,7 +17,7 @@
 		6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */; };
 		6924E05824A1C18B001CDBB7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E05724A1C18B001CDBB7 /* Models.swift */; };
 		6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06524A21D8C001CDBB7 /* DataSource.swift */; };
-		69D2517F24A49EAF00908C96 /* SeasonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */; };
+		69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */; };
 		69F1C84024AC81B00018FDF4 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F1C83F24AC81B00018FDF4 /* Devices.swift */; };
 		69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		6924E05024A1BD26001CDBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6924E05724A1C18B001CDBB7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6924E06524A21D8C001CDBB7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderView.swift; path = Tracks/SeasonHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/Cells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		69F1C83F24AC81B00018FDF4 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +56,7 @@
 			children = (
 				690F6DFA24A35D83009BD28D /* StatisticsCell.swift */,
 				690F6DF824A34D5B009BD28D /* TripCell.swift */,
+				69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */,
 			);
 			name = Cells;
 			path = Tracks/Cells;
@@ -91,7 +92,6 @@
 				6924E04B24A1BD26001CDBB7 /* Assets.xcassets */,
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
-				69D2517E24A49EAF00908C96 /* SeasonHeaderView.swift */,
 			);
 			path = tracks;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				6924E04524A1BD23001CDBB7 /* SceneDelegate.swift in Sources */,
 				6924E05824A1C18B001CDBB7 /* Models.swift in Sources */,
 				69F1C84024AC81B00018FDF4 /* Devices.swift in Sources */,
-				69D2517F24A49EAF00908C96 /* SeasonHeaderView.swift in Sources */,
+				69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */,
 				690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nerkys.Tracks;
 				PRODUCT_NAME = Tracks;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -376,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Nerkys.Tracks;
 				PRODUCT_NAME = Tracks;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -68,16 +68,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //            cell.maxSpeedLabel?.text = maxSpeed
 //            cell.distanceLabel?.text = distance
 //            cell.numberOfTracksLabel?.text = numberOfTracks
+            cell.selectionStyle = .none
             
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
             let trip = dataSource[indexPath.section].trip[indexPath.row - 1]
-            let tripImage = UIImage(named: trip.image)
             
             cell.titleLabel?.text = trip.title
-            cell.tripImage?.image = tripImage
+            cell.tripImage?.image = UIImage(named: trip.image)
+            cell.numberOfActiveDaysLabel?.text = String(trip.numberOfActiveDays)
+            cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
+            cell.distanceLabel?.text = String(trip.distance)
+            //cell.numberOfActiveDaysLabel?.text = trip
             //cell.tripImage?.contentMode = .scaleAspectFill
             //cell.tripImage?.cornerRadius(usingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10))
             return cell
@@ -86,7 +90,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableCell(withIdentifier: "SeasonHeaderView") as! SeasonHeaderView
+        let header = tableView.dequeueReusableCell(withIdentifier: "SeasonHeaderCell") as! SeasonHeaderCell
         
         header.titleLabel.text = dataSource[section].title
 
@@ -96,6 +100,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.row == 0 {
+//            tableView.deselectRow(at: indexPath, animated: false)
+//        }
+//    }
     
 
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
