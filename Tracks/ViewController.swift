@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 13.0, *) {
-            self.overrideUserInterfaceStyle = .light
-        }
+//        if #available(iOS 13.0, *) {
+//            self.overrideUserInterfaceStyle = .light
+//        }
         
         dataSource = getDataSourceInitialValue()
         
@@ -81,9 +81,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.numberOfActiveDaysLabel?.text = String(trip.numberOfActiveDays)
             cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
             cell.distanceLabel?.text = String(trip.distance)
-            //cell.numberOfActiveDaysLabel?.text = trip
-            //cell.tripImage?.contentMode = .scaleAspectFill
-            //cell.tripImage?.cornerRadius(usingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10))
+            
             return cell
         }
         
@@ -100,6 +98,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
+        
+        let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
+        
+        let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
+        theTripViewController.trip = selectedTrip
+        //theTripViewController.delegate = self
+        
+        self.navigationController?.pushViewController(theTripViewController, animated: false)
+    }
+    
+
+    
+    
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if indexPath.row == 0 {
@@ -132,12 +146,5 @@ extension UIViewController {
     }
 }
 
-//extension UIImageView {
-//    func cornerRadius(usingCorners corners: UIRectCorner, cornerRadii: CGSize) {
-//        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: cornerRadii)
-//        let maskLayer = CAShapeLayer()
-//        maskLayer.path = path.cgPath
-//        
-//        self.layer.mask = maskLayer
-//    }
-//}
+
+
