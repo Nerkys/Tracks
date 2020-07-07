@@ -26,6 +26,7 @@ struct Trip {
     let numberOfTracks: Int
     let distance: Int
     let flag: String
+    let statistics: [Statistics]
     
 }
 
