@@ -102,13 +102,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
         
-        let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
-        
-        let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
-        theTripViewController.trip = selectedTrip
-        //theTripViewController.delegate = self
-        
-        self.navigationController?.pushViewController(theTripViewController, animated: false)
+        if indexPath.row != 0 {
+            let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
+            
+            let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
+            theTripViewController.trip = selectedTrip
+            //theTripViewController.delegate = self
+            
+            self.navigationController?.pushViewController(theTripViewController, animated: false)
+        }
     }
     
 

@@ -14,7 +14,15 @@ class TheTripCell: UITableViewCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var tripImage: UIImageView!
     
+    let coverLayer = CALayer()
+    
     override func layoutSubviews() {
+        
+        
+        coverLayer.frame = tripImage.bounds
+        coverLayer.backgroundColor = UIColor.black.cgColor
+        coverLayer.opacity = 0.25
+        tripImage.layer.addSublayer(coverLayer)
         
     }
 }

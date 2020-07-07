@@ -20,7 +20,6 @@
 		6924E05824A1C18B001CDBB7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E05724A1C18B001CDBB7 /* Models.swift */; };
 		6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06524A21D8C001CDBB7 /* DataSource.swift */; };
 		69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */; };
-		69F1C84024AC81B00018FDF4 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F1C83F24AC81B00018FDF4 /* Devices.swift */; };
 		69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		6924E05724A1C18B001CDBB7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6924E06524A21D8C001CDBB7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/Cells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
-		69F1C83F24AC81B00018FDF4 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,15 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		690F6DF724A34CEF009BD28D /* Cells */ = {
+		690F6DF724A34CEF009BD28D /* SeasonCells */ = {
 			isa = PBXGroup;
 			children = (
+				69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */,
 				690F6DFA24A35D83009BD28D /* StatisticsCell.swift */,
 				690F6DF824A34D5B009BD28D /* TripCell.swift */,
 				69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */,
 			);
-			name = Cells;
-			path = Tracks/Cells;
+			name = SeasonCells;
+			path = Tracks/SeasonCells;
 			sourceTree = "<group>";
 		};
 		6910BA9A24B439C900F27E1B /* TheTrip */ = {
@@ -79,9 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				6910BA9A24B439C900F27E1B /* TheTrip */,
-				69F1C83E24AC818B0018FDF4 /* Devices */,
-				69F7354D24AB39B7002A6668 /* CollectionViewCells */,
-				690F6DF724A34CEF009BD28D /* Cells */,
+				690F6DF724A34CEF009BD28D /* SeasonCells */,
 				6924E05624A1C0AD001CDBB7 /* Model */,
 				6924E04124A1BD23001CDBB7 /* tracks */,
 				6924E04024A1BD23001CDBB7 /* Products */,
@@ -118,22 +115,6 @@
 			);
 			name = Model;
 			path = tracks/Model;
-			sourceTree = "<group>";
-		};
-		69F1C83E24AC818B0018FDF4 /* Devices */ = {
-			isa = PBXGroup;
-			children = (
-				69F1C83F24AC81B00018FDF4 /* Devices.swift */,
-			);
-			path = Devices;
-			sourceTree = "<group>";
-		};
-		69F7354D24AB39B7002A6668 /* CollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */,
-			);
-			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +195,6 @@
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
 				6924E04524A1BD23001CDBB7 /* SceneDelegate.swift in Sources */,
 				6924E05824A1C18B001CDBB7 /* Models.swift in Sources */,
-				69F1C84024AC81B00018FDF4 /* Devices.swift in Sources */,
 				6910BA9E24B443E900F27E1B /* TheTripCell.swift in Sources */,
 				6910BA9C24B43A1700F27E1B /* TheTripViewController.swift in Sources */,
 				69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */,
