@@ -15,17 +15,21 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     @IBOutlet weak var tripImage: UIImageView!
     @IBOutlet weak var tripCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var titleAndDateLabel: UILabel!
     
     private var dataSource = [Statistics]()
+    private var titleAndDateDataSource: Trip!
     private let itemsInSection: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    let coverLayer = CALayer()
     
     func configure(with model: [Statistics]) {
         self.dataSource = model
     }
     
-    let coverLayer = CALayer()
-    
+    func configureTitleAndDate(with model: Trip) {
+        self.titleAndDateDataSource = model
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,13 +42,13 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     
     override func layoutSubviews() {
         
-        
         coverLayer.frame = tripImage.bounds
         coverLayer.backgroundColor = UIColor.black.cgColor
         coverLayer.opacity = 0.25
         tripImage.layer.addSublayer(coverLayer)
         
     }
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -57,6 +61,7 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheTripCollectionViewCell", for: indexPath) as! TheTripCollectionViewCell
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
+        titleAndDateLabel.text = titleAndDateDataSource.title
         cell.titleLabel.text = statistics.title
         cell.actionImage.image = UIImage(named: statistics.image)
         cell.valueLabel.text = String(statistics.value)
@@ -65,6 +70,12 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl?.currentPage = Int(ceil(tripCollectionView.contentOffset.x / tripCollectionView.frame.width))
+        if pageControl?.currentPage == 0 {
+            titleAndDateLabel.text = titleAndDateDataSource.title
+        } else {
+            titleAndDateLabel.text = titleAndDateDataSource.startedAt
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

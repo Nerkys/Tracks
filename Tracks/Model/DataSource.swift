@@ -13,7 +13,7 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2018/19",
             trip:
-                [Trip(title: "Сольдэу - Эль-Тартер", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
+                [Trip(title: "Сольдэу - Эль-Тартер", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
                              Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
@@ -22,7 +22,7 @@ func getDataSourceInitialValue() -> [Season] {
                              Statistics(title: "на горе", image: "ActivityTime", value: 40),
                              Statistics(title: "skillcoin", image: "SkillCoin", value: 55)]),
                 
-                 Trip(title: "Уистлер-Блэккомб", startedAt: "2020.03.03", finishedAt: "2020.03.10", image: "Blackcomb", numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
+                 Trip(title: "Уистлер-Блэккомб", startedAt: "03.03.2020", finishedAt: "10.03.2020", image: "Blackcomb", numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
                              Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 8),
@@ -42,7 +42,7 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2019/20",
             trip:
-                [Trip(title: "Куршевель, Франция", startedAt: "2020.02.13", finishedAt: "2020.02.20", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
+                [Trip(title: "Куршевель, Франция", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
                              Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 8),

@@ -46,7 +46,8 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
 //            return cell
 //        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
-        cell.configure(with: dataSource[indexPath.section].trip[indexPath.row].statistics)
+        cell.configure(with: trip.statistics)
+        cell.configureTitleAndDate(with: trip)
         cell.tripImage.image = UIImage(named: trip.image)
         
         return cell
