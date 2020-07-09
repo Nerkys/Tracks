@@ -42,14 +42,14 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2019/20",
             trip:
-                [Trip(title: "Куршевель, Франция", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
+                [Trip(title: "Куршевель, Франция", startedAt: "14.02.2020", finishedAt: "21.02.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
-                            [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
-                             Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 8),
-                             Statistics(title: "расстояние", image: "DistanceWhite", value: 600),
-                             Statistics(title: "время спуска", image: "ActivityTime", value: 10),
-                             Statistics(title: "на горе", image: "ActivityTime", value: 40),
-                             Statistics(title: "skillcoin", image: "SkillCoin", value: 55)])],
+                            [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 5),
+                             Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 10),
+                             Statistics(title: "расстояние", image: "DistanceWhite", value: 900),
+                             Statistics(title: "время спуска", image: "ActivityTime", value: 11),
+                             Statistics(title: "на горе", image: "ActivityTime", value: 43),
+                             Statistics(title: "skillcoin", image: "SkillCoin", value: 60)])],
             statistics:
                 [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 75),
                  Statistics(title: "расстояние", image: "Distance", value: 600),

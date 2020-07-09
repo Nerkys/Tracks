@@ -20,15 +20,20 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     private var dataSource = [Statistics]()
     private var titleAndDateDataSource: Trip!
     private let itemsInSection: CGFloat = 3
-    private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+    //private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     let coverLayer = CALayer()
     
-    func configure(with model: [Statistics]) {
-        self.dataSource = model
-    }
+
     
-    func configureTitleAndDate(with model: Trip) {
-        self.titleAndDateDataSource = model
+//    func configure(with model: [Statistics]) {
+//        self.dataSource = model
+//    }
+    
+    func configure(with model: Trip) {
+        titleAndDateDataSource = model
+        dataSource = model.statistics
+        tripImage.image = UIImage(named: model.image)
+        titleAndDateLabel.text = titleAndDateDataSource.title
     }
     
     override func awakeFromNib() {
@@ -36,17 +41,13 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
         
         tripCollectionView.delegate = self
         tripCollectionView.dataSource = self
-        
-        
     }
     
     override func layoutSubviews() {
-        
         coverLayer.frame = tripImage.bounds
         coverLayer.backgroundColor = UIColor.black.cgColor
         coverLayer.opacity = 0.25
         tripImage.layer.addSublayer(coverLayer)
-        
     }
 
     
@@ -61,7 +62,6 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheTripCollectionViewCell", for: indexPath) as! TheTripCollectionViewCell
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
-        titleAndDateLabel.text = titleAndDateDataSource.title
         cell.titleLabel.text = statistics.title
         cell.actionImage.image = UIImage(named: statistics.image)
         cell.valueLabel.text = String(statistics.value)
@@ -79,23 +79,23 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
-        let availableWidth = tripCollectionView.frame.width - paggingSpace
-        let widthPerItem = availableWidth / itemsInSection
+//        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
+//        let availableWidth = tripCollectionView.frame.width - paggingSpace
+        let widthPerItem = tripCollectionView.frame.width / itemsInSection
         return CGSize(width: widthPerItem, height: tripCollectionView.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        sectionInsets
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        sectionInsets
+//    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0.0
+//    }
     
 }

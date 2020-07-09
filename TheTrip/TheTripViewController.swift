@@ -16,7 +16,7 @@ class TheTripViewController: UIViewController {
     
     var trip: Trip!
     weak var delegate: TheTripViewController?
-    var dataSource = [Season]()
+    //var dataSource = [Season]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class TheTripViewController: UIViewController {
 //        if #available(iOS 13.0, *) {
 //            self.overrideUserInterfaceStyle = .light
 //        }
-        dataSource = getDataSourceInitialValue()
+        //dataSource = getDataSourceInitialValue()
         theTripTableView.delegate = self
         theTripTableView.dataSource = self
         
@@ -46,9 +46,9 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
 //            return cell
 //        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
-        cell.configure(with: trip.statistics)
-        cell.configureTitleAndDate(with: trip)
-        cell.tripImage.image = UIImage(named: trip.image)
+//        cell.configure(with: trip.statistics)
+        cell.configure(with: trip)
+//        cell.tripImage.image = UIImage(named: trip.image)
         
         return cell
     }
