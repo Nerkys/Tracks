@@ -27,6 +27,7 @@ struct Trip {
     let distance: Int
     let flag: String
     let statistics: [Statistics]
+    let resorts: [Resort]
     
 }
 
@@ -34,4 +35,16 @@ struct Statistics {
     let title: String
     let image: String
     let value: Int
+}
+
+struct Resort {
+    let title: String
+    let days: [Day]
+}
+
+struct Day {
+    let date: String
+    let maxSpeed : Int
+    let distance: Int
+    let numberOfTracks: Int
 }
