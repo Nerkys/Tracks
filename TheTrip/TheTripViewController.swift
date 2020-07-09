@@ -36,34 +36,49 @@ class TheTripViewController: UIViewController {
 
 extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return trip.resorts.count + 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if section == 0 {
+            return 1
+        } else {
+            return trip.resorts[section - 1].days.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
-//            return cell
-//        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
-//        cell.configure(with: trip.statistics)
-        cell.configure(with: trip)
-//        cell.tripImage.image = UIImage(named: trip.image)
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
+    //        cell.configure(with: trip.statistics)
+            cell.configure(with: trip)
+    //        cell.tripImage.image = UIImage(named: trip.image)
         
-        return cell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ResortsDayCell", for: indexPath) as! ResortsDayCell
+            let day = trip.resorts[indexPath.section - 1].days[indexPath.row]
+            cell.titleLabel.text = day.date
+            cell.maxSpeedLabel.text = String(day.maxSpeed)
+            cell.distanceLabel.text = String(day.distance)
+            cell.numberOfTracksLabel.text = String(day.numberOfTracks)
+            return cell
+        }
+        
     }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if  section == 0 {
-//            return nil
-//        }   else {
-//            let header = tableView.dequeueReusableCell(withIdentifier: "TheResortHeaderCell") as! TheResortHeaderCell
-//
-//            header.titleLabel.text = "sas"
-//
-//            return header
-//        }
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if  section == 0 {
+            return nil
+        }   else {
+            let header = tableView.dequeueReusableCell(withIdentifier: "TheResortHeaderCell") as! TheResortHeaderCell
+
+            header.titleLabel.text = trip.resorts[section - 1].title
+
+            return header
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
