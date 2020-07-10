@@ -10,8 +10,8 @@ import UIKit
 
 class TheDayCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var view: UIView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var valueLabel: UILabel!
-    @IBOutlet var actionImage: UIImageView!
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var actionImage: UIImageView!
 }

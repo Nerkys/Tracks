@@ -12,6 +12,8 @@ class TheDayViewController: UIViewController {
     
     @IBOutlet var theDayTableView: UITableView!
     
+    var day: Day!
+    weak var delegate: TheDayViewController?
     
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -32,11 +34,18 @@ class TheDayViewController: UIViewController {
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        //day.feedItems.count
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+//        if indexPath.row == 0 {
+            let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
+            //cell.configure(with: day)
+            return cell
+            
+            
+//        }
     }
 }
 

@@ -88,5 +88,19 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
+        
+        if indexPath.section != 0 {
+            let selectedDay = trip.resorts[indexPath.section - 1].days[indexPath.row]
+            
+            let theDayViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheDayViewController") as! TheDayViewController
+            theDayViewController.day = selectedDay
+            //theTripViewController.delegate = self
+            
+            self.navigationController?.pushViewController(theDayViewController, animated: false)
+        }
+    }
+    
 }
 

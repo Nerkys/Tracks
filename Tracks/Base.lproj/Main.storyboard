@@ -814,7 +814,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionLayout" destination="YLW-3T-Zfq" id="Fps-1b-Aul"/>
-                                            <outlet property="collectionView" destination="l4Y-Lp-rSs" id="CAo-Lt-yZv"/>
                                             <outlet property="dateLabel" destination="WnR-D8-bZh" id="bId-cx-0wP"/>
                                             <outlet property="pageControl" destination="9dE-BF-ddp" id="beP-aA-ZVK"/>
                                             <outlet property="theDayCollectionView" destination="l4Y-Lp-rSs" id="713-OH-Uvz"/>
