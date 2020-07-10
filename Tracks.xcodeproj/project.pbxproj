@@ -21,6 +21,9 @@
 		6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924E06524A21D8C001CDBB7 /* DataSource.swift */; };
 		694AD75624B71920007783E7 /* TheResortHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75524B71920007783E7 /* TheResortHeaderCell.swift */; };
 		694AD75824B72E5F007783E7 /* ResortsDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75724B72E5F007783E7 /* ResortsDayCell.swift */; };
+		694AD75B24B81855007783E7 /* TheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75A24B81855007783E7 /* TheDayViewController.swift */; };
+		694AD75D24B81A57007783E7 /* TheDayStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75C24B81A57007783E7 /* TheDayStatisticsCell.swift */; };
+		694AD75F24B81F12007783E7 /* TheDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */; };
 		6975CAD324B4776B00FBBAA1 /* TheTripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */; };
 		69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */; };
 		69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */; };
@@ -43,6 +46,9 @@
 		6924E06524A21D8C001CDBB7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		694AD75524B71920007783E7 /* TheResortHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheResortHeaderCell.swift; sourceTree = "<group>"; };
 		694AD75724B72E5F007783E7 /* ResortsDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortsDayCell.swift; sourceTree = "<group>"; };
+		694AD75A24B81855007783E7 /* TheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDayViewController.swift; sourceTree = "<group>"; };
+		694AD75C24B81A57007783E7 /* TheDayStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDayStatisticsCell.swift; sourceTree = "<group>"; };
+		694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripCollectionViewCell.swift; sourceTree = "<group>"; };
 		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/Cells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 		6924E03624A1BD23001CDBB7 = {
 			isa = PBXGroup;
 			children = (
+				694AD75924B81746007783E7 /* TheDay */,
 				6910BA9A24B439C900F27E1B /* TheTrip */,
 				690F6DF724A34CEF009BD28D /* SeasonCells */,
 				6924E05624A1C0AD001CDBB7 /* Model */,
@@ -124,6 +131,16 @@
 			);
 			name = Model;
 			path = tracks/Model;
+			sourceTree = "<group>";
+		};
+		694AD75924B81746007783E7 /* TheDay */ = {
+			isa = PBXGroup;
+			children = (
+				694AD75A24B81855007783E7 /* TheDayViewController.swift */,
+				694AD75C24B81A57007783E7 /* TheDayStatisticsCell.swift */,
+				694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */,
+			);
+			path = TheDay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +216,7 @@
 			files = (
 				6924E06624A21D8C001CDBB7 /* DataSource.swift in Sources */,
 				6924E04724A1BD23001CDBB7 /* ViewController.swift in Sources */,
+				694AD75B24B81855007783E7 /* TheDayViewController.swift in Sources */,
 				69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */,
 				690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */,
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
@@ -208,9 +226,11 @@
 				6924E05824A1C18B001CDBB7 /* Models.swift in Sources */,
 				6910BA9E24B443E900F27E1B /* TheTripCell.swift in Sources */,
 				6910BA9C24B43A1700F27E1B /* TheTripViewController.swift in Sources */,
+				694AD75F24B81F12007783E7 /* TheDayCollectionViewCell.swift in Sources */,
 				69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */,
 				690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */,
 				694AD75624B71920007783E7 /* TheResortHeaderCell.swift in Sources */,
+				694AD75D24B81A57007783E7 /* TheDayStatisticsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

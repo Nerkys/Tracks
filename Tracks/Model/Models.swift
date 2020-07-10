@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mikhail Chukhvantsev. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Season {
     let title: String
@@ -47,4 +47,15 @@ struct Day {
     let maxSpeed : Int
     let distance: Int
     let numberOfTracks: Int
+    let statistics: [Statistics]
+    let feedItems: [DayFeedItem]
+}
+
+struct DayFeedItem {
+    let title: String
+    let type: ItemType
+
+    enum ItemType {
+        case rest, lift(liftName: String), enterLeftResort(title: String, resortName: String), track(difficultyImageName: String)
+    }
 }
