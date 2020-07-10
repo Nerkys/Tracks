@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mikhail Chukhvantsev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Season {
     let title: String

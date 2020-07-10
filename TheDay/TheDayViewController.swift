@@ -41,7 +41,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        if indexPath.row == 0 {
             let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
-            //cell.configure(with: day)
+            cell.configure(with: day)
+            cell.dateLabel.text = day.date
             return cell
             
             

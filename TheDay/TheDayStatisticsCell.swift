@@ -24,7 +24,7 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     func configure(with model: Day) {
         dataSource = model.statistics
-        dateLabel.text = dateDataSource.date
+        //dateLabel?.text = dateDataSource.date
     }
     
     override func awakeFromNib() {
@@ -32,6 +32,17 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
         theDayCollectionView.delegate = self
         theDayCollectionView.dataSource = self
+    }
+    
+    override func layoutSubviews() {
+        view.layer.cornerRadius = 10.0
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.2
+        view.clipsToBounds = false
+
+        //layer.zPosition = 1
     }
     
     
@@ -53,15 +64,19 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
     }
     
-        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            pageControl?.currentPage = Int(ceil(theDayCollectionView.contentOffset.x / theDayCollectionView.frame.width))
-        }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        pageControl?.currentPage = Int(ceil(theDayCollectionView.contentOffset.x / theDayCollectionView.frame.width))
+    }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     //        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
     //        let availableWidth = tripCollectionView.frame.width - paggingSpace
-            let widthPerItem = theDayCollectionView.frame.width / itemsInSection
-            return CGSize(width: widthPerItem, height: theDayCollectionView.frame.height)
-        }
+        let widthPerItem = theDayCollectionView.frame.width / itemsInSection
+        return CGSize(width: widthPerItem, height: theDayCollectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
     
 }
