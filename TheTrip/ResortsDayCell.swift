@@ -18,7 +18,7 @@ class ResortsDayCell: UITableViewCell {
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2

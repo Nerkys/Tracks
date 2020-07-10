@@ -14,6 +14,9 @@ class TheDayViewController: UIViewController {
     
     var day: Day!
     weak var delegate: TheDayViewController?
+    @IBAction func backButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: false)
+    }
     
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -43,6 +46,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
             cell.configure(with: day)
             cell.dateLabel.text = day.date
+            cell.selectionStyle = .none
             return cell
             
             

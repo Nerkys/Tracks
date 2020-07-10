@@ -12,10 +12,12 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     
     
-    @IBOutlet var view: UIView!
-    @IBOutlet var theDayCollectionView: UICollectionView!
-    @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var dateLabel: UILabel!
+    
+
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var theDayCollectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var dateLabel: UILabel!
     
     private var dataSource = [Statistics]()
     private var dateDataSource: Day!
@@ -32,10 +34,11 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
         theDayCollectionView.delegate = self
         theDayCollectionView.dataSource = self
+        
     }
     
     override func layoutSubviews() {
-        view.layer.cornerRadius = 10.0
+        //view.layer.cornerRadius = 10.0
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3

@@ -10,12 +10,6 @@ import UIKit
 
 class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
-    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! {
-        didSet {
-            
-            //collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        }
-    }
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -70,24 +64,24 @@ class StatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
-        let availableWidth = collectionView.frame.width - paggingSpace
-        let widthPerItem = availableWidth / itemsInSection
+        //let paggingSpace = sectionInsets.left * (itemsInSection + 1)
+        //let availableWidth = collectionView.frame.width - paggingSpace
+        let widthPerItem = collectionView.frame.width / itemsInSection
         return CGSize(width: widthPerItem, height: collectionView.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        sectionInsets
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        sectionInsets
+//    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0.0
+//    }
     
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 //        pageControl.currentPage = indexPath.item

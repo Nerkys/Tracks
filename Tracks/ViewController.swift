@@ -15,12 +15,9 @@ class ViewController: UIViewController {
     var dataSource = [Season]()
     //let headerID = String(describing: SeasonHeaderView.self)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if #available(iOS 13.0, *) {
-//            self.overrideUserInterfaceStyle = .light
-//        }
         
         dataSource = getDataSourceInitialValue()
         

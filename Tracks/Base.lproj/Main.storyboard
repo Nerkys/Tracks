@@ -182,7 +182,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionLayout" destination="qGy-ZY-iLh" id="PYT-oS-RgC"/>
                                             <outlet property="collectionView" destination="pqz-y7-EBx" id="pXf-7e-1ge"/>
                                             <outlet property="pageControl" destination="8N8-1F-fe0" id="SG0-6d-L1g"/>
                                             <outlet property="view" destination="32b-zB-dRi" id="z7a-65-0yP"/>
@@ -359,24 +358,24 @@
             <objects>
                 <viewController storyboardIdentifier="TheTripViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LBZ-v6-ive" customClass="TheTripViewController" customModule="Tracks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cXO-RM-WSa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-Rf-vFX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TheTripCell" id="H3u-CD-ywW" customClass="TheTripCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="232"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="232.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H3u-CD-ywW" id="101-B8-rJm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-GY-hEK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="El-Tarter" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-UV-JP0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-IE-qsk">
                                                             <rect key="frame" x="12" y="12" width="38" height="38"/>
@@ -387,11 +386,11 @@
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" image="BackButtonWhite"/>
                                                             <connections>
-                                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="e0Z-SG-RYH"/>
+                                                                <segue destination="BYZ-38-t0r" kind="show" id="z8I-Q4-ofC"/>
                                                             </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-fX-Rel">
-                                                            <rect key="frame" x="0.0" y="144" width="414" height="51"/>
+                                                            <rect key="frame" x="0.0" y="144.5" width="414" height="51"/>
                                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="51" id="JCB-bb-uDC"/>
@@ -467,7 +466,7 @@
                                                             </connections>
                                                         </collectionView>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-jO-ZZK">
-                                                            <rect key="frame" x="195.5" y="195" width="23" height="37"/>
+                                                            <rect key="frame" x="195.5" y="195.5" width="23" height="37"/>
                                                         </pageControl>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сольдэу - Эль-Тартер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-8D-GSZ">
                                                             <rect key="frame" x="118.5" y="21" width="177" height="20.5"/>
@@ -510,17 +509,17 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheResortHeaderCell" id="ueF-vR-4RY" customClass="TheResortHeaderCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="260" width="414" height="29"/>
+                                        <rect key="frame" x="0.0" y="260.5" width="414" height="29.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueF-vR-4RY" id="nRr-iG-lu8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-7F-aEp">
-                                                    <rect key="frame" x="17" y="15" width="389" height="14"/>
+                                                    <rect key="frame" x="17" y="15" width="389" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сольдэу - Эль-Тартер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ8-V0-6AO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="369" height="14"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="369" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -548,14 +547,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResortsDayCell" id="NAt-ga-pGS" customClass="ResortsDayCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="289" width="414" height="95.5"/>
+                                        <rect key="frame" x="0.0" y="290" width="414" height="102.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NAt-ga-pGS" id="3if-B3-gf2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCi-hG-jHA">
-                                                    <rect key="frame" x="8" y="6" width="398" height="83.5"/>
+                                                    <rect key="frame" x="8" y="6" width="398" height="90.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28/03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-4h-Va0">
                                                             <rect key="frame" x="15" y="13" width="368" height="14"/>
@@ -639,7 +638,7 @@
                                                         <constraint firstItem="XK4-H4-VAb" firstAttribute="top" secondItem="vld-pg-6HB" secondAttribute="bottom" constant="4" id="lMr-dp-xQ3"/>
                                                         <constraint firstAttribute="trailing" secondItem="vld-pg-6HB" secondAttribute="trailing" constant="30" id="n8G-7L-cAe"/>
                                                         <constraint firstItem="gI0-cI-yRt" firstAttribute="leading" secondItem="hHN-tv-ehk" secondAttribute="leading" id="pg5-4w-HZT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="gI0-cI-yRt" secondAttribute="bottom" constant="10" id="t9N-2A-ClG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gI0-cI-yRt" secondAttribute="bottom" constant="17" id="t9N-2A-ClG"/>
                                                         <constraint firstItem="QTY-98-wrM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pRR-9b-LaV" secondAttribute="trailing" constant="25" id="uy8-ao-661"/>
                                                         <constraint firstItem="XK4-H4-VAb" firstAttribute="leading" secondItem="vld-pg-6HB" secondAttribute="leading" id="vTS-d5-kvY"/>
                                                         <constraint firstItem="gI0-cI-yRt" firstAttribute="top" secondItem="hHN-tv-ehk" secondAttribute="bottom" constant="4" id="yM1-pY-uMO"/>
@@ -696,23 +695,23 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TheDayStatisticsCell" id="k8s-3W-mig" customClass="TheDayStatisticsCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k8s-3W-mig" id="t3j-vm-bja">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-Lx-Y6p">
-                                                    <rect key="frame" x="16" y="5" width="382" height="119"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28/03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnR-D8-bZh">
-                                                            <rect key="frame" x="174" y="14" width="34" height="15.5"/>
+                                                            <rect key="frame" x="190" y="14" width="34" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l4Y-Lp-rSs">
-                                                            <rect key="frame" x="0.0" y="29.5" width="382" height="51"/>
+                                                            <rect key="frame" x="0.0" y="29.5" width="414" height="51"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="51" id="yDr-S6-7ca"/>
@@ -787,7 +786,7 @@
                                                             </connections>
                                                         </collectionView>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-BF-ddp">
-                                                            <rect key="frame" x="179.5" y="80.5" width="23" height="37.5"/>
+                                                            <rect key="frame" x="195.5" y="80.5" width="23" height="37.5"/>
                                                             <color key="pageIndicatorTintColor" red="0.9594331384" green="0.97206157449999997" blue="0.98523455859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="currentPageIndicatorTintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </pageControl>
@@ -801,7 +800,7 @@
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="LBZ-v6-ive" kind="show" animates="NO" id="w4C-9f-Fbi"/>
+                                                                <action selector="backButton:" destination="Chl-Da-Uo1" eventType="touchUpInside" id="ofC-9C-ECE"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -821,10 +820,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="nu9-Lx-Y6p" secondAttribute="trailing" constant="16" id="Plt-sw-6iE"/>
-                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="leading" secondItem="t3j-vm-bja" secondAttribute="leading" constant="16" id="Psx-nw-wzI"/>
+                                                <constraint firstAttribute="trailing" secondItem="nu9-Lx-Y6p" secondAttribute="trailing" id="Plt-sw-6iE"/>
+                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="leading" secondItem="t3j-vm-bja" secondAttribute="leading" id="Psx-nw-wzI"/>
                                                 <constraint firstAttribute="bottom" secondItem="nu9-Lx-Y6p" secondAttribute="bottom" constant="6" id="lu3-uv-0k5"/>
-                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="top" secondItem="t3j-vm-bja" secondAttribute="top" constant="5" id="tGG-x0-Sfe"/>
+                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="top" secondItem="t3j-vm-bja" secondAttribute="top" id="tGG-x0-Sfe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -874,7 +873,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e0Z-SG-RYH"/>
+        <segue reference="z8I-Q4-ofC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackButton" width="10.5" height="19"/>

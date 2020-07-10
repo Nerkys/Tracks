@@ -63,6 +63,7 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
             cell.maxSpeedLabel.text = String(day.maxSpeed)
             cell.distanceLabel.text = String(day.distance)
             cell.numberOfTracksLabel.text = String(day.numberOfTracks)
+            cell.selectionStyle = .none
             return cell
         }
         
