@@ -25,7 +25,7 @@ func getDataSourceInitialValue() -> [Season] {
                             [Resort(title: "Сольдэу - Эль-Тартер", days:
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                      statistics:
-                                        [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 7),
+                                        [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 70),
                                          Statistics(title: "спусков", image: "NumberOfTracks", value: 20),
                                          Statistics(title: "расстояние", image: "Distance", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTime", value: 10),

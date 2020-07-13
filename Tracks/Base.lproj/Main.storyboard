@@ -365,17 +365,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TheTripCell" id="H3u-CD-ywW" customClass="TheTripCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="232.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H3u-CD-ywW" id="101-B8-rJm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-GY-hEK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="El-Tarter" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-UV-JP0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-IE-qsk">
                                                             <rect key="frame" x="12" y="12" width="38" height="38"/>
@@ -386,11 +386,11 @@
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" image="BackButtonWhite"/>
                                                             <connections>
-                                                                <segue destination="BYZ-38-t0r" kind="show" id="z8I-Q4-ofC"/>
+                                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="z8I-Q4-ofC"/>
                                                             </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-fX-Rel">
-                                                            <rect key="frame" x="0.0" y="144.5" width="414" height="51"/>
+                                                            <rect key="frame" x="0.0" y="144" width="414" height="51"/>
                                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="51" id="JCB-bb-uDC"/>
@@ -466,7 +466,7 @@
                                                             </connections>
                                                         </collectionView>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-jO-ZZK">
-                                                            <rect key="frame" x="195.5" y="195.5" width="23" height="37"/>
+                                                            <rect key="frame" x="195.5" y="195" width="23" height="37"/>
                                                         </pageControl>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сольдэу - Эль-Тартер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-8D-GSZ">
                                                             <rect key="frame" x="118.5" y="21" width="177" height="20.5"/>
@@ -509,7 +509,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheResortHeaderCell" id="ueF-vR-4RY" customClass="TheResortHeaderCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="260.5" width="414" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="260" width="414" height="29.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueF-vR-4RY" id="nRr-iG-lu8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
@@ -547,7 +547,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResortsDayCell" id="NAt-ga-pGS" customClass="ResortsDayCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="290" width="414" height="102.5"/>
+                                        <rect key="frame" x="0.0" y="289.5" width="414" height="102.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NAt-ga-pGS" id="3if-B3-gf2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
@@ -695,10 +695,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TheDayStatisticsCell" id="k8s-3W-mig" customClass="TheDayStatisticsCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k8s-3W-mig" id="t3j-vm-bja">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-Lx-Y6p">
@@ -822,12 +822,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="nu9-Lx-Y6p" secondAttribute="trailing" id="Plt-sw-6iE"/>
                                                 <constraint firstItem="nu9-Lx-Y6p" firstAttribute="leading" secondItem="t3j-vm-bja" secondAttribute="leading" id="Psx-nw-wzI"/>
-                                                <constraint firstAttribute="bottom" secondItem="nu9-Lx-Y6p" secondAttribute="bottom" constant="6" id="lu3-uv-0k5"/>
+                                                <constraint firstAttribute="bottom" secondItem="nu9-Lx-Y6p" secondAttribute="bottom" id="lu3-uv-0k5"/>
                                                 <constraint firstItem="nu9-Lx-Y6p" firstAttribute="top" secondItem="t3j-vm-bja" secondAttribute="top" id="tGG-x0-Sfe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="WnR-D8-bZh" id="bId-cx-0wP"/>
+                                            <outlet property="lineBottomConstraint" destination="lu3-uv-0k5" id="jl1-Sy-bDf"/>
+                                            <outlet property="lineTopConstraint" destination="tGG-x0-Sfe" id="MVQ-9j-bdH"/>
                                             <outlet property="pageControl" destination="9dE-BF-ddp" id="beP-aA-ZVK"/>
                                             <outlet property="theDayCollectionView" destination="l4Y-Lp-rSs" id="713-OH-Uvz"/>
                                             <outlet property="view" destination="nu9-Lx-Y6p" id="YWl-md-x7L"/>

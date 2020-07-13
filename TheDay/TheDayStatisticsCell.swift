@@ -8,16 +8,16 @@
 
 import UIKit
 
-class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
-    
-    
-    
+class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, DayFeedItemCell {
 
+    
+    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var theDayCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var dateLabel: UILabel!
+    
     
     private var dataSource = [Statistics]()
     private var dateDataSource: Day!
@@ -62,7 +62,18 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
         cell.titleLabel?.text = statistics.title
         cell.actionImage?.image = UIImage(named: statistics.image)
-        cell.valueLabel?.text = String(statistics.value)
+        switch statistics.title {
+        case "макс. скорость":
+            cell.valueLabel?.text = String(statistics.value) + " км/ч"
+        case "расстояние":
+            cell.valueLabel?.text = String(statistics.value) + " м"
+        case "на горе":
+            cell.valueLabel?.text = String(statistics.value) + " мин"
+        case "время спуска":
+            cell.valueLabel?.text = String(statistics.value) + " мин"
+        default:
+            cell.valueLabel?.text = String(statistics.value)
+        }
         return cell
         
     }
