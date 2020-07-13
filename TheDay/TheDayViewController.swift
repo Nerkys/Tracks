@@ -59,10 +59,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
             
             cell.configure(with: day)
-            cell.dateLabel.text = day.date
+            //cell.dateLabel.text = day.date
             cell.selectionStyle = .none
-            cell.lineTopConstraint.constant = 0
-            cell.lineBottomConstraint.constant = 0
             
             return cell
             

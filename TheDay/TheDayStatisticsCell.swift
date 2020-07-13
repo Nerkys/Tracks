@@ -8,11 +8,10 @@
 
 import UIKit
 
-class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, DayFeedItemCell {
+class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     
-    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var theDayCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -25,8 +24,9 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
     private let itemsInSection: CGFloat = 3
     
     func configure(with model: Day) {
+        dateDataSource = model
         dataSource = model.statistics
-        //dateLabel?.text = dateDataSource.date
+        dateLabel?.text = dateDataSource.date
     }
     
     override func awakeFromNib() {
@@ -35,10 +35,11 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         theDayCollectionView.delegate = self
         theDayCollectionView.dataSource = self
         
+        
     }
     
     override func layoutSubviews() {
-        //view.layer.cornerRadius = 10.0
+        view.layer.cornerRadius = 10.0
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
@@ -60,17 +61,19 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheDayCollectionViewCell", for: indexPath) as! TheDayCollectionViewCell
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
+        
         cell.titleLabel?.text = statistics.title
         cell.actionImage?.image = UIImage(named: statistics.image)
+        
         switch statistics.title {
         case "макс. скорость":
-            cell.valueLabel?.text = String(statistics.value) + " км/ч"
+            cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
         case "расстояние":
-            cell.valueLabel?.text = String(statistics.value) + " м"
+            cell.valueLabel?.text = "\(String(statistics.value)) м"
         case "на горе":
-            cell.valueLabel?.text = String(statistics.value) + " мин"
+            cell.valueLabel?.text = "\(String(statistics.value)) мин"
         case "время спуска":
-            cell.valueLabel?.text = String(statistics.value) + " мин"
+            cell.valueLabel?.text = "\(String(statistics.value)) мин"
         default:
             cell.valueLabel?.text = String(statistics.value)
         }

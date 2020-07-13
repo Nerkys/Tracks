@@ -26,14 +26,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="SeasonHeaderCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SeasonHeaderCell" id="OCW-vr-2vJ" customClass="SeasonHeaderCell" customModule="Tracks">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="35"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OCW-vr-2vJ" id="tAL-tc-v4l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-H3-pkW">
-                                                    <rect key="frame" x="17" y="8" width="389" height="22"/>
+                                                    <rect key="frame" x="17" y="16" width="389" height="22"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЕЗОН 2018/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZr-IU-wdq">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
@@ -54,8 +54,8 @@
                                             <constraints>
                                                 <constraint firstItem="lhT-H3-pkW" firstAttribute="leading" secondItem="tAL-tc-v4l" secondAttribute="leading" constant="17" id="1lk-zO-D6W"/>
                                                 <constraint firstAttribute="trailing" secondItem="lhT-H3-pkW" secondAttribute="trailing" constant="8" id="AHW-BN-UQ0"/>
-                                                <constraint firstItem="lhT-H3-pkW" firstAttribute="top" secondItem="tAL-tc-v4l" secondAttribute="top" constant="8" id="GLr-vq-YdU"/>
-                                                <constraint firstAttribute="bottom" secondItem="lhT-H3-pkW" secondAttribute="bottom" constant="5" id="oqP-Gl-cPp"/>
+                                                <constraint firstItem="lhT-H3-pkW" firstAttribute="top" secondItem="tAL-tc-v4l" secondAttribute="top" constant="16" id="GLr-vq-YdU"/>
+                                                <constraint firstAttribute="bottom" secondItem="lhT-H3-pkW" secondAttribute="bottom" constant="10" id="oqP-Gl-cPp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StatisticsCell" id="Gxl-ho-4M2" customClass="StatisticsCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90.5" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="103.5" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gxl-ho-4M2" id="ESA-Aw-n4d">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -188,7 +188,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripCell" id="ciw-t3-NVj" customClass="TripCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="220.5" width="414" height="244"/>
+                                        <rect key="frame" x="0.0" y="233.5" width="414" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ciw-t3-NVj" id="v83-ty-jRI">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
@@ -695,23 +695,23 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TheDayStatisticsCell" id="k8s-3W-mig" customClass="TheDayStatisticsCell" customModule="Tracks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="119"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k8s-3W-mig" id="t3j-vm-bja">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-Lx-Y6p">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                                    <rect key="frame" x="6" y="6" width="402" height="119"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28/03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnR-D8-bZh">
-                                                            <rect key="frame" x="190" y="14" width="34" height="15.5"/>
+                                                            <rect key="frame" x="184" y="14" width="34" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l4Y-Lp-rSs">
-                                                            <rect key="frame" x="0.0" y="29.5" width="414" height="51"/>
+                                                            <rect key="frame" x="0.0" y="29.5" width="402" height="51"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="51" id="yDr-S6-7ca"/>
@@ -786,7 +786,7 @@
                                                             </connections>
                                                         </collectionView>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-BF-ddp">
-                                                            <rect key="frame" x="195.5" y="80.5" width="23" height="37.5"/>
+                                                            <rect key="frame" x="189.5" y="80.5" width="23" height="37.5"/>
                                                             <color key="pageIndicatorTintColor" red="0.9594331384" green="0.97206157449999997" blue="0.98523455859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="currentPageIndicatorTintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </pageControl>
@@ -820,16 +820,14 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="nu9-Lx-Y6p" secondAttribute="trailing" id="Plt-sw-6iE"/>
-                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="leading" secondItem="t3j-vm-bja" secondAttribute="leading" id="Psx-nw-wzI"/>
+                                                <constraint firstAttribute="trailing" secondItem="nu9-Lx-Y6p" secondAttribute="trailing" constant="6" id="Plt-sw-6iE"/>
+                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="leading" secondItem="t3j-vm-bja" secondAttribute="leading" constant="6" id="Psx-nw-wzI"/>
                                                 <constraint firstAttribute="bottom" secondItem="nu9-Lx-Y6p" secondAttribute="bottom" id="lu3-uv-0k5"/>
-                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="top" secondItem="t3j-vm-bja" secondAttribute="top" id="tGG-x0-Sfe"/>
+                                                <constraint firstItem="nu9-Lx-Y6p" firstAttribute="top" secondItem="t3j-vm-bja" secondAttribute="top" constant="6" id="tGG-x0-Sfe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="WnR-D8-bZh" id="bId-cx-0wP"/>
-                                            <outlet property="lineBottomConstraint" destination="lu3-uv-0k5" id="jl1-Sy-bDf"/>
-                                            <outlet property="lineTopConstraint" destination="tGG-x0-Sfe" id="MVQ-9j-bdH"/>
                                             <outlet property="pageControl" destination="9dE-BF-ddp" id="beP-aA-ZVK"/>
                                             <outlet property="theDayCollectionView" destination="l4Y-Lp-rSs" id="713-OH-Uvz"/>
                                             <outlet property="view" destination="nu9-Lx-Y6p" id="YWl-md-x7L"/>
