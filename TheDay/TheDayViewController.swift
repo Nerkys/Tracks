@@ -27,8 +27,9 @@ class TheDayViewController: UIViewController {
             //dataSource = getDataSourceInitialValue()
         theDayTableView.delegate = self
         theDayTableView.dataSource = self
-            
+        theDayTableView.tableFooterView = UIView(frame: .zero)
         theDayTableView.rowHeight = UITableView.automaticDimension
+        
         theDayTableView.separatorStyle = .none
         
             
@@ -56,11 +57,13 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
+            
             cell.configure(with: day)
             cell.dateLabel.text = day.date
             cell.selectionStyle = .none
             cell.lineTopConstraint.constant = 0
-            cell.lineBottomConstraint.constant = 10
+            cell.lineBottomConstraint.constant = 0
+            
             return cell
             
             
@@ -76,6 +79,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
                 (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
             case .enterLeftResort(let title, let resortName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell
+                (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 12 : 6
                 (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
                 (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
             case .track(let difficultyImageName):
@@ -83,8 +87,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
                 (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
             }
             
-            cell.lineTopConstraint.constant = indexPath.row == 1 ? -20 : -20
-            cell.lineBottomConstraint.constant = day.feedItems.count == (indexPath.row) ? 24 : -10
+            cell.lineTopConstraint.constant = indexPath.row == 1 ? -12 : -12
+            cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 24 : 0
             
             return cell
         }
