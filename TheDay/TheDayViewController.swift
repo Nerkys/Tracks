@@ -95,6 +95,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             //cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : 0
             
             return cell
+            
         }
     }
     
