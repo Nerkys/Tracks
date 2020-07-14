@@ -66,8 +66,6 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
                                          Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
-                                        DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
-                                        "Шерегеш")),
                                         DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
                                         DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
                                         DayFeedItem(title: "Отдых", type: .rest),
@@ -90,7 +88,7 @@ func getDataSourceInitialValue() -> [Season] {
                                         DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
                                         DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
                                         DayFeedItem(title: "Отдых", type: .rest),
-                                        DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))]),
+                                        ]),
                                  Day(date: "15.02.2020", maxSpeed: 100, distance: 600, numberOfTracks: 5,
                                     statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),

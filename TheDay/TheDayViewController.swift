@@ -86,11 +86,11 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
                 (cell as? DayFeedTrackCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
-                               if indexPath.row == day.feedItems.count { (cell as? DayFeedLiftCell)?.viewTopConstraint.constant = 12}
+                if indexPath.row == day.feedItems.count { (cell as? DayFeedLiftCell)?.viewTopConstraint.constant = 12}
                 (cell as? DayFeedTrackCell)?.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             }
             
-//            cell.lineTopConstraint.constant = indexPath.row == 1 ? -12 : -12
+            cell.lineTopConstraint.constant = indexPath.row == 1 ? -12 : -12
             //cell.lineTopConstraint.constant = indexPath.row == day.feedItems.count ? -14 : -12
             cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : 0
             
