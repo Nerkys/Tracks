@@ -69,11 +69,11 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             switch item.type {
             case .rest:
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 55 : 0
+                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
             case .lift(let liftName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
-                (cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 45 : 0
+                (cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
             case .enterLeftResort(let title, let resortName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
@@ -83,7 +83,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             case .track(let difficultyImageName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
-                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 40 : 0
+                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
 
             }
             
