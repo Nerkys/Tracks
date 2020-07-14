@@ -34,7 +34,9 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var view: UIView!
-
+    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -51,7 +53,9 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -71,6 +75,7 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
@@ -88,6 +93,8 @@ class DayFeedTrackCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var difficultyImage: UIImageView!
+    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0

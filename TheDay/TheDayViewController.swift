@@ -66,21 +66,33 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             switch item.type {
             case .rest:
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
+                (cell as? DayFeedFullRestCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+                if indexPath.row == day.feedItems.count { (cell as? DayFeedFullRestCell)?.viewTopConstraint.constant = 12}
+                (cell as? DayFeedFullRestCell)?.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             case .lift(let liftName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
+                (cell as? DayFeedLiftCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+                if indexPath.row == day.feedItems.count { (cell as? DayFeedLiftCell)?.viewTopConstraint.constant = 12}
+                (cell as? DayFeedLiftCell)?.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             case .enterLeftResort(let title, let resortName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
                 (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
                 (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
+                (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+                if indexPath.row == day.feedItems.count { (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = 12}
+                (cell as? DayFeedEnterLeftResortCell)?.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             case .track(let difficultyImageName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
+                (cell as? DayFeedTrackCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+                               if indexPath.row == day.feedItems.count { (cell as? DayFeedLiftCell)?.viewTopConstraint.constant = 12}
+                (cell as? DayFeedTrackCell)?.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             }
             
-            cell.lineTopConstraint.constant = indexPath.row == 1 ? -12 : -12
-            cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 24 : 0
+//            cell.lineTopConstraint.constant = indexPath.row == 1 ? -12 : -12
+            //cell.lineTopConstraint.constant = indexPath.row == day.feedItems.count ? -14 : -12
+            cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : 0
             
             return cell
         }
