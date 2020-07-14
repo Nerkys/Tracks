@@ -40,7 +40,10 @@ class TheDayViewController: UIViewController {
         let dayFeedTrackCellNib = UINib(nibName: String(describing: DayFeedTrackCell.self), bundle: nil)
         theDayTableView.register(dayFeedTrackCellNib, forCellReuseIdentifier: String(describing: DayFeedTrackCell.self))
         
+        
+        
     }
+    //var selectedIndex: IndexPath = IndexPath(row: 2, section: 0)
 }
 
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
@@ -94,6 +97,22 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row != 0 {
+//            if selectedIndex == indexPath { return 200 }
+//            return 76
+//        } else {
+//            return 125
+//
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.beginUpdates()
+//        tableView.reloadRows(at: [selectedIndex], with: .none)
+//        tableView.endUpdates()
+//    }
 }
 
     
