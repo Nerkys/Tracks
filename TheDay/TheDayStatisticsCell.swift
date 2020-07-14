@@ -51,7 +51,7 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return dataSource.count / Int(itemsInSection)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

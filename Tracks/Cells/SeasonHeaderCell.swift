@@ -13,5 +13,4 @@ class SeasonHeaderCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var view: UIView!
     
-    
 }

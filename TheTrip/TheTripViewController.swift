@@ -15,7 +15,7 @@ class TheTripViewController: UIViewController {
     @IBOutlet weak var theTripTableView: UITableView!
     
     var trip: Trip!
-    weak var delegate: TheTripViewController?
+    //weak var delegate: TheTripViewController?
     //var dataSource = [Season]()
     
     override func viewDidLoad() {
@@ -51,19 +51,20 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
-    //        cell.configure(with: trip.statistics)
+            
             cell.configure(with: trip)
-    //        cell.tripImage.image = UIImage(named: trip.image)
-        
+
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResortsDayCell", for: indexPath) as! ResortsDayCell
             let day = trip.resorts[indexPath.section - 1].days[indexPath.row]
+            
             cell.titleLabel.text = day.date
-            cell.maxSpeedLabel.text = String(day.maxSpeed)
-            cell.distanceLabel.text = String(day.distance)
+            cell.maxSpeedLabel.text = "\(String(day.maxSpeed)) км/ч"
+            cell.distanceLabel.text = "\(String(day.distance)) м"
             cell.numberOfTracksLabel.text = String(day.numberOfTracks)
             cell.selectionStyle = .none
+            
             return cell
         }
         
@@ -72,7 +73,7 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if  section == 0 {
             return nil
-        }   else {
+        } else {
             let header = tableView.dequeueReusableCell(withIdentifier: "TheResortHeaderCell") as! TheResortHeaderCell
 
             header.titleLabel.text = trip.resorts[section - 1].title
@@ -96,6 +97,7 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
             let selectedDay = trip.resorts[indexPath.section - 1].days[indexPath.row]
             
             let theDayViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheDayViewController") as! TheDayViewController
+            
             theDayViewController.day = selectedDay
             //theTripViewController.delegate = self
             

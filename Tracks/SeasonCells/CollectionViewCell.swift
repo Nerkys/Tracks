@@ -16,15 +16,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var actionImage: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
     
-
-    //    static func nib() -> UINib {
-//        return UINib(nibName: "CollectionViewCell", bundle: nil)
-//    }
-//    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-
 }
 
 

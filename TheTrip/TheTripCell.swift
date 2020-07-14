@@ -52,7 +52,7 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return dataSource.count / Int(itemsInSection)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,9 +62,23 @@ class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheTripCollectionViewCell", for: indexPath) as! TheTripCollectionViewCell
         let statistics = dataSource[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
+        
         cell.titleLabel.text = statistics.title
         cell.actionImage.image = UIImage(named: statistics.image)
-        cell.valueLabel.text = String(statistics.value)
+        
+        switch statistics.title {
+        case "макс. скорость":
+            cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
+        case "расстояние":
+            cell.valueLabel?.text = "\(String(statistics.value)) м"
+        case "на горе":
+            cell.valueLabel?.text = "\(String(statistics.value)) мин"
+        case "время спуска":
+            cell.valueLabel?.text = "\(String(statistics.value)) мин"
+        default:
+            cell.valueLabel?.text = String(statistics.value)
+        }
+        
         return cell
     }
     

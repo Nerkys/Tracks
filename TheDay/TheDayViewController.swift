@@ -13,7 +13,7 @@ class TheDayViewController: UIViewController {
     @IBOutlet var theDayTableView: UITableView!
     
     var day: Day!
-    weak var delegate: TheDayViewController?
+    //weak var delegate: TheDayViewController?
     @IBAction func backButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: false)
     }
@@ -21,10 +21,6 @@ class TheDayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-    //        if #available(iOS 13.0, *) {
-    //            self.overrideUserInterfaceStyle = .light
-    //        }
-            //dataSource = getDataSourceInitialValue()
         theDayTableView.delegate = self
         theDayTableView.dataSource = self
         theDayTableView.tableFooterView = UIView(frame: .zero)
@@ -50,7 +46,6 @@ class TheDayViewController: UIViewController {
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //day.feedItems.count
         return day.feedItems.count + 1
     }
 
@@ -59,7 +54,6 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = theDayTableView.dequeueReusableCell(withIdentifier: "TheDayStatisticsCell", for: indexPath) as! TheDayStatisticsCell
             
             cell.configure(with: day)
-            //cell.dateLabel.text = day.date
             cell.selectionStyle = .none
             
             return cell
@@ -77,7 +71,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
                 (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
             case .enterLeftResort(let title, let resortName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 12 : 6
+                (cell as? DayFeedEnterLeftResortCell)?.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
                 (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
                 (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
             case .track(let difficultyImageName):

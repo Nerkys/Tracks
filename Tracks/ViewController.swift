@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         dataSource = getDataSourceInitialValue()
         
         seasonTableView.rowHeight = UITableView.automaticDimension
-        //seasonTableView.tableFooterView = UIView(frame: .zero)
+        seasonTableView.tableFooterView = UIView(frame: .zero)
         //seasonTableView.reloadData()
         
         //tableViewConfig()
@@ -54,17 +54,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
             
-//            cell.configure(with: dataSource2)
             cell.configure(with: dataSource[indexPath.section].statistics)
-            
-//            let maxSpeed = String(dataSource[indexPath.section].maxSpeed)
-//            let distance = String(dataSource[indexPath.section].distance)
-//            let numberOfTracks = String(dataSource[indexPath.section].numberOfTracks)
-            
-            
-//            cell.maxSpeedLabel?.text = maxSpeed
-//            cell.distanceLabel?.text = distance
-//            cell.numberOfTracksLabel?.text = numberOfTracks
             cell.selectionStyle = .none
             
             return cell
@@ -77,7 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.tripImage?.image = UIImage(named: trip.image)
             cell.numberOfActiveDaysLabel?.text = String(trip.numberOfActiveDays)
             cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
-            cell.distanceLabel?.text = String(trip.distance)
+            cell.distanceLabel?.text = "\(String(trip.distance)) м"
             
             return cell
         }

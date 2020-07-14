@@ -12,9 +12,6 @@ struct Season {
     let title: String
     let trip: [Trip]
     let statistics: [Statistics]
-//    let maxSpeed : Int
-//    let distance: Int
-//    let numberOfTracks: Int
 }
 
 struct Trip {
