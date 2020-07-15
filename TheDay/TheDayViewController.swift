@@ -13,6 +13,8 @@ class TheDayViewController: UIViewController {
     @IBOutlet var theDayTableView: UITableView!
     
     var day: Day!
+    var selectedIndexArray: [Int] = []
+    var selectedIndex = -1
     //weak var delegate: TheDayViewController?
     @IBAction func backButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: false)
@@ -88,6 +90,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+            //cell.viewBottomConstraint.constant = indexPath.row == 1 ? 0 : 6
             if indexPath.row == day.feedItems.count { cell.viewTopConstraint.constant = 12}
             cell.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             
@@ -98,7 +101,67 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row != 0 {
+            if selectedIndexArray.contains(indexPath.row) {
+                return 95
+            } else {
+                return 55
+            }
+        } else {
+            return 125
+
+        }
+//            let cell = tableView.cellForRow(at: indexPath) as! TheDayStatisticsCell
+//            let height = cell.frame.height
+//            return CGFloat(height)
+
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //tableView.deselectRow(at: indexPath, animated: true)
+            
+        selectedIndex = indexPath.row
+        if selectedIndexArray.contains(selectedIndex) {
+            selectedIndexArray.removeAll {
+                $0 == selectedIndex
+            }
+    //            if let index = selectedIndexArray.firstIndex(of: selectedIndex) {
+    //                selectedIndexArray.remove(at: index)
+    //            }
+        } else {
+            selectedIndexArray.append(selectedIndex)
+        }
+        
+//        tableView.beginUpdates()
+//        tableView.endUpdates()
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        
+           
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//        UIView.animate(withDuration: 1.5) {
+//            tableView.reloadData()
+//        }
+        
+//        let transition = CATransition()
+//        transition.type = CATransitionType.push
+//        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+//        transition.fillMode = CAMediaTimingFillMode.forwards
+//        transition.duration = 0.5
+//        transition.subtype = CATransitionSubtype.fromTop
+//        tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
+//        tableView.reloadData()
+        
+//        UIView.transition(with: tableView,
+//                          duration: 0.8,
+//                          options: .transitionCrossDissolve,
+//        animations: { tableView.reloadData() })
+        
+        
+           
+        
+    }
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if indexPath.row != 0 {
 //            if selectedIndex == indexPath { return 200 }
