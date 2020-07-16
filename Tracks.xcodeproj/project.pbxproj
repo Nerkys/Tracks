@@ -78,9 +78,9 @@
 		690F6DF724A34CEF009BD28D /* SeasonCells */ = {
 			isa = PBXGroup;
 			children = (
-				691B38F924C074C0005820D2 /* StatisticsCell */,
 				690F6DF824A34D5B009BD28D /* TripCell.swift */,
 				69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */,
+				691B38F924C074C0005820D2 /* StatisticsCell */,
 			);
 			path = SeasonCells;
 			sourceTree = "<group>";
@@ -89,13 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				6910BA9B24B43A1700F27E1B /* TheTripViewController.swift */,
-				6910BA9D24B443E900F27E1B /* TheTripCell.swift */,
-				6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */,
 				694AD75524B71920007783E7 /* TheResortHeaderCell.swift */,
 				694AD75724B72E5F007783E7 /* ResortsDayCell.swift */,
+				69B66D6024C0781600C8A529 /* TheTripStatisticsCell */,
 			);
-			name = TheTrip;
-			path = TheDay/TheTrip;
+			path = TheTrip;
 			sourceTree = "<group>";
 		};
 		691B38F924C074C0005820D2 /* StatisticsCell */ = {
@@ -159,6 +157,15 @@
 				694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */,
 			);
 			path = TheDay;
+			sourceTree = "<group>";
+		};
+		69B66D6024C0781600C8A529 /* TheTripStatisticsCell */ = {
+			isa = PBXGroup;
+			children = (
+				6910BA9D24B443E900F27E1B /* TheTripCell.swift */,
+				6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */,
+			);
+			path = TheTripStatisticsCell;
 			sourceTree = "<group>";
 		};
 		69B95A0424BC23B800A0CBBB /* DayFeedCells */ = {
