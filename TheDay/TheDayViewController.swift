@@ -69,10 +69,6 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             var cell: DayFeedItemCell!
             let item = day.feedItems[indexPath.row - 1]
             
-            
-            
-            
-            
             switch item.type {
             case .rest:
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
@@ -104,8 +100,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             
             cell.viewTopConstraint.constant = indexPath.row == 1 ? 8 : 6
             //cell.viewBottomConstraint.constant = indexPath.row == 1 ? 0 : 6
-            if indexPath.row == day.feedItems.count { cell.viewTopConstraint.constant = 12}
-            cell.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
+            //if indexPath.row == day.feedItems.count { cell.viewTopConstraint.constant = 12}
+            //cell.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
             cell.lineTopConstraint.constant = indexPath.row == 1 ? -14 : -20
             
             cell.selectionStyle = .none
@@ -116,11 +112,12 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         }
+        
     }
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row != 0 {
+        if indexPath.row != 0 && indexPath.row != 1 && indexPath.row != day.feedItems.count {
             if selectedIndexArray.contains(indexPath.row) {
                 return theDayTableView.rowHeight
             } else {
@@ -153,7 +150,11 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 //                            duration: 0.3,
 //                            options: .transitionCurlDown,
 //            animations: { tableView.reloadData() })
-            //tableView.reloadRows(at: [indexPath], with: .fade)
+            tableView.reloadRows(at: [indexPath], with: .fade)
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            //tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            //tableView.scrollToRow(at: indexPath, at: .none, animated:   true)
             
 //            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: { () -> Void in
 //                tableView.beginUpdates()

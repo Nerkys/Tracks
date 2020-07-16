@@ -45,7 +45,8 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
+        //view.layer.zPosition = 1
     }
 }
 
@@ -64,7 +65,7 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
     }
 }
 
@@ -78,7 +79,7 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var heightOfCell: NSLayoutConstraint!
+    
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0
@@ -86,7 +87,8 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
+        layer.zPosition = 2
     }
 }
 
@@ -105,6 +107,6 @@ class DayFeedTrackCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
     }
 }

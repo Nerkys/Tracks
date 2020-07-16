@@ -42,6 +42,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="7Mp-lf-4jH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="GWF-nC-xVx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="ZDD-Tx-hi1"/>
                                     <constraint firstAttribute="width" constant="24" id="jiJ-mA-mjN"/>
                                 </constraints>
                             </imageView>

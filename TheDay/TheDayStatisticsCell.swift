@@ -44,9 +44,9 @@ class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollect
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
 
-        //layer.zPosition = 1
+        layer.zPosition = 1
     }
     
     
