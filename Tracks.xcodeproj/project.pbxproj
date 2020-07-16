@@ -60,7 +60,7 @@
 		69B95A0924BC245E00A0CBBB /* DayFeedLiftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedLiftCell.xib; sourceTree = "<group>"; };
 		69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedEnterLeftResortCell.xib; sourceTree = "<group>"; };
 		69B95A0D24BC247000A0CBBB /* DayFeedTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedTrackCell.xib; sourceTree = "<group>"; };
-		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/Cells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/SeasonCells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
