@@ -27,6 +27,7 @@ class TheDayViewController: UIViewController {
         theDayTableView.dataSource = self
         theDayTableView.tableFooterView = UIView(frame: .zero)
         theDayTableView.rowHeight = UITableView.automaticDimension
+        theDayTableView.estimatedRowHeight = 90
         
         theDayTableView.separatorStyle = .none
         
@@ -68,48 +69,65 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             var cell: DayFeedItemCell!
             let item = day.feedItems[indexPath.row - 1]
             
+            
+            
+            
+            
             switch item.type {
             case .rest:
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
+                //(cell as? DayFeedFullRestCell)?.selectionStyle = .none
+                
             case .lift(let liftName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
-                (cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                (cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
+                //(cell as? DayFeedLiftCell)?.selectionStyle = .none
+                
             case .enterLeftResort(let title, let resortName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
                 (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
-                (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : 0
+                (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : -20
+                //(cell as? DayFeedEnterLeftResortCell)?.selectionStyle = .none
+                //(cell as? DayFeedEnterLeftResortCell)?.heightOfCell.constant = 63
+                
 
             case .track(let difficultyImageName):
                 cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell
                 (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
-                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
+                //(cell as? DayFeedTrackCell)?.selectionStyle = .none
 
             }
             
-            cell.viewTopConstraint.constant = indexPath.row == 1 ? 14 : 6
+            cell.viewTopConstraint.constant = indexPath.row == 1 ? 8 : 6
             //cell.viewBottomConstraint.constant = indexPath.row == 1 ? 0 : 6
             if indexPath.row == day.feedItems.count { cell.viewTopConstraint.constant = 12}
             cell.viewBottomConstraint.constant = indexPath.row == day.feedItems.count - 1 ? 0 : 6
+            cell.lineTopConstraint.constant = indexPath.row == 1 ? -14 : -20
             
-            cell.lineTopConstraint.constant = indexPath.row == 1 ? -14 : -12
+            cell.selectionStyle = .none
+            
+            
             //cell.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : 0
             
             return cell
             
         }
     }
+
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row != 0 {
             if selectedIndexArray.contains(indexPath.row) {
-                return 95
+                return theDayTableView.rowHeight
             } else {
                 return 55
             }
         } else {
-            return 125
+            return theDayTableView.rowHeight
 
         }
 //            let cell = tableView.cellForRow(at: indexPath) as! TheDayStatisticsCell
@@ -119,27 +137,46 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //tableView.deselectRow(at: indexPath, animated: true)
-            
-        selectedIndex = indexPath.row
-        if selectedIndexArray.contains(selectedIndex) {
-            selectedIndexArray.removeAll {
-                $0 == selectedIndex
+        //tableView.deselectRow(at: indexPath, animated: false)
+        let dayFeedEnterLeftResortCell = tableView.cellForRow(at: indexPath) as? DayFeedEnterLeftResortCell
+        if tableView.cellForRow(at: indexPath) != dayFeedEnterLeftResortCell {
+            selectedIndex = indexPath.row
+            if selectedIndexArray.contains(selectedIndex) {
+                selectedIndexArray.removeAll {
+                    $0 == selectedIndex
+                }
+            } else {
+                selectedIndexArray.append(selectedIndex)
             }
-    //            if let index = selectedIndexArray.firstIndex(of: selectedIndex) {
-    //                selectedIndexArray.remove(at: index)
-    //            }
-        } else {
-            selectedIndexArray.append(selectedIndex)
+            
+//            UIView.transition(with: tableView,
+//                            duration: 0.3,
+//                            options: .transitionCurlDown,
+//            animations: { tableView.reloadData() })
+            //tableView.reloadRows(at: [indexPath], with: .fade)
+            
+//            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: { () -> Void in
+//                tableView.beginUpdates()
+//                tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+//                tableView.endUpdates()
+//            }, completion: nil)
+            
+                
         }
         
+
+        //UIView.setAnimationsEnabled(false)
 //        tableView.beginUpdates()
 //        tableView.endUpdates()
+        //tableView.reloadRows(at: [indexPath], with: .fade)
+        //tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+//        UIView.performWithoutAnimation {
+//              tableView.reloadRows(at: [indexPath], with: .none)
+//        }
+        //UIView.setAnimationsEnabled(true)
+
         
-        tableView.reloadRows(at: [indexPath], with: .automatic)
         
-           
-//            tableView.reloadRows(at: [indexPath], with: .automatic)
 //        UIView.animate(withDuration: 1.5) {
 //            tableView.reloadData()
 //        }

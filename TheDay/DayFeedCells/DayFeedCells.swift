@@ -78,6 +78,7 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightOfCell: NSLayoutConstraint!
     
     override func layoutSubviews() {
         view.layer.cornerRadius = 10.0

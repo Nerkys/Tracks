@@ -17,7 +17,7 @@
         <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayFeedEnterLeftResortCell" id="lSs-kF-6Kt" customClass="DayFeedEnterLeftResortCell" customModule="Tracks" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lSs-kF-6Kt" id="rtf-mD-srz">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lSs-kF-6Kt" id="rtf-mD-srz">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -75,6 +75,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2qM-vT-7Nt" secondAttribute="bottom" constant="6" id="7C7-4n-pGr"/>
                     <constraint firstAttribute="trailing" secondItem="2qM-vT-7Nt" secondAttribute="trailing" constant="12" id="I3c-5t-HZ0"/>
