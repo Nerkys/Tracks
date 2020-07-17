@@ -14,6 +14,9 @@ class TheTripViewController: UIViewController {
     
     @IBOutlet weak var theTripTableView: UITableView!
     
+    @IBAction func backButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     var trip: Trip!
     //weak var delegate: TheTripViewController?
     //var dataSource = [Season]()

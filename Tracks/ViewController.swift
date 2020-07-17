@@ -68,6 +68,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.numberOfActiveDaysLabel?.text = String(trip.numberOfActiveDays)
             cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
             cell.distanceLabel?.text = "\(String(trip.distance)) м"
+            cell.selectionStyle = .none
             
             return cell
         }

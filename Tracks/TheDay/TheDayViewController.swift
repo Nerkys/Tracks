@@ -17,7 +17,7 @@ class TheDayViewController: UIViewController {
     var selectedIndex = -1
     //weak var delegate: TheDayViewController?
     @IBAction func backButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
