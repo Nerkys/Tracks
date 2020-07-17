@@ -60,7 +60,7 @@
 		69B95A0924BC245E00A0CBBB /* DayFeedLiftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedLiftCell.xib; sourceTree = "<group>"; };
 		69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedEnterLeftResortCell.xib; sourceTree = "<group>"; };
 		69B95A0D24BC247000A0CBBB /* DayFeedTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedTrackCell.xib; sourceTree = "<group>"; };
-		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/Cells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/SeasonCells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,8 +83,7 @@
 				690F6DF824A34D5B009BD28D /* TripCell.swift */,
 				69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */,
 			);
-			name = SeasonCells;
-			path = Tracks/SeasonCells;
+			path = SeasonCells;
 			sourceTree = "<group>";
 		};
 		6910BA9A24B439C900F27E1B /* TheTrip */ = {
@@ -102,10 +101,6 @@
 		6924E03624A1BD23001CDBB7 = {
 			isa = PBXGroup;
 			children = (
-				694AD75924B81746007783E7 /* TheDay */,
-				6910BA9A24B439C900F27E1B /* TheTrip */,
-				690F6DF724A34CEF009BD28D /* SeasonCells */,
-				6924E05624A1C0AD001CDBB7 /* Model */,
 				6924E04124A1BD23001CDBB7 /* Tracks */,
 				6924E04024A1BD23001CDBB7 /* Products */,
 			);
@@ -122,10 +117,14 @@
 		6924E04124A1BD23001CDBB7 /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
-				6924E04224A1BD23001CDBB7 /* AppDelegate.swift */,
-				6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */,
 				6924E04624A1BD23001CDBB7 /* ViewController.swift */,
 				6924E04824A1BD23001CDBB7 /* Main.storyboard */,
+				690F6DF724A34CEF009BD28D /* SeasonCells */,
+				6924E05624A1C0AD001CDBB7 /* Model */,
+				694AD75924B81746007783E7 /* TheDay */,
+				6910BA9A24B439C900F27E1B /* TheTrip */,
+				6924E04224A1BD23001CDBB7 /* AppDelegate.swift */,
+				6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */,
 				6924E04B24A1BD26001CDBB7 /* Assets.xcassets */,
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
@@ -139,8 +138,7 @@
 				6924E05724A1C18B001CDBB7 /* Models.swift */,
 				6924E06524A21D8C001CDBB7 /* DataSource.swift */,
 			);
-			name = Model;
-			path = tracks/Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		694AD75924B81746007783E7 /* TheDay */ = {
