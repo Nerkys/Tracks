@@ -151,15 +151,15 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 //                            options: .transitionCurlDown,
 //            animations: { tableView.reloadData() })
             tableView.reloadRows(at: [indexPath], with: .fade)
-            tableView.beginUpdates()
-            tableView.endUpdates()
+//            tableView.beginUpdates()
+//            tableView.endUpdates()
             //tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
             //tableView.scrollToRow(at: indexPath, at: .none, animated:   true)
             
-//            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: { () -> Void in
-//                tableView.beginUpdates()
+//            UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseIn, animations: { () -> Void in
+//                //tableView.beginUpdates()
 //                tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
-//                tableView.endUpdates()
+//                //tableView.endUpdates()
 //            }, completion: nil)
             
                 

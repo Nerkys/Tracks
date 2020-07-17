@@ -96,7 +96,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             theTripViewController.trip = selectedTrip
             //theTripViewController.delegate = self
             
-            self.navigationController?.pushViewController(theTripViewController, animated: false)
+            self.navigationController?.pushViewController(theTripViewController, animated: true)
         }
     }
     
