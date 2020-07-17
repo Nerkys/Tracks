@@ -1,5 +1,5 @@
 //
-//  TheTripCell.swift
+//  TheTripStatisticsCell.swift
 //  Tracks
 //
 //  Created by Mikhail Chukhvantsev on 07.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TheTripCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     
     @IBOutlet weak var view: UIView!

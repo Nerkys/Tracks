@@ -50,7 +50,7 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripCell", for: indexPath) as! TheTripCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TheTripStatisticsCell", for: indexPath) as! TheTripStatisticsCell
             
             cell.configure(with: trip)
 
