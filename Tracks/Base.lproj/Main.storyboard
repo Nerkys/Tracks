@@ -686,7 +686,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAb-XI-THU">
-                                <rect key="frame" x="25" y="44" width="2" height="816"/>
+                                <rect key="frame" x="25" y="50" width="2" height="806"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="Dfx-S7-57Q"/>
@@ -839,12 +839,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pDU-SE-45a" firstAttribute="bottom" secondItem="0NJ-hd-FkG" secondAttribute="bottom" id="0Te-tu-H7w"/>
-                            <constraint firstItem="pDU-SE-45a" firstAttribute="bottom" secondItem="oAb-XI-THU" secondAttribute="bottom" constant="2" id="8xF-eS-UFe"/>
+                            <constraint firstItem="pDU-SE-45a" firstAttribute="bottom" secondItem="oAb-XI-THU" secondAttribute="bottom" constant="6" id="8xF-eS-UFe"/>
                             <constraint firstItem="0NJ-hd-FkG" firstAttribute="leading" secondItem="pDU-SE-45a" secondAttribute="leading" id="MUJ-QS-kw3"/>
                             <constraint firstItem="oAb-XI-THU" firstAttribute="leading" secondItem="pDU-SE-45a" secondAttribute="leading" constant="25" id="YBT-tP-vu4"/>
                             <constraint firstItem="0NJ-hd-FkG" firstAttribute="top" secondItem="pDU-SE-45a" secondAttribute="top" id="ay0-Cj-Dwt"/>
                             <constraint firstItem="pDU-SE-45a" firstAttribute="trailing" secondItem="0NJ-hd-FkG" secondAttribute="trailing" id="vXz-Z8-M2C"/>
-                            <constraint firstItem="oAb-XI-THU" firstAttribute="top" secondItem="pDU-SE-45a" secondAttribute="top" id="yCT-Fz-EsY"/>
+                            <constraint firstItem="oAb-XI-THU" firstAttribute="top" secondItem="pDU-SE-45a" secondAttribute="top" constant="6" id="yCT-Fz-EsY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pDU-SE-45a"/>
                     </view>

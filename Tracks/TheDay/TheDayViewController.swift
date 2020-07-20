@@ -34,8 +34,8 @@ class TheDayViewController: UIViewController {
             
         self.hideNavigationBar()
         
-        let dayFeedFullRestCellNib = UINib(nibName: String(describing: DayFeedFullRestCell.self), bundle: nil)
-        theDayTableView.register(dayFeedFullRestCellNib, forCellReuseIdentifier: String(describing: DayFeedFullRestCell.self))
+        let dayFeedFullRestCellNib = UINib(nibName: String(describing: DayFeedFullRestCell2.self), bundle: nil)
+        theDayTableView.register(dayFeedFullRestCellNib, forCellReuseIdentifier: String(describing: DayFeedFullRestCell2.self))
         let dayFeedLiftCellNib = UINib(nibName: String(describing: DayFeedLiftCell.self), bundle: nil)
         theDayTableView.register(dayFeedLiftCellNib, forCellReuseIdentifier: String(describing: DayFeedLiftCell.self))
         let dayFeedEnterLeftResortCellNib = UINib(nibName: String(describing: DayFeedEnterLeftResortCell.self), bundle: nil)
@@ -66,39 +66,39 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             
             
         } else {
-            var cell: UITableViewCell
-            //let item = day.feedItems[indexPath.row - 1]
+            var cell: DayFeedItemCell!
+            let item = day.feedItems[indexPath.row - 1]
             
-            cell = theDayTableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as! DayFeedLiftCell
+//            cell = theDayTableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as! DayFeedLiftCell
             
-//            switch item.type {
-//            case .rest:
-//                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell)!
-//                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
-//                //(cell as? DayFeedFullRestCell)?.selectionStyle = .none
-//
-//            case .lift( _):
-//                cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
-//                //(cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
-//                //(cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
-//                //(cell as? DayFeedLiftCell)?.selectionStyle = .none
-//
-//            case .enterLeftResort(let title, let resortName):
-//                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell)!
-//                (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
-//                (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
-//                (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 29 : -20
-//                //(cell as? DayFeedEnterLeftResortCell)?.selectionStyle = .none
-//                //(cell as? DayFeedEnterLeftResortCell)?.heightOfCell.constant = 63
-//
-//
-//            case .track(let difficultyImageName):
-//                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell)!
-//                (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
-//                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : -20
-//                //(cell as? DayFeedTrackCell)?.selectionStyle = .none
-//
-//            }
+            switch item.type {
+            case .rest:
+                cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell2.self), for: indexPath) as? DayFeedItemCell
+                (cell as? DayFeedFullRestCell2)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                //(cell as? DayFeedFullRestCell)?.selectionStyle = .none
+
+            case .lift(let liftName):
+                cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
+                (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
+                (cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                //(cell as? DayFeedLiftCell)?.selectionStyle = .none
+
+            case .enterLeftResort(let title, let resortName):
+                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell)!
+                (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
+                (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
+                (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 30 : 0
+                //(cell as? DayFeedEnterLeftResortCell)?.selectionStyle = .none
+                //(cell as? DayFeedEnterLeftResortCell)?.heightOfCell.constant = 63
+
+
+            case .track(let difficultyImageName):
+                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell)!
+                (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
+                (cell as? DayFeedTrackCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                //(cell as? DayFeedTrackCell)?.selectionStyle = .none
+
+            }
             
             //cell.viewTopConstraint.constant = indexPath.row == 1 ? 8 : 6
             //cell.viewBottomConstraint.constant = indexPath.row == 1 ? 0 : 6
@@ -173,20 +173,22 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 //
 //    }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? DayFeedLiftCell {
-            
-            UIView.animate(withDuration: 0.3) {
-                cell.bottomView.isHidden = !cell.bottomView.isHidden
-            }
-            
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            
-            //tableView.deselectRow(at: indexPath, animated: false)
-        }
-    }
+ ////////////////////////////////////////////////
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let dayFeedLiftCell = tableView.cellForRow(at: indexPath) as? DayFeedLiftCell
+//        let dayFeedRestCell = tableView.cellForRow(at: indexPath) as? DayFeedFullRestCell2
+//        if let cell = tableView.cellForRow(at: indexPath) as? DayFeedLiftCell ||  {
+//
+//            UIView.animate(withDuration: 0.3) {
+//                cell.bottomView.isHidden = !cell.bottomView.isHidden
+//            }
+//
+//            tableView.beginUpdates()
+//            tableView.endUpdates()
+//
+//            //tableView.deselectRow(at: indexPath, animated: false)
+//        }
+//    }
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if indexPath.row != 0 {
 //            if selectedIndex == indexPath { return 200 }
