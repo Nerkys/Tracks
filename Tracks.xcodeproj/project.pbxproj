@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690408B224C55FBF006C7D5C /* UIControlClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690408B124C55FBF006C7D5C /* UIControlClosure.swift */; };
 		690F6DF924A34D5C009BD28D /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F6DF824A34D5B009BD28D /* TripCell.swift */; };
 		690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690F6DFA24A35D83009BD28D /* StatisticsCell.swift */; };
 		6910BA9C24B43A1700F27E1B /* TheTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6910BA9B24B43A1700F27E1B /* TheTripViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690408B124C55FBF006C7D5C /* UIControlClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlClosure.swift; sourceTree = "<group>"; };
 		690F6DF824A34D5B009BD28D /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
 		690F6DFA24A35D83009BD28D /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		6910BA9B24B43A1700F27E1B /* TheTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6924E04B24A1BD26001CDBB7 /* Assets.xcassets */,
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
+				690408B124C55FBF006C7D5C /* UIControlClosure.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */,
 				690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */,
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
+				690408B224C55FBF006C7D5C /* UIControlClosure.swift in Sources */,
 				694AD75824B72E5F007783E7 /* ResortsDayCell.swift in Sources */,
 				6975CAD324B4776B00FBBAA1 /* TheTripCollectionViewCell.swift in Sources */,
 				69B95A0624BC240000A0CBBB /* DayFeedCells.swift in Sources */,
