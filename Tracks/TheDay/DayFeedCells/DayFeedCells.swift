@@ -15,6 +15,10 @@ protocol DayFeedItemCell: UITableViewCell {
     //var viewBottomConstraint: NSLayoutConstraint! { get set }
 }
 
+protocol ExpandableFeedItemCell {
+    var bottomView: UIView! { get set }
+}
+
 //class DayFeedRestCell: UITableViewCell, DayFeedItemCell {
 //
 //    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
@@ -31,26 +35,8 @@ protocol DayFeedItemCell: UITableViewCell {
 //    }
 //}
 
-class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell {
 
-    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var view: UIView!
-    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
-    
-    override func layoutSubviews() {
-        view.layer.cornerRadius = 10.0
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        view.layer.shadowRadius = 3
-        view.layer.shadowOpacity = 0.2
-        //view.clipsToBounds = false
-        //view.layer.zPosition = 1
-    }
-}
-
-class DayFeedLiftCell: UITableViewCell, DayFeedItemCell {
+class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
@@ -140,7 +126,7 @@ class DayFeedTrackCell: UITableViewCell, DayFeedItemCell {
     }
 }
 
-class DayFeedFullRestCell2: UITableViewCell, DayFeedItemCell {
+class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var view: UIView!
@@ -178,12 +164,4 @@ class DayFeedFullRestCell2: UITableViewCell, DayFeedItemCell {
         
     }
     
-//    override func layoutSubviews() {
-//        view.layer.cornerRadius = 10.0
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        view.layer.shadowRadius = 3
-//        view.layer.shadowOpacity = 0.2
-//        view.clipsToBounds = false
-//    }
 }

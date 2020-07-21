@@ -34,8 +34,8 @@ class TheDayViewController: UIViewController {
             
         self.hideNavigationBar()
         
-        let dayFeedFullRestCellNib = UINib(nibName: String(describing: DayFeedFullRestCell2.self), bundle: nil)
-        theDayTableView.register(dayFeedFullRestCellNib, forCellReuseIdentifier: String(describing: DayFeedFullRestCell2.self))
+        let dayFeedFullRestCellNib = UINib(nibName: String(describing: DayFeedFullRestCell.self), bundle: nil)
+        theDayTableView.register(dayFeedFullRestCellNib, forCellReuseIdentifier: String(describing: DayFeedFullRestCell.self))
         let dayFeedLiftCellNib = UINib(nibName: String(describing: DayFeedLiftCell.self), bundle: nil)
         theDayTableView.register(dayFeedLiftCellNib, forCellReuseIdentifier: String(describing: DayFeedLiftCell.self))
         let dayFeedEnterLeftResortCellNib = UINib(nibName: String(describing: DayFeedEnterLeftResortCell.self), bundle: nil)
@@ -73,8 +73,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             
             switch item.type {
             case .rest:
-                cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell2.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedFullRestCell2)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
+                cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
+                (cell as? DayFeedFullRestCell)?.lineBottomConstraint.constant = indexPath.row == day.feedItems.count ? 60 : 0
                 //(cell as? DayFeedFullRestCell)?.selectionStyle = .none
 
             case .lift(let liftName):
@@ -174,21 +174,20 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 //    }
     
  ////////////////////////////////////////////////
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let dayFeedLiftCell = tableView.cellForRow(at: indexPath) as? DayFeedLiftCell
-//        let dayFeedRestCell = tableView.cellForRow(at: indexPath) as? DayFeedFullRestCell2
-//        if let cell = tableView.cellForRow(at: indexPath) as? DayFeedLiftCell ||  {
-//
-//            UIView.animate(withDuration: 0.3) {
-//                cell.bottomView.isHidden = !cell.bottomView.isHidden
-//            }
-//
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//
-//            //tableView.deselectRow(at: indexPath, animated: false)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if let cell = tableView.cellForRow(at: indexPath) as? ExpandableFeedItemCell {
+
+            UIView.animate(withDuration: 0.3) {
+                cell.bottomView.isHidden = !cell.bottomView.isHidden
+            }
+
+            tableView.beginUpdates()
+            tableView.endUpdates()
+
+            //tableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if indexPath.row != 0 {
 //            if selectedIndex == indexPath { return 200 }

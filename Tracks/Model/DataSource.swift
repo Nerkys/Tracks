@@ -85,9 +85,7 @@ func getDataSourceInitialValue() -> [Season] {
                                         DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
                                         DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
                                         DayFeedItem(title: "Отдых", type: .rest),
-                                        DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
-                                        DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
-                                        DayFeedItem(title: "Отдых", type: .rest),
+                                        DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))
                                         ]),
                                  Day(date: "15.02.2020", maxSpeed: 100, distance: 600, numberOfTracks: 5,
                                     statistics:

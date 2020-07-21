@@ -90,7 +90,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
         
-        if indexPath.row != 0 {
+        if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
             let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
             
             let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
