@@ -55,7 +55,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-v1-4Ct">
-                                                <rect key="frame" x="326" y="11.5" width="28" height="13"/>
+                                                <rect key="frame" x="333" y="11.5" width="28" height="13"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="IzA-PQ-bQZ" firstAttribute="leading" secondItem="3In-Ye-jda" secondAttribute="leading" constant="8" id="1Pp-ad-8sl"/>
-                                            <constraint firstAttribute="trailing" secondItem="ePa-v1-4Ct" secondAttribute="trailing" constant="12" id="Hl9-MZ-VVk"/>
+                                            <constraint firstAttribute="trailing" secondItem="ePa-v1-4Ct" secondAttribute="trailing" constant="5" id="Hl9-MZ-VVk"/>
                                             <constraint firstItem="ePa-v1-4Ct" firstAttribute="top" secondItem="3In-Ye-jda" secondAttribute="top" constant="11.5" id="JFA-LH-NTh"/>
                                             <constraint firstItem="IzA-PQ-bQZ" firstAttribute="top" secondItem="3In-Ye-jda" secondAttribute="top" constant="9" id="KX5-HU-cZ3"/>
                                             <constraint firstAttribute="bottom" secondItem="IzA-PQ-bQZ" secondAttribute="bottom" constant="11.5" id="cAe-EO-htG"/>

@@ -55,7 +55,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNQ-g5-wgD">
-                                                <rect key="frame" x="326" y="11.5" width="28" height="13"/>
+                                                <rect key="frame" x="333" y="11.5" width="28" height="13"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" red="0.58431372549019611" green="0.63529411764705879" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                             <constraint firstAttribute="bottom" secondItem="STP-PV-o81" secondAttribute="bottom" constant="11.5" id="BuB-v3-FmA"/>
                                             <constraint firstItem="STP-PV-o81" firstAttribute="leading" secondItem="OkS-hP-j6s" secondAttribute="leading" constant="8" id="NRG-2n-OPS"/>
                                             <constraint firstItem="lNQ-g5-wgD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="STP-PV-o81" secondAttribute="trailing" constant="35" id="PW2-RO-cDC"/>
-                                            <constraint firstAttribute="trailing" secondItem="lNQ-g5-wgD" secondAttribute="trailing" constant="12" id="R6R-yc-jEc"/>
+                                            <constraint firstAttribute="trailing" secondItem="lNQ-g5-wgD" secondAttribute="trailing" constant="5" id="R6R-yc-jEc"/>
                                             <constraint firstItem="STP-PV-o81" firstAttribute="top" secondItem="OkS-hP-j6s" secondAttribute="top" constant="9" id="SAv-qK-XNq"/>
                                             <constraint firstItem="lNQ-g5-wgD" firstAttribute="top" secondItem="OkS-hP-j6s" secondAttribute="top" constant="11.5" id="X0g-Xv-cUO"/>
                                         </constraints>
