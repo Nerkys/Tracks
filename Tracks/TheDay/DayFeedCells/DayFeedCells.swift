@@ -52,6 +52,13 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
         }
     }
     
+    @IBOutlet weak var distanceValueLabel: UILabel! {
+        didSet {
+            distanceValueLabel.isHidden = true
+        }
+    }
+    @IBOutlet weak var titleLabelButton: UIButton!
+    
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
 //        view.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -59,10 +66,10 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
 //        view.layer.shadowRadius = 3
 //        view.layer.shadowOpacity = 0.2
         //view.clipsToBounds = false
-        view.layer.zPosition = 2
         
-        topView.layer.zPosition = 4
-        bottomView.layer.zPosition = 3
+        
+        
+        
         
         shadowView.layer.cornerRadius = 10.0
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -71,6 +78,13 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
         shadowView.layer.shadowOpacity = 0.2
         
         shadowView.layer.zPosition = 1
+        view.layer.zPosition = 2
+        bottomView.layer.zPosition = 3
+        topView.layer.zPosition = 4
+        
+//        titleLabelButton.addAction(for: .touchUpInside) {
+//            <#code#>
+//        }
         
     }
     

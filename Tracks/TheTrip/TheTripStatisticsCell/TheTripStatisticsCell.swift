@@ -41,14 +41,19 @@ class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollec
         
         tripCollectionView.delegate = self
         tripCollectionView.dataSource = self
-    }
-    
-    override func layoutSubviews() {
+        
         coverLayer.frame = tripImage.bounds
         coverLayer.backgroundColor = UIColor.black.cgColor
         coverLayer.opacity = 0.25
         tripImage.layer.addSublayer(coverLayer)
     }
+    
+//    override func layoutSubviews() {
+//        coverLayer.frame = tripImage.bounds
+//        coverLayer.backgroundColor = UIColor.black.cgColor
+//        coverLayer.opacity = 0.25
+//        tripImage.layer.addSublayer(coverLayer)
+//    }
 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

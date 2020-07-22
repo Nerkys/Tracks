@@ -225,7 +225,41 @@ func getDataSourceInitialValue() -> [Season] {
                                          DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
                                          DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
                                          DayFeedItem(title: "Отдых", type: .rest),
-                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))])
+                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))]),
+                                 Day(date: "19.02.2020", maxSpeed: 120, distance: 700, numberOfTracks: 8,
+                                 statistics:
+                                     [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
+                                      Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                      Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
+                                      Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
+                                      Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
+                                      Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                 feedItems: [
+                                     DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
+                                     "Шерегеш")),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "yellow")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
+                                     DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
+                                     DayFeedItem(title: "Отдых", type: .rest),
+                                     DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))])
                              ])
                             ]),
                 

@@ -116,19 +116,11 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if let cell = tableView.cellForRow(at: indexPath) as? ExpandableFeedItemCell {
-            let item = feedItems[indexPath.row - 1]
-            switch item.type {
-            case .rest:
-                feedItems[indexPath.row - 1].isExpanded.toggle()
-                UIView.animate(withDuration: 0.3) {
-                    cell.bottomView.isHidden.toggle()
-                }
-            case .lift:
-                feedItems[indexPath.row - 1].isExpanded.toggle()
-                UIView.animate(withDuration: 0.3) {
-                    cell.bottomView.isHidden.toggle()
-                }
-            default: return
+            
+            feedItems[indexPath.row - 1].isExpanded.toggle()
+            
+            UIView.animate(withDuration: 0.3) {
+                cell.bottomView.isHidden.toggle()
             }
 
             tableView.beginUpdates()
