@@ -101,7 +101,7 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
             
             let theDayViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheDayViewController") as! TheDayViewController
             
-            theDayViewController.day = selectedDay
+            theDayViewController.setDay(day: selectedDay)
             //theTripViewController.delegate = self
             
             self.navigationController?.pushViewController(theDayViewController, animated: true)

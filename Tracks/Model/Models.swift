@@ -56,3 +56,9 @@ struct DayFeedItem {
         case rest, lift(liftName: String), enterLeftResort(title: String, resortName: String), track(difficultyImageName: String)
     }
 }
+
+struct UIDayFeedItem {
+    let title: String
+    let type: DayFeedItem.ItemType
+    var isExpanded: Bool
+}
