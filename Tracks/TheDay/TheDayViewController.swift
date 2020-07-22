@@ -179,7 +179,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath) as? ExpandableFeedItemCell {
 
             UIView.animate(withDuration: 0.3) {
-                cell.bottomView.isHidden = !cell.bottomView.isHidden
+                cell.bottomView.isHidden.toggle()
             }
 
             tableView.beginUpdates()

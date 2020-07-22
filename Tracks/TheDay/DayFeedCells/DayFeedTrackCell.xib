@@ -32,8 +32,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRM-Sx-bDd">
-                                <rect key="frame" x="364.5" y="16" width="25.5" height="12"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <rect key="frame" x="358" y="16" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -112,7 +112,7 @@
                             <constraint firstItem="6l9-Hs-ZVr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7xt-wT-Kl1" secondAttribute="trailing" constant="19" id="Bhy-R0-fvl"/>
                             <constraint firstItem="BxO-3Y-1Ch" firstAttribute="top" secondItem="em0-3a-SD8" secondAttribute="top" constant="35" id="BjX-hI-pOc"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hJB-G2-pZS" secondAttribute="trailing" constant="20" id="Eg1-NE-ub9"/>
-                            <constraint firstAttribute="trailing" secondItem="GRM-Sx-bDd" secondAttribute="trailing" constant="8" id="F6n-0X-ble"/>
+                            <constraint firstAttribute="trailing" secondItem="GRM-Sx-bDd" secondAttribute="trailing" constant="12" id="F6n-0X-ble"/>
                             <constraint firstItem="GRM-Sx-bDd" firstAttribute="top" secondItem="em0-3a-SD8" secondAttribute="top" constant="16" id="Gsf-iM-Anu"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CQw-QP-ny4" secondAttribute="bottom" constant="12" id="IHH-xh-CVQ"/>
                             <constraint firstItem="GJe-aH-yeh" firstAttribute="top" secondItem="7xt-wT-Kl1" secondAttribute="bottom" constant="3" id="Ie5-fh-jnX"/>

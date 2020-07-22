@@ -98,6 +98,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             //theTripViewController.delegate = self
             
             self.navigationController?.pushViewController(theTripViewController, animated: true)
+            //tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     

@@ -32,8 +32,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-7l-8hf">
-                                <rect key="frame" x="364.5" y="16" width="25.5" height="12"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <rect key="frame" x="358" y="16" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,7 +67,7 @@
                             <constraint firstItem="7HU-gM-v8S" firstAttribute="top" secondItem="8pz-N5-15W" secondAttribute="bottom" constant="8" id="Roc-3t-bXX"/>
                             <constraint firstItem="8pz-N5-15W" firstAttribute="leading" secondItem="cIG-E1-ENL" secondAttribute="trailing" constant="8" id="Saa-lh-vy8"/>
                             <constraint firstAttribute="bottom" secondItem="7HU-gM-v8S" secondAttribute="bottom" constant="10" id="hIh-Nv-ibD"/>
-                            <constraint firstAttribute="trailing" secondItem="SPd-7l-8hf" secondAttribute="trailing" constant="8" id="mW0-AT-lEa"/>
+                            <constraint firstAttribute="trailing" secondItem="SPd-7l-8hf" secondAttribute="trailing" constant="12" id="mW0-AT-lEa"/>
                             <constraint firstAttribute="bottom" secondItem="2DL-cD-IqM" secondAttribute="bottom" id="rzp-z4-gZc"/>
                             <constraint firstItem="7HU-gM-v8S" firstAttribute="leading" secondItem="8pz-N5-15W" secondAttribute="leading" id="tUF-tn-HxS"/>
                             <constraint firstItem="cIG-E1-ENL" firstAttribute="top" secondItem="8pz-N5-15W" secondAttribute="top" id="u0P-uE-5FL"/>
