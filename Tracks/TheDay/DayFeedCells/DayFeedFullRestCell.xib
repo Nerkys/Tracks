@@ -56,6 +56,11 @@
                                                 <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-5v-dNC">
+                                                <rect key="frame" x="123" y="3" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -135,6 +140,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bottomView" destination="m5Y-Xh-hLd" id="hxT-KC-BeE"/>
+                <outlet property="buttonTitleLabel" destination="u7S-5v-dNC" id="8Fd-u5-o0G"/>
                 <outlet property="lineBottomConstraint" destination="QAF-x4-e1b" id="gsg-zH-uVb"/>
                 <outlet property="lineTopConstraint" destination="rr7-kq-s5c" id="TK3-RN-cck"/>
                 <outlet property="titleLabel" destination="Bl5-ai-EI5" id="yEB-4k-bPc"/>

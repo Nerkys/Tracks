@@ -36,67 +36,7 @@ protocol ExpandableFeedItemCell {
 //}
 
 
-class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var view: UIView!
-    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var shadowView: UIView!
-    @IBOutlet weak var topView: UIView!
-    @IBOutlet public weak var bottomView: UIView! {
-        didSet {
-            bottomView.isHidden = true
-        }
-    }
-    
-    @IBOutlet weak var distanceValueLabel: UILabel! {
-        didSet {
-            distanceValueLabel.isHidden = true
-        }
-    }
-    @IBOutlet weak var titleLabelButton: UIButton!
-    
-    override func awakeFromNib() {
-        view.layer.cornerRadius = 10.0
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        view.layer.shadowRadius = 3
-        view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
-        
-        
-        
-        
-        
-//        shadowView.layer.cornerRadius = 10.0
-//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        shadowView.layer.shadowRadius = 3
-//        shadowView.layer.shadowOpacity = 0.2
-        
-//        shadowView.layer.zPosition = 1
-//        view.layer.zPosition = 2
-        //bottomView.layer.zPosition = 3
-        //topView.layer.zPosition = 4
-        
-//        titleLabelButton.addAction(for: .touchUpInside) {
-//            <#code#>
-//        }
-        
-    }
-    
-//    override func layoutSubviews() {
-//        view.layer.cornerRadius = 10.0
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        view.layer.shadowRadius = 3
-//        view.layer.shadowOpacity = 0.2
-//        view.clipsToBounds = false
-//    }
-}
 
 class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
 
@@ -165,6 +105,10 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemC
         }
     }
     
+    @IBOutlet weak var buttonTitleLabel: UIButton!
+    
+    var delegate: DayFeedCellDelegate?
+    
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -174,17 +118,52 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemC
         view.clipsToBounds = false
         //view.layer.zPosition = 2
         
-        topView.layer.zPosition = 4
-        bottomView.layer.zPosition = 3
-        
-//        shadowView.layer.cornerRadius = 10.0
-//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        shadowView.layer.shadowRadius = 3
-//        shadowView.layer.shadowOpacity = 0.2
-//
-//        shadowView.layer.zPosition = 1
-        
+        buttonTitleLabel.addAction(for: .touchUpInside) { [weak self] in
+            guard let self = self else { return }
+            
+            self.delegate?.expandCell(cell: self)
+        }
     }
+}
+
+class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var lineTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lineBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet public weak var bottomView: UIView! {
+        didSet {
+            bottomView.isHidden = true
+        }
+    }
+
+    @IBOutlet weak var buttonTitleLabel: UIButton!
     
+    var delegate: DayFeedCellDelegate?
+    
+    override func awakeFromNib() {
+        view.layer.cornerRadius = 10.0
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.2
+        view.clipsToBounds = false
+        
+        
+        
+        buttonTitleLabel.addAction(for: .touchUpInside) { [weak self] in
+            guard let self = self else { return }
+            
+            self.delegate?.expandCell(cell: self)
+        }
+    }
+}
+
+protocol DayFeedCellDelegate {
+    func expandCell(cell: UITableViewCell)
 }
