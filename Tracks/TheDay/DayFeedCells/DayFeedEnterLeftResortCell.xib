@@ -21,11 +21,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moo-OD-JZ2">
+                        <rect key="frame" x="8" y="6" width="398" height="63"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qM-vT-7Nt">
                         <rect key="frame" x="8" y="6" width="398" height="63"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-cD-IqM">
-                                <rect key="frame" x="17" y="0.0" width="2" height="63"/>
+                                <rect key="frame" x="17" y="-20" width="2" height="103"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="6rf-RQ-0e7"/>
@@ -56,7 +60,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SPd-7l-8hf" firstAttribute="top" secondItem="2qM-vT-7Nt" secondAttribute="top" constant="16" id="0eu-wS-RHV"/>
                             <constraint firstItem="SPd-7l-8hf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8pz-N5-15W" secondAttribute="trailing" constant="8" symbolic="YES" id="2Vd-7K-SXe"/>
@@ -68,24 +71,29 @@
                             <constraint firstItem="8pz-N5-15W" firstAttribute="leading" secondItem="cIG-E1-ENL" secondAttribute="trailing" constant="8" id="Saa-lh-vy8"/>
                             <constraint firstAttribute="bottom" secondItem="7HU-gM-v8S" secondAttribute="bottom" constant="10" id="hIh-Nv-ibD"/>
                             <constraint firstAttribute="trailing" secondItem="SPd-7l-8hf" secondAttribute="trailing" constant="12" id="mW0-AT-lEa"/>
-                            <constraint firstAttribute="bottom" secondItem="2DL-cD-IqM" secondAttribute="bottom" id="rzp-z4-gZc"/>
+                            <constraint firstAttribute="bottom" secondItem="2DL-cD-IqM" secondAttribute="bottom" constant="-20" id="rzp-z4-gZc"/>
                             <constraint firstItem="7HU-gM-v8S" firstAttribute="leading" secondItem="8pz-N5-15W" secondAttribute="leading" id="tUF-tn-HxS"/>
                             <constraint firstItem="cIG-E1-ENL" firstAttribute="top" secondItem="8pz-N5-15W" secondAttribute="top" id="u0P-uE-5FL"/>
-                            <constraint firstItem="2DL-cD-IqM" firstAttribute="top" secondItem="2qM-vT-7Nt" secondAttribute="top" id="wjy-8g-yk5"/>
+                            <constraint firstItem="2DL-cD-IqM" firstAttribute="top" secondItem="2qM-vT-7Nt" secondAttribute="top" constant="-20" id="wjy-8g-yk5"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2qM-vT-7Nt" secondAttribute="bottom" constant="6" id="7C7-4n-pGr"/>
+                    <constraint firstAttribute="bottom" secondItem="moo-OD-JZ2" secondAttribute="bottom" constant="6" id="DI0-Fn-mMv"/>
+                    <constraint firstItem="moo-OD-JZ2" firstAttribute="leading" secondItem="rtf-mD-srz" secondAttribute="leading" constant="8" id="Ggk-mQ-BhV"/>
                     <constraint firstAttribute="trailing" secondItem="2qM-vT-7Nt" secondAttribute="trailing" constant="8" id="I3c-5t-HZ0"/>
                     <constraint firstItem="2qM-vT-7Nt" firstAttribute="leading" secondItem="rtf-mD-srz" secondAttribute="leading" constant="8" id="IOM-0X-FB9"/>
                     <constraint firstItem="2qM-vT-7Nt" firstAttribute="top" secondItem="rtf-mD-srz" secondAttribute="top" constant="6" id="Uf2-WL-Ecg"/>
+                    <constraint firstAttribute="trailing" secondItem="moo-OD-JZ2" secondAttribute="trailing" constant="8" id="pn1-uK-cV5"/>
+                    <constraint firstItem="moo-OD-JZ2" firstAttribute="top" secondItem="rtf-mD-srz" secondAttribute="top" constant="6" id="z44-IF-QyM"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lineBottomConstraint" destination="rzp-z4-gZc" id="TIe-eD-7aw"/>
+                <outlet property="lineTopConstraint" destination="wjy-8g-yk5" id="ssF-3E-bM0"/>
                 <outlet property="resortNameLabel" destination="7HU-gM-v8S" id="l1P-M8-cUX"/>
+                <outlet property="shadowView" destination="moo-OD-JZ2" id="dOw-MV-PXB"/>
                 <outlet property="timeLabel" destination="SPd-7l-8hf" id="ERE-N0-ftY"/>
                 <outlet property="titleLabel" destination="8pz-N5-15W" id="9Xp-Xw-tji"/>
                 <outlet property="view" destination="2qM-vT-7Nt" id="WT0-D8-SW8"/>

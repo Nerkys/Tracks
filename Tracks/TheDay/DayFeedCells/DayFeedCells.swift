@@ -61,26 +61,26 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        view.layer.shadowRadius = 3
-//        view.layer.shadowOpacity = 0.2
-        //view.clipsToBounds = false
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.2
+        view.clipsToBounds = false
         
         
         
         
         
-        shadowView.layer.cornerRadius = 10.0
-        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        shadowView.layer.shadowRadius = 3
-        shadowView.layer.shadowOpacity = 0.2
+//        shadowView.layer.cornerRadius = 10.0
+//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+//        shadowView.layer.shadowRadius = 3
+//        shadowView.layer.shadowOpacity = 0.2
         
-        shadowView.layer.zPosition = 1
-        view.layer.zPosition = 2
-        bottomView.layer.zPosition = 3
-        topView.layer.zPosition = 4
+//        shadowView.layer.zPosition = 1
+//        view.layer.zPosition = 2
+        //bottomView.layer.zPosition = 3
+        //topView.layer.zPosition = 4
         
 //        titleLabelButton.addAction(for: .touchUpInside) {
 //            <#code#>
@@ -108,6 +108,7 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var viewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shadowView: UIView!
     
     
     override func layoutSubviews() {
@@ -117,7 +118,15 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
         //view.clipsToBounds = false
-        layer.zPosition = 2
+        view.layer.zPosition = 2
+        
+        shadowView.layer.cornerRadius = 10.0
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        shadowView.layer.shadowRadius = 3
+        shadowView.layer.shadowOpacity = 0.2
+
+        shadowView.layer.zPosition = 1
     }
 }
 
@@ -158,23 +167,23 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemC
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
-//        view.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        view.layer.shadowRadius = 3
-//        view.layer.shadowOpacity = 0.2
-        //view.clipsToBounds = false
-        view.layer.zPosition = 2
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.2
+        view.clipsToBounds = false
+        //view.layer.zPosition = 2
         
         topView.layer.zPosition = 4
         bottomView.layer.zPosition = 3
         
-        shadowView.layer.cornerRadius = 10.0
-        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        shadowView.layer.shadowRadius = 3
-        shadowView.layer.shadowOpacity = 0.2
-        
-        shadowView.layer.zPosition = 1
+//        shadowView.layer.cornerRadius = 10.0
+//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+//        shadowView.layer.shadowRadius = 3
+//        shadowView.layer.shadowOpacity = 0.2
+//
+//        shadowView.layer.zPosition = 1
         
     }
     

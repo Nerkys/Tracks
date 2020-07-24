@@ -21,15 +21,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="420" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM9-GZ-p5d">
-                        <rect key="frame" x="8" y="6" width="404" height="81"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kT5-CB-bgc">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kT5-CB-bgc">
                         <rect key="frame" x="8" y="6" width="404" height="81"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAn-Kt-eGY">
-                                <rect key="frame" x="17" y="0.0" width="2" height="81"/>
+                                <rect key="frame" x="17" y="-20" width="2" height="121"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="G0R-yz-a6e"/>
@@ -114,9 +110,9 @@
                         <constraints>
                             <constraint firstItem="Vjl-TF-94P" firstAttribute="leading" secondItem="kT5-CB-bgc" secondAttribute="leading" constant="6" id="BAo-D1-lrH"/>
                             <constraint firstItem="uAn-Kt-eGY" firstAttribute="leading" secondItem="kT5-CB-bgc" secondAttribute="leading" constant="17" id="BCx-zG-zXz"/>
-                            <constraint firstItem="uAn-Kt-eGY" firstAttribute="top" secondItem="kT5-CB-bgc" secondAttribute="top" id="G39-eg-DRz"/>
+                            <constraint firstItem="uAn-Kt-eGY" firstAttribute="top" secondItem="kT5-CB-bgc" secondAttribute="top" constant="-20" id="G39-eg-DRz"/>
                             <constraint firstItem="3In-Ye-jda" firstAttribute="leading" secondItem="kT5-CB-bgc" secondAttribute="leading" constant="31" id="OVC-ZY-kOC"/>
-                            <constraint firstAttribute="bottom" secondItem="uAn-Kt-eGY" secondAttribute="bottom" id="dsh-Z7-ZQV"/>
+                            <constraint firstAttribute="bottom" secondItem="uAn-Kt-eGY" secondAttribute="bottom" constant="-20" id="dsh-Z7-ZQV"/>
                             <constraint firstAttribute="trailing" secondItem="hDx-Fs-WsT" secondAttribute="trailing" constant="7" id="eXs-qb-6pW"/>
                             <constraint firstItem="hDx-Fs-WsT" firstAttribute="top" secondItem="kT5-CB-bgc" secondAttribute="top" id="fAu-ZP-djB"/>
                             <constraint firstAttribute="bottom" secondItem="hDx-Fs-WsT" secondAttribute="bottom" id="mYW-Lx-3ui"/>
@@ -124,23 +120,17 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="kT5-CB-bgc" secondAttribute="trailing" constant="8" id="6sw-04-EWA"/>
-                    <constraint firstAttribute="trailing" secondItem="NM9-GZ-p5d" secondAttribute="trailing" constant="8" id="7vi-mg-dPP"/>
                     <constraint firstItem="kT5-CB-bgc" firstAttribute="leading" secondItem="dHJ-D4-we4" secondAttribute="leading" constant="8" id="Kk0-MG-B9D"/>
                     <constraint firstItem="kT5-CB-bgc" firstAttribute="top" secondItem="dHJ-D4-we4" secondAttribute="top" constant="6" id="QXq-a4-n67"/>
-                    <constraint firstItem="NM9-GZ-p5d" firstAttribute="leading" secondItem="dHJ-D4-we4" secondAttribute="leading" constant="8" id="fOA-O5-DdJ"/>
-                    <constraint firstAttribute="bottom" secondItem="NM9-GZ-p5d" secondAttribute="bottom" constant="6" id="iPA-qQ-S9D"/>
                     <constraint firstAttribute="bottom" secondItem="kT5-CB-bgc" secondAttribute="bottom" constant="6" id="qoL-vy-hwn"/>
-                    <constraint firstItem="NM9-GZ-p5d" firstAttribute="top" secondItem="dHJ-D4-we4" secondAttribute="top" constant="6" id="tuK-Li-3uo"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bottomView" destination="aM2-mA-TCu" id="kYR-pS-eF6"/>
                 <outlet property="lineBottomConstraint" destination="dsh-Z7-ZQV" id="dIe-Se-1rO"/>
-                <outlet property="shadowView" destination="NM9-GZ-p5d" id="Ziz-CZ-BRz"/>
+                <outlet property="lineTopConstraint" destination="G39-eg-DRz" id="UDO-hm-fkm"/>
                 <outlet property="topView" destination="3In-Ye-jda" id="EVg-J6-Pa0"/>
                 <outlet property="view" destination="kT5-CB-bgc" id="Hxg-zz-sDS"/>
             </connections>
