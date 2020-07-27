@@ -17,6 +17,7 @@ protocol DayFeedItemCell: UITableViewCell {
 
 protocol ExpandableFeedItemCell {
     var bottomView: UIView! { get set }
+    var viewAlpha: CGFloat { get set }
 }
 
 //class DayFeedRestCell: UITableViewCell, DayFeedItemCell {
@@ -108,6 +109,7 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemC
     @IBOutlet weak var buttonTitleLabel: UIButton!
     
     var delegate: DayFeedCellDelegate?
+    var viewAlpha = CGFloat(0.0)
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
@@ -115,7 +117,7 @@ class DayFeedFullRestCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemC
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
         //view.layer.zPosition = 2
         
         buttonTitleLabel.addAction(for: .touchUpInside) { [weak self] in
@@ -145,6 +147,7 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
     @IBOutlet weak var buttonTitleLabel: UIButton!
     
     var delegate: DayFeedCellDelegate?
+    var viewAlpha = CGFloat(0.0)
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
@@ -152,7 +155,7 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        view.clipsToBounds = false
+        //view.clipsToBounds = false
         
         
         
@@ -167,3 +170,4 @@ class DayFeedLiftCell: UITableViewCell, DayFeedItemCell, ExpandableFeedItemCell 
 protocol DayFeedCellDelegate {
     func expandCell(cell: UITableViewCell)
 }
+

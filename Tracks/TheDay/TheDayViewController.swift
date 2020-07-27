@@ -14,7 +14,7 @@ class TheDayViewController: UIViewController {
     
     var day: Day!
     var feedItems: [UIDayFeedItem] = []
-    var alpha = 0
+    //var alpha = 0
     
 
     //weak var delegate: TheDayViewController?
@@ -35,8 +35,8 @@ class TheDayViewController: UIViewController {
         theDayTableView.delegate = self
         theDayTableView.dataSource = self
         theDayTableView.tableFooterView = UIView(frame: .zero)
-        theDayTableView.rowHeight = UITableView.automaticDimension
-        theDayTableView.estimatedRowHeight = 90
+        //theDayTableView.rowHeight = UITableView.automaticDimension
+        //theDayTableView.estimatedRowHeight = 90
         
         theDayTableView.separatorStyle = .none
             
@@ -88,7 +88,8 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 
             case .lift(let liftName):
                 cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
-                (cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
+                //(cell as? DayFeedLiftCell)?.titleLabel.text = "Подъемник \(liftName)"
+                (cell as? DayFeedLiftCell)?.buttonTitleLabel.setTitle("Подъемник \(liftName)", for: .normal)
                 //(cell as? DayFeedLiftCell)?.lineBottomConstraint.constant = indexPath.row == feedItems.count ? 60 : -20
                 (cell as? DayFeedLiftCell)?.bottomView.isHidden = !item.isExpanded
                 (cell as? DayFeedLiftCell)?.lineTopConstraint.constant = indexPath.row == 1 ? -6 : -20
@@ -135,20 +136,19 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
 extension TheDayViewController: DayFeedCellDelegate {
     func expandCell(cell: UITableViewCell) {
         guard let indexPath = theDayTableView.indexPath(for: cell) else { return }
-        if let cell = cell as? ExpandableFeedItemCell {
+        if var cell = cell as? ExpandableFeedItemCell {
             
             feedItems[indexPath.row - 1].isExpanded.toggle()
             
             UIView.animate(withDuration: 0.3) {
                 cell.bottomView.isHidden.toggle()
-                if self.alpha == 0 {
+                if cell.viewAlpha == 0 {
                     cell.bottomView.alpha = 1
-                    self.alpha = 1
+                    cell.viewAlpha = 1
                 } else {
                     cell.bottomView.alpha = 0
-                    self.alpha = 0
+                    cell.viewAlpha = 0
                 }
-                //cell.bottomView.isOpaque.toggle()
             }
 
             theDayTableView.beginUpdates()

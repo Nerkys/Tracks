@@ -96,9 +96,24 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
             theTripViewController.trip = selectedTrip
             //theTripViewController.delegate = self
+//            UIView.animate(withDuration: 2.0) {() -> Void in
+//                UIView.setAnimationCurve(.easeInOut)
+//                self.navigationController?.pushViewController(theTripViewController, animated: true)
+//                //UIView.transition(with: (self.navigationController?.view)!, duration: 2, options: .beginFromCurrentState, animations: (() -> Void)?, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+//                UIView.setAnimationTransition(.flipFromLeft, for: (self.navigationController?.view)!, cache: false)
+//
+//            }
+            let transition = CATransition()
+            transition.duration = 5
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            //self.view.window?.backgroundColor = .clear
+            //transition.fillMode = CAMediaTimingFillMode.forwards
+            //view.window!.layer.add(transition, forKey: kCATransition)
+            self.navigationController?.view.layer.add(transition, forKey: nil)
+            self.navigationController?.pushViewController(theTripViewController, animated: false)
             
-            self.navigationController?.pushViewController(theTripViewController, animated: true)
-            //tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
