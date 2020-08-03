@@ -46,6 +46,9 @@ class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollec
         coverLayer.backgroundColor = UIColor.black.cgColor
         coverLayer.opacity = 0.25
         tripImage.layer.addSublayer(coverLayer)
+        view.layer.cornerRadius = 10.0
+        view.clipsToBounds = true
+        view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
 //    override func layoutSubviews() {

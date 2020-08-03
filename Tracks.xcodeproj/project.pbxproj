@@ -42,7 +42,7 @@
 		690F6DFA24A35D83009BD28D /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		6910BA9B24B43A1700F27E1B /* TheTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripViewController.swift; sourceTree = "<group>"; };
 		6910BA9D24B443E900F27E1B /* TheTripStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripStatisticsCell.swift; sourceTree = "<group>"; };
-		6924E03F24A1BD23001CDBB7 /* Tracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6924E03F24A1BD23001CDBB7 /* Skill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6924E04224A1BD23001CDBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6924E04424A1BD23001CDBB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6924E04624A1BD23001CDBB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		6924E04024A1BD23001CDBB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6924E03F24A1BD23001CDBB7 /* Tracks.app */,
+				6924E03F24A1BD23001CDBB7 /* Skill.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			);
 			name = Tracks;
 			productName = tracks;
-			productReference = 6924E03F24A1BD23001CDBB7 /* Tracks.app */;
+			productReference = 6924E03F24A1BD23001CDBB7 /* Skill.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -425,15 +425,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7FMBFG6GU;
+				CURRENT_PROJECT_VERSION = 233;
+				DEVELOPMENT_TEAM = H698PLT4Q4;
 				INFOPLIST_FILE = tracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nerkys.Tracks;
-				PRODUCT_NAME = Tracks;
+				MARKETING_VERSION = 3.3.2;
+				PRODUCT_BUNDLE_IDENTIFIER = co.getfullstack.skill;
+				PRODUCT_NAME = Skill;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -444,15 +446,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7FMBFG6GU;
+				CURRENT_PROJECT_VERSION = 233;
+				DEVELOPMENT_TEAM = H698PLT4Q4;
 				INFOPLIST_FILE = tracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nerkys.Tracks;
-				PRODUCT_NAME = Tracks;
+				MARKETING_VERSION = 3.3.2;
+				PRODUCT_BUNDLE_IDENTIFIER = co.getfullstack.skill;
+				PRODUCT_NAME = Skill;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
