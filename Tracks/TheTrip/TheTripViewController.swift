@@ -40,6 +40,7 @@ class TheTripViewController: UIViewController {
         theTripCollectionView.dataSource = self
         
         theTripTableView.rowHeight = UITableView.automaticDimension
+        theTripTableView.tableFooterView = UIView(frame: .zero)
         
         titleAndDateLabel.text = trip.title
         tripImage.image = UIImage(named: trip.image)
@@ -51,6 +52,8 @@ class TheTripViewController: UIViewController {
         statisticsView.layer.cornerRadius = 10.0
         statisticsView.clipsToBounds = true
         statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        
         
         self.hideNavigationBar()
     }
@@ -94,17 +97,29 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
             return 30
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        // Removes extra padding in Grouped style
+        return CGFloat.leastNormalMagnitude
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
         
         let selectedDay = trip.resorts[indexPath.section].days[indexPath.row]
         
-        let theDayViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheDayViewController") as! TheDayViewController
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [ weak self ] in
+//            guard let self = self else { return }
+            
+            let theDayViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheDayViewController") as! TheDayViewController
+            
+            theDayViewController.setDay(day: selectedDay)
+            //theTripViewController.delegate = self
+            
+            self.navigationController?.pushViewController(theDayViewController, animated: true)
+            
+        //}
         
-        theDayViewController.setDay(day: selectedDay)
-        //theTripViewController.delegate = self
         
-        self.navigationController?.pushViewController(theDayViewController, animated: true)
     }
     
 }

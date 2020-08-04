@@ -46,6 +46,7 @@ class TheDayViewController: UIViewController {
         theDayTableView.delegate = self
         theDayTableView.dataSource = self
         theDayTableView.tableFooterView = UIView(frame: .zero)
+        theDayTableView.alpha = 1
         
         theDayCollectionView.delegate = self
         theDayCollectionView.dataSource = self
@@ -74,7 +75,20 @@ class TheDayViewController: UIViewController {
         let dayFeedTrackCellNib = UINib(nibName: String(describing: DayFeedTrackCell.self), bundle: nil)
         theDayTableView.register(dayFeedTrackCellNib, forCellReuseIdentifier: String(describing: DayFeedTrackCell.self))
         
+        //animateTableViewAppearance()
     }
+    
+//    private func animateTableViewAppearance() {
+//        let originalY = theDayTableView.frame.origin.y
+//        theDayTableView.frame = CGRect(x: theDayTableView.frame.origin.x, y: theDayTableView.frame.origin.y - view.frame.height, width: theDayTableView.frame.width, height: theDayTableView.frame.height)
+//        theDayTableView.isHidden = false
+//        UIView.animate(withDuration: 3.0) { [weak self] in
+//            guard let self = self else { return }
+//
+//            self.theDayTableView.alpha = 1
+//            self.theDayTableView.frame = CGRect(x: self.theDayTableView.frame.origin.x, y: originalY, width: self.theDayTableView.frame.width, height: self.theDayTableView.frame.height)
+//        }
+//    }
 }
 
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {

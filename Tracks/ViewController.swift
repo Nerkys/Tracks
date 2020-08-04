@@ -59,21 +59,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource[section].trip.count + 1
+        return dataSource[section].trip.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
-            
-            cell.configure(with: dataSource[indexPath.section].statistics)
-            cell.selectionStyle = .none
-            
-            return cell
-            
-        } else {
+//        if indexPath.row == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
+//
+//            cell.configure(with: dataSource[indexPath.section].statistics)
+//            cell.selectionStyle = .none
+//
+//            return cell
+//
+//        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
-            let trip = dataSource[indexPath.section].trip[indexPath.row - 1]
+            let trip = dataSource[indexPath.section].trip[indexPath.row]
             
             cell.titleLabel?.text = trip.title
             cell.tripImage?.image = UIImage(named: trip.image)
@@ -83,7 +83,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.selectionStyle = .none
             
             return cell
-        }
+//        }
         
     }
     
@@ -102,8 +102,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
         
-        if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
-            let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
+        //if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
+            let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row]
             
             let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
             
@@ -113,30 +113,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             self.navigationController?.pushViewController(theTripViewController, animated: true)
             
             
-        }
+        //}
     } 
-    
-
-    
-    
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 0 {
-//            tableView.deselectRow(at: indexPath, animated: false)
-//        }
-//    }
-    
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0 {
-//            return CGFloat(120)
-//        } else 
-//        
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 60
-//    }
     
     
 }
