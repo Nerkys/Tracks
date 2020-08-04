@@ -6,6 +6,8 @@
 //  Copyright © 2020 Mikhail Chukhvantsev. All rights reserved.
 //
 
+//НЕ ИСПОЛЬЗУЕТСЯ БОЛЬШЕ
+
 import UIKit
 
 class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -22,12 +24,6 @@ class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollec
     private let itemsInSection: CGFloat = 3
     //private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     let coverLayer = CALayer()
-    
-
-    
-//    func configure(with model: [Statistics]) {
-//        self.dataSource = model
-//    }
     
     func configure(with model: Trip) {
         titleAndDateDataSource = model
@@ -101,9 +97,9 @@ class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
-//        let availableWidth = tripCollectionView.frame.width - paggingSpace
+
         let widthPerItem = tripCollectionView.frame.width / itemsInSection
+        
         return CGSize(width: widthPerItem, height: tripCollectionView.frame.height)
     }
     

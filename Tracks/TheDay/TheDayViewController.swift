@@ -14,7 +14,7 @@ class TheDayViewController: UIViewController {
     
     var day: Day!
     var feedItems: [UIDayFeedItem] = []
-    //var alpha = 0
+
     
 
     //weak var delegate: TheDayViewController?
@@ -51,10 +51,7 @@ class TheDayViewController: UIViewController {
         let dayFeedTrackCellNib = UINib(nibName: String(describing: DayFeedTrackCell.self), bundle: nil)
         theDayTableView.register(dayFeedTrackCellNib, forCellReuseIdentifier: String(describing: DayFeedTrackCell.self))
         
-        
-        
     }
-    //var selectedIndex: IndexPath = IndexPath(row: 2, section: 0)
 }
 
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {

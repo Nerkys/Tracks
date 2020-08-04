@@ -12,38 +12,45 @@ class TheTripViewController: UIViewController {
     
     
     @IBOutlet weak var theTripCollectionView: UICollectionView!
-    
-    //@IBOutlet weak var view: UIView!
+    @IBOutlet weak var statisticsView: UIView!
     @IBOutlet weak var titleAndDateLabel: UILabel!
     @IBOutlet weak var theTripTableView: UITableView!
-    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tripImage: UIImageView!
     
     @IBAction func backButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     var trip: Trip!
     private let itemsInSection: CGFloat = 3
     private var dataSourceForColletionView = [Statistics]()
+    private let coverLayer = CALayer()
     //weak var delegate: TheTripViewController?
-    //var dataSource = [Season]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if #available(iOS 13.0, *) {
-//            self.overrideUserInterfaceStyle = .light
-//        }
         
         dataSourceForColletionView = trip.statistics
         
         theTripTableView.delegate = self
         theTripTableView.dataSource = self
         
+        theTripCollectionView.delegate = self
+        theTripCollectionView.dataSource = self
+        
         theTripTableView.rowHeight = UITableView.automaticDimension
         
         titleAndDateLabel.text = trip.title
+        tripImage.image = UIImage(named: trip.image)
+        
+        coverLayer.frame = tripImage.bounds
+        coverLayer.backgroundColor = UIColor.black.cgColor
+        coverLayer.opacity = 0.25
+        tripImage.layer.addSublayer(coverLayer)
+        statisticsView.layer.cornerRadius = 10.0
+        statisticsView.clipsToBounds = true
+        statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         self.hideNavigationBar()
     }
@@ -146,25 +153,14 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //        let paggingSpace = sectionInsets.left * (itemsInSection + 1)
-    //        let availableWidth = tripCollectionView.frame.width - paggingSpace
+            
             let widthPerItem = theTripCollectionView.frame.width / itemsInSection
+            
             return CGSize(width: widthPerItem, height: theTripCollectionView.frame.height)
         }
-        
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    //        sectionInsets
-    //    }
-        
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
             return 0.0
         }
         
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    //        return 0.0
-    //    }
-    
-    
-    
 }
