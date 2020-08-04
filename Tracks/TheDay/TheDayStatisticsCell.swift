@@ -6,6 +6,9 @@
 //  Copyright © 2020 Mikhail Chukhvantsev. All rights reserved.
 //
 
+
+//НЕ ИСПОЛЬЗУЕТСЯ БОЛЬШЕ
+
 import UIKit
 
 class TheDayStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
