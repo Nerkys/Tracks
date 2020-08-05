@@ -25,6 +25,7 @@ class TheDayViewController: UIViewController {
 
     private let itemsInSection: CGFloat = 3
     private var dataSourceForColletionView = [Statistics]()
+    var alreadySetup: Bool = false
     
 
     //weak var delegate: TheDayViewController?
@@ -46,14 +47,13 @@ class TheDayViewController: UIViewController {
         theDayTableView.delegate = self
         theDayTableView.dataSource = self
         theDayTableView.tableFooterView = UIView(frame: .zero)
-        theDayTableView.alpha = 1
+        //theDayTableView.alpha = 0
+        theDayTableView.separatorStyle = .none
         
         theDayCollectionView.delegate = self
         theDayCollectionView.dataSource = self
         //theDayTableView.rowHeight = UITableView.automaticDimension
         //theDayTableView.estimatedRowHeight = 90
-        
-        theDayTableView.separatorStyle = .none
         
         statisticsView.layer.cornerRadius = 10.0
         statisticsView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -93,44 +93,82 @@ class TheDayViewController: UIViewController {
 
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
     
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath == tableView.indexPathsForVisibleRows?.last {
+//            alreadySetup = true
+//        }
+//        if !alreadySetup {
+//            cell.alpha = 0
+//            cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y - view.frame.height, width: cell.frame.width, height: cell.frame.height)
+//            UIView.animate(
+//                withDuration: 0.5,
+//                delay: 0.05 * Double(indexPath.row),
+//                animations: {
+//                    cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: cell.frame.width, height: cell.frame.height)
+//                    cell.alpha = 1
+//            })
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+            if indexPath.row == tableView.indexPathsForVisibleRows?.count {
+                self.alreadySetup = true
+            }
+            if !self.alreadySetup {
+                let animation = AnimationFactory.makeMoveUpWithBounce(rowHeight: -100, duration: 0.5, delayFactor: 0.03)
+                let animator = Animator(animation: animation)
+                animator.animate(cell: cell, at: indexPath, in: tableView)
+            }
+        })
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return day.feedItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-            var cell: DayFeedItemCell!
-            let item = feedItems[indexPath.row]
+        var cell: DayFeedItemCell!
+        let item = feedItems[indexPath.row]
+        switch item.type {
+        case .rest:
+            cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
+            (cell as? DayFeedFullRestCell)?.bottomView.isHidden = !item.isExpanded
+            (cell as? DayFeedFullRestCell)?.lineTopConstraint.constant = indexPath.row == 0 ? -100 : -20
+            (cell as? DayFeedFullRestCell)?.delegate = self
+            //(cell as? DayFeedFullRestCell)?.view.alpha = 0
             
-            switch item.type {
-            case .rest:
-                cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedFullRestCell.self), for: indexPath) as? DayFeedItemCell
-                (cell as? DayFeedFullRestCell)?.bottomView.isHidden = !item.isExpanded
-                (cell as? DayFeedFullRestCell)?.lineTopConstraint.constant = indexPath.row == 1 ? -6 : -20
-                (cell as? DayFeedFullRestCell)?.delegate = self
-                
-
-            case .lift(let liftName):
-                cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
-                (cell as? DayFeedLiftCell)?.buttonTitleLabel.setTitle("Подъемник \(liftName)", for: .normal)
-                (cell as? DayFeedLiftCell)?.bottomView.isHidden = !item.isExpanded
-                (cell as? DayFeedLiftCell)?.lineTopConstraint.constant = indexPath.row == 1 ? -6 : -20
-                (cell as? DayFeedLiftCell)?.delegate = self
-
-            case .enterLeftResort(let title, let resortName):
-                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell)!
-                (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
-                (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
-                (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == feedItems.count - 1 ? 30 : -20
-                (cell as? DayFeedEnterLeftResortCell)?.lineTopConstraint.constant = indexPath.row == 1 ? -6 : -20
-
-            case .track(let difficultyImageName):
-                cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell)!
-                (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
-                (cell as? DayFeedTrackCell)?.lineTopConstraint.constant = indexPath.row == 1 ? -6 : -20
-            }
             
-            return cell
+        case .lift(let liftName):
+            cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
+            (cell as? DayFeedLiftCell)?.buttonTitleLabel.setTitle("Подъемник \(liftName)", for: .normal)
+            (cell as? DayFeedLiftCell)?.bottomView.isHidden = !item.isExpanded
+            (cell as? DayFeedLiftCell)?.lineTopConstraint.constant = indexPath.row == 0 ? -100 : -20
+            (cell as? DayFeedLiftCell)?.delegate = self
+            //(cell as? DayFeedLiftCell)?.view.alpha = 0
+
+            
+        case .enterLeftResort(let title, let resortName):
+            cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? DayFeedItemCell)!
+            (cell as? DayFeedEnterLeftResortCell)?.titleLabel.text = title
+            (cell as? DayFeedEnterLeftResortCell)?.resortNameLabel.text = resortName
+            (cell as? DayFeedEnterLeftResortCell)?.lineBottomConstraint.constant = indexPath.row == feedItems.count - 1 ? 30 : -20
+            (cell as? DayFeedEnterLeftResortCell)?.lineTopConstraint.constant = indexPath.row == 0 ? -100 : -20
+            //(cell as? DayFeedEnterLeftResortCell)?.view.alpha = 0
+
+            
+        case .track(let difficultyImageName):
+            cell = (tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedTrackCell.self), for: indexPath) as? DayFeedItemCell)!
+            (cell as? DayFeedTrackCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
+            (cell as? DayFeedTrackCell)?.lineTopConstraint.constant = indexPath.row == 0 ? -100 : -20
+            //(cell as? DayFeedTrackCell)?.view.alpha = 0
+
+        }
+        
+        return cell
         
     }
     
