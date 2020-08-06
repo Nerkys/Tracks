@@ -42,6 +42,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIViewCo
         return transitionManager
     }
     
+    func getNumberOfActiveDays(tableView: UITableView, indexPath: IndexPath) -> Int {
+        let trip = dataSource[indexPath.section].trip[indexPath.row]
+        var count = 0
+        for currentResort in 0..<trip.resorts.count {
+            count += trip.resorts[currentResort].days.count
+        }
+        return count
+    }
+    
 //    private func tableViewConfig() {
 //        let nib = UINib(nibName: headerID, bundle: nil)
 //        seasonTableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
@@ -72,17 +81,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //            return cell
 //
 //        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
-            let trip = dataSource[indexPath.section].trip[indexPath.row]
-            
-            cell.titleLabel?.text = trip.title
-            cell.tripImage?.image = UIImage(named: trip.image)
-            cell.numberOfActiveDaysLabel?.text = String(trip.numberOfActiveDays)
-            cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
-            cell.distanceLabel?.text = "\(String(trip.distance)) м"
-            cell.selectionStyle = .none
-            
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
+        let trip = dataSource[indexPath.section].trip[indexPath.row]
+        
+        cell.titleLabel?.text = trip.title
+        cell.tripImage?.image = UIImage(named: trip.image)
+//        cell.numberOfActiveDaysLabel?.text = String(dataSource[indexPath.section].trip[indexPath.row].resorts[indexPath.row].days.count)
+        cell.numberOfActiveDaysLabel?.text = "\(getNumberOfActiveDays(tableView: tableView, indexPath: indexPath))/\(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
+        cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
+        cell.distanceLabel?.text = "\(String(Double(trip.distance) / 1000))  км"
+        cell.dateLabel?.text = dateForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt)
+        cell.selectionStyle = .none
+        
+        return cell
 //        }
         
     }

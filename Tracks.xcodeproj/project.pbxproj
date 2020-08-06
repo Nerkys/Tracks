@@ -30,6 +30,7 @@
 		698BB1E924C5B9A000C5EC67 /* DayFeedFullRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */; };
 		6993A42D24DA8DB900505BA4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42C24DA8DB900505BA4 /* Animations.swift */; };
 		6993A42F24DA8DE500505BA4 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42E24DA8DE500505BA4 /* Animator.swift */; };
+		6993A43124DBF95C00505BA4 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A43024DBF95C00505BA4 /* DateFormatter.swift */; };
 		69B95A0624BC240000A0CBBB /* DayFeedCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B95A0524BC240000A0CBBB /* DayFeedCells.swift */; };
 		69B95A0A24BC245E00A0CBBB /* DayFeedLiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B95A0924BC245E00A0CBBB /* DayFeedLiftCell.xib */; };
 		69B95A0C24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */; };
@@ -64,6 +65,7 @@
 		698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayFeedFullRestCell.xib; sourceTree = "<group>"; };
 		6993A42C24DA8DB900505BA4 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		6993A42E24DA8DE500505BA4 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		6993A43024DBF95C00505BA4 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		69B95A0524BC240000A0CBBB /* DayFeedCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFeedCells.swift; sourceTree = "<group>"; };
 		69B95A0924BC245E00A0CBBB /* DayFeedLiftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedLiftCell.xib; sourceTree = "<group>"; };
 		69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedEnterLeftResortCell.xib; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				6924E04D24A1BD26001CDBB7 /* LaunchScreen.storyboard */,
 				6924E05024A1BD26001CDBB7 /* Info.plist */,
 				690408B124C55FBF006C7D5C /* UIControlClosure.swift */,
+				6993A43024DBF95C00505BA4 /* DateFormatter.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				690F6DFB24A35D83009BD28D /* StatisticsCell.swift in Sources */,
 				6924E04324A1BD23001CDBB7 /* AppDelegate.swift in Sources */,
 				690408B224C55FBF006C7D5C /* UIControlClosure.swift in Sources */,
+				6993A43124DBF95C00505BA4 /* DateFormatter.swift in Sources */,
 				694AD75824B72E5F007783E7 /* ResortsDayCell.swift in Sources */,
 				6975CAD324B4776B00FBBAA1 /* TheTripCollectionViewCell.swift in Sources */,
 				69B95A0624BC240000A0CBBB /* DayFeedCells.swift in Sources */,
