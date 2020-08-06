@@ -59,21 +59,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource[section].trip.count + 1
+        return dataSource[section].trip.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
-            
-            cell.configure(with: dataSource[indexPath.section].statistics)
-            cell.selectionStyle = .none
-            
-            return cell
-            
-        } else {
+//        if indexPath.row == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsCell", for: indexPath) as! StatisticsCell
+//
+//            cell.configure(with: dataSource[indexPath.section].statistics)
+//            cell.selectionStyle = .none
+//
+//            return cell
+//
+//        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as! TripCell
-            let trip = dataSource[indexPath.section].trip[indexPath.row - 1]
+            let trip = dataSource[indexPath.section].trip[indexPath.row]
             
             cell.titleLabel?.text = trip.title
             cell.tripImage?.image = UIImage(named: trip.image)
@@ -83,7 +83,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.selectionStyle = .none
             
             return cell
-        }
+//        }
         
     }
     
@@ -102,79 +102,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
         
-        if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
-            let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row - 1]
+        //if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
+            let selectedTrip = self.dataSource[indexPath.section].trip[indexPath.row]
             
             let theTripViewController = self.storyboard?.instantiateViewController(withIdentifier: "TheTripViewController") as! TheTripViewController
-            //theTripViewController.transitioningDelegate = transitionManager
+            
             theTripViewController.trip = selectedTrip
             //theTripViewController.delegate = self
-//            UIView.animate(withDuration: 2.0) {() -> Void in
-//                UIView.setAnimationCurve(.easeInOut)
-//                self.navigationController?.pushViewController(theTripViewController, animated: true)
-//                //UIView.transition(with: (self.navigationController?.view)!, duration: 2, options: .beginFromCurrentState, animations: (() -> Void)?, completion: )
-//                UIView.setAnimationTransition(.flipFromLeft, for: (self.navigationController?.view)!, cache: false)
 //
-//            }
-            
-//            let container = self.navigationController?.transitionCoordinator?.containerView
-//            let fromView = self.navigationController?.transitionCoordinator?.view(forKey: UITransitionContextViewKey.from)
-//            let toView = self.navigationController?.transitionCoordinator?.view(forKey: UITransitionContextViewKey.to)
-//
-//            let offScreenRight = CGAffineTransform.init(scaleX: (container?.frame.width)!, y: 0)
-//            //let offScreenLeft = CGAffineTransform.init(scaleX: -(container?.frame.width)!, y: 0)
-//
-//            container!.addSubview(toView!)
-//            container!.addSubview(fromView!)
-//
-//            UIView.animate(withDuration: 3.0, delay: 0.0, usingSpringWithDamping: 0.49, initialSpringVelocity: 0.81, options: [], animations: { () -> Void in
-//
-//                fromView!.transform = offScreenRight
-//
-//                toView!.transform = CGAffineTransform.identity
-//
-//            })
-            
-            
-            
-            
-//            let transition = CATransition()
-//            transition.duration = 5
-//            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-//            transition.type = CATransitionType.push
-//            transition.subtype = CATransitionSubtype.fromRight
-//            //self.view.window?.backgroundColor = .clear
-//            //transition.fillMode = CAMediaTimingFillMode.forwards
-//            //view.window!.layer.add(transition, forKey: kCATransition)
-//            self.navigationController?.view.layer.add(transition, forKey: nil)
-            //self.navigationController?.transitioningDelegate = transitionManager
             self.navigationController?.pushViewController(theTripViewController, animated: true)
             
             
-        }
-    }
-    
-
-    
-    
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 0 {
-//            tableView.deselectRow(at: indexPath, animated: false)
-//        }
-//    }
-    
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0 {
-//            return CGFloat(120)
-//        } else 
-//        
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 60
-//    }
+        //}
+    } 
     
     
 }

@@ -14,7 +14,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     var presenting: Bool = true
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        0.6
+        0.4
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
