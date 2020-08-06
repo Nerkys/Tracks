@@ -58,16 +58,16 @@ class DayFeedEnterLeftResortCell: UITableViewCell, DayFeedItemCell {
         view.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.2
-        //view.clipsToBounds = false
-        view.layer.zPosition = 2
+        view.clipsToBounds = false
+        //view.layer.zPosition = 2
         
-        shadowView.layer.cornerRadius = 10.0
-        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        shadowView.layer.shadowRadius = 3
-        shadowView.layer.shadowOpacity = 0.2
-
-        shadowView.layer.zPosition = 1
+//        shadowView.layer.cornerRadius = 10.0
+//        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        shadowView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+//        shadowView.layer.shadowRadius = 3
+//        shadowView.layer.shadowOpacity = 0.2
+//
+//        shadowView.layer.zPosition = 1
     }
 }
 

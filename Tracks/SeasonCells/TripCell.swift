@@ -42,7 +42,7 @@ class TripCell: UITableViewCell {
         
         coverLayer.frame = tripImage.bounds
         coverLayer.backgroundColor = UIColor.black.cgColor
-        coverLayer.opacity = 0.25
+        coverLayer.opacity = 0.35
         tripImage.layer.addSublayer(coverLayer)
         
     }

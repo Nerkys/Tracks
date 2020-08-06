@@ -25,20 +25,22 @@ enum AnimationFactory {
         }
     }
 
-    static func makeMoveUpWithBounce(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
+    static func makeMoveAndFade(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
         return { cell, indexPath, tableView in
             cell.transform = CGAffineTransform(translationX: 0, y: rowHeight)
+            cell.isHidden = true
             cell.alpha = 0
             
             UIView.animate(
                 withDuration: duration,
                 delay: delayFactor * Double(indexPath.row),
-                usingSpringWithDamping: 1.0,
-                initialSpringVelocity: 1.0,
-                options: [.curveEaseInOut],
+                //usingSpringWithDamping: 1.0,
+                //initialSpringVelocity: 1.0,
+                options: [.curveLinear],
                 animations: {
                     cell.transform = CGAffineTransform(translationX: 0, y: 0)
                     cell.alpha = 1
+                    cell.isHidden = false
             })
         }
     }

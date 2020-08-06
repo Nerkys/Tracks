@@ -13,14 +13,14 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2018/19",
             trip:
-                [Trip(title: "Сольдэу - Эль-Тартер", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
+                [Trip(title: "Красная Поляна", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
                              Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                             Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                             Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                       resorts:
                             [Resort(title: "Сольдэу - Эль-Тартер", days:
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
@@ -30,7 +30,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "Distance", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                                          Statistics(title: "на горе", image: "ActivityTime", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoin", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoin", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -64,7 +64,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                         DayFeedItem(title: "Трек", type: .track(difficultyImageName: "red")),
                                         DayFeedItem(title: "Отдых", type: .lift(liftName: "Атлант")),
@@ -94,7 +94,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                         "Шерегеш")),
@@ -128,7 +128,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                         "Шерегеш")),
@@ -165,7 +165,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -199,7 +199,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -233,7 +233,7 @@ func getDataSourceInitialValue() -> [Season] {
                                       Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                       Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                       Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                      Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                      Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                  feedItems: [
                                      DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                      "Шерегеш")),
@@ -270,7 +270,7 @@ func getDataSourceInitialValue() -> [Season] {
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 600),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                             Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                             Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                       resorts:
                             [Resort(title: "Сольдэу - Эль-Тартер", days:
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
@@ -280,7 +280,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -314,7 +314,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                         "Шерегеш")),
@@ -350,7 +350,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -384,7 +384,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                         "Шерегеш")),
@@ -420,7 +420,7 @@ func getDataSourceInitialValue() -> [Season] {
                  Statistics(title: "спусков", image: "NumberOfTracks", value: 17),
                  Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                  Statistics(title: "на горе", image: "ActivityTime", value: 80),
-                 Statistics(title: "skillcoin", image: "SkillCoin", value: 110)]
+                 Statistics(title: "skill coin", image: "SkillCoin", value: 110)]
             ),
         
         Season(
@@ -433,7 +433,7 @@ func getDataSourceInitialValue() -> [Season] {
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 900),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 11),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 43),
-                             Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 60)],
+                             Statistics(title: "skill coin", image: "SkillCoinWhite", value: 60)],
                       resorts:
                             [Resort(title: "Сольдэу - Эль-Тартер", days:
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
@@ -443,7 +443,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -477,7 +477,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -513,7 +513,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -547,7 +547,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
-                                         Statistics(title: "skillcoin", image: "SkillCoinWhite", value: 55)],
+                                         Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                                     feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
                                          "Шерегеш")),
@@ -583,7 +583,7 @@ func getDataSourceInitialValue() -> [Season] {
                  Statistics(title: "спусков", image: "NumberOfTracks", value: 8),
                  Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                  Statistics(title: "на горе", image: "ActivityTime", value: 40),
-                 Statistics(title: "skillcoin", image: "SkillCoin", value: 55)]
+                 Statistics(title: "skill coin", image: "SkillCoin", value: 55)]
             )
     ]
 }

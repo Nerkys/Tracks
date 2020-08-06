@@ -25,7 +25,7 @@
                         <rect key="frame" x="8" y="6" width="404" height="73"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpa-Nx-wiT">
-                                <rect key="frame" x="17" y="-20" width="2" height="103"/>
+                                <rect key="frame" x="17" y="-20" width="2" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="Dgu-tU-qoS"/>
@@ -109,7 +109,7 @@
                             <constraint firstItem="Gpa-Nx-wiT" firstAttribute="leading" secondItem="Fgh-1A-Z3p" secondAttribute="leading" constant="17" id="N7P-7D-8cf"/>
                             <constraint firstAttribute="bottom" secondItem="IXO-Iw-ohg" secondAttribute="bottom" constant="29" id="OkB-Nl-JB9"/>
                             <constraint firstAttribute="bottom" secondItem="ebu-Fm-Ot6" secondAttribute="bottom" constant="10" id="Q9u-VM-K4a"/>
-                            <constraint firstAttribute="bottom" secondItem="Gpa-Nx-wiT" secondAttribute="bottom" constant="-10" id="QAF-x4-e1b"/>
+                            <constraint firstAttribute="bottom" secondItem="Gpa-Nx-wiT" secondAttribute="bottom" constant="-7" id="QAF-x4-e1b"/>
                             <constraint firstAttribute="bottom" secondItem="P7c-xz-9io" secondAttribute="bottom" constant="12" id="RfD-75-hZG"/>
                             <constraint firstItem="dUc-E7-IiB" firstAttribute="leading" secondItem="Fgh-1A-Z3p" secondAttribute="leading" constant="6" id="abF-Mm-Z5j"/>
                             <constraint firstItem="0nN-3B-ch2" firstAttribute="top" secondItem="Fgh-1A-Z3p" secondAttribute="top" id="dDX-Dm-0Al"/>
@@ -133,6 +133,7 @@
                     <constraint firstItem="Fgh-1A-Z3p" firstAttribute="top" secondItem="Qiv-bb-hvJ" secondAttribute="top" constant="6" id="uTG-v9-IWD"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bottomView" destination="m5Y-Xh-hLd" id="hxT-KC-BeE"/>
                 <outlet property="buttonTitleLabel" destination="u7S-5v-dNC" id="8Fd-u5-o0G"/>
