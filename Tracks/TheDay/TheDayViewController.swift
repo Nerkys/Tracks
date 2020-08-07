@@ -43,7 +43,7 @@ class TheDayViewController: UIViewController {
         super.viewDidLoad()
         
         dataSourceForColletionView = day.statistics
-        dateLabel?.text = day.date
+        dateLabel?.text = dateForDay(date: day.date)
         
         theDayTableView.delegate = self
         theDayTableView.dataSource = self

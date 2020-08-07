@@ -24,7 +24,7 @@ extension String {
     }
 }
 
-public func dateForTripOnSeasonScreen(startedAt: String, finishedAt: String) -> String {
+func dateForTripOnSeasonScreen(startedAt: String, finishedAt: String) -> String {
     
     if startedAt == finishedAt {
         let dateFormatter = DateFormatter()
@@ -47,7 +47,7 @@ public func dateForTripOnSeasonScreen(startedAt: String, finishedAt: String) -> 
     }
 }
 
-public func getNumberOfDaysForTripOnSeasonScreen(startedAt: String, finishedAt: String) -> Int {
+func getNumberOfDaysForTripOnSeasonScreen(startedAt: String, finishedAt: String) -> Int {
     
     if startedAt == finishedAt {
         return 1
@@ -59,4 +59,14 @@ public func getNumberOfDaysForTripOnSeasonScreen(startedAt: String, finishedAt: 
         let result = Int(finishedDate)! - Int(startedDate)!
         return result
     }
+}
+
+func dateForDay(date: String) -> String {
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ru_RU")
+    dateFormatter.dateFormat = "d MMMM"
+    
+    let result = dateFormatter.string(from: (date.toDate())!)
+    return result
 }

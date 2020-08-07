@@ -42,7 +42,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIViewCo
         return transitionManager
     }
     
-    func getNumberOfActiveDays(tableView: UITableView, indexPath: IndexPath) -> Int {
+    func getNumberOfActiveDays(indexPath: IndexPath) -> Int {
         let trip = dataSource[indexPath.section].trip[indexPath.row]
         var count = 0
         for currentResort in 0..<trip.resorts.count {
@@ -50,6 +50,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIViewCo
         }
         return count
     }
+    
+    
     
 //    private func tableViewConfig() {
 //        let nib = UINib(nibName: headerID, bundle: nil)
@@ -87,7 +89,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel?.text = trip.title
         cell.tripImage?.image = UIImage(named: trip.image)
 //        cell.numberOfActiveDaysLabel?.text = String(dataSource[indexPath.section].trip[indexPath.row].resorts[indexPath.row].days.count)
-        cell.numberOfActiveDaysLabel?.text = "\(getNumberOfActiveDays(tableView: tableView, indexPath: indexPath))/\(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
+        cell.numberOfActiveDaysLabel?.text = "\(getNumberOfActiveDays(indexPath: indexPath))/\(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
         cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
         cell.distanceLabel?.text = "\(String(Double(trip.distance) / 1000))  км"
         cell.dateLabel?.text = dateForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt)

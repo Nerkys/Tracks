@@ -57,6 +57,14 @@ class TheTripViewController: UIViewController {
         
         self.hideNavigationBar()
     }
+    
+    func getNumberOfActiveDays(indexPath: IndexPath) -> Int {
+        var count = 0
+        for currentResort in 0..<trip.resorts.count {
+            count += trip.resorts[currentResort].days.count
+        }
+        return count
+    }
 }
 
 extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
@@ -71,16 +79,17 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ResortsDayCell", for: indexPath) as! ResortsDayCell
-            let day = trip.resorts[indexPath.section].days[indexPath.row]
-            
-            cell.titleLabel.text = day.date
-            cell.maxSpeedLabel.text = "\(String(day.maxSpeed)) км/ч"
-            cell.distanceLabel.text = "\(String(day.distance)) м"
-            cell.numberOfTracksLabel.text = String(day.numberOfTracks)
-            cell.selectionStyle = .none
-            
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResortsDayCell", for: indexPath) as! ResortsDayCell
+        let day = trip.resorts[indexPath.section].days[indexPath.row]
+        
+        //cell.titleLabel.text = dateForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt)
+        cell.titleLabel.text = dateForDay(date: day.date)
+        cell.maxSpeedLabel.text = "\(String(day.maxSpeed)) км/ч"
+        cell.distanceLabel.text = "\(String(Double(day.distance) / 1000)) км"
+        cell.numberOfTracksLabel.text = String(day.numberOfTracks)
+        cell.selectionStyle = .none
+        
+        return cell
         
     }
     
@@ -142,14 +151,14 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
             cell.actionImage.image = UIImage(named: statistics.image)
             
             switch statistics.title {
-            case "макс. скорость":
-                cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
+            case "активные дни":
+                cell.valueLabel?.text = "\(getNumberOfActiveDays(indexPath: indexPath))/\(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
             case "расстояние":
-                cell.valueLabel?.text = "\(String(statistics.value)) м"
+                cell.valueLabel?.text = "\(Double(statistics.value) / 1000) км"
             case "на горе":
-                cell.valueLabel?.text = "\(String(statistics.value)) мин"
+                cell.valueLabel?.text = "\(statistics.value) мин"
             case "время спуска":
-                cell.valueLabel?.text = "\(String(statistics.value)) мин"
+                cell.valueLabel?.text = "\(statistics.value) мин"
             default:
                 cell.valueLabel?.text = String(statistics.value)
             }
@@ -162,7 +171,7 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
             if pageControl?.currentPage == 0 {
                 titleAndDateLabel.text = trip.title
             } else {
-                titleAndDateLabel.text = trip.startedAt
+                titleAndDateLabel.text = dateForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt)
             }
             
         }

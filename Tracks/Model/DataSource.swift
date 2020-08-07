@@ -16,7 +16,7 @@ func getDataSourceInitialValue() -> [Season] {
                 [Trip(title: "Красная Поляна", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                             Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                             Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -26,7 +26,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                      statistics:
                                         [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 70),
-                                         Statistics(title: "спусков", image: "NumberOfTracks", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracks", value: 20),
                                          Statistics(title: "расстояние", image: "Distance", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                                          Statistics(title: "на горе", image: "ActivityTime", value: 40),
@@ -60,7 +60,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "15.02.2020", maxSpeed: 100, distance: 600, numberOfTracks: 5,
                                     statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -94,7 +94,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "16.02.2020", maxSpeed: 120, distance: 700, numberOfTracks: 8,
                                     statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -131,7 +131,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 [Day(date: "17.02.2020", maxSpeed: 90, distance: 300, numberOfTracks: 2,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -165,7 +165,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "18.02.2020", maxSpeed: 228, distance: 100500, numberOfTracks: 10,
                                  statistics:
                                     [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                     Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                     Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                      Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                      Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                      Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -199,7 +199,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "19.02.2020", maxSpeed: 228, distance: 100500, numberOfTracks: 10,
                                  statistics:
                                     [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                     Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                     Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                      Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                      Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                      Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -233,7 +233,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "20.02.2020", maxSpeed: 120, distance: 700, numberOfTracks: 8,
                                  statistics:
                                      [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                      Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                      Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                       Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                       Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                       Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -270,7 +270,7 @@ func getDataSourceInitialValue() -> [Season] {
                  Trip(title: "Уистлер-Блэккомб", startedAt: "03.03.2020", finishedAt: "10.03.2020", image: "Blackcomb", numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
-                             Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 8),
+                             Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 8),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 600),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -280,7 +280,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -314,7 +314,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "14.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                  statistics:
                                     [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                     Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                     Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                      Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                      Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                      Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -348,7 +348,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "15.02.2020", maxSpeed: 80, distance: 500, numberOfTracks: 4,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -384,7 +384,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 [Day(date: "15.02.2020", maxSpeed: 90, distance: 300, numberOfTracks: 2,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -418,7 +418,7 @@ func getDataSourceInitialValue() -> [Season] {
                                  Day(date: "16.02.2020", maxSpeed: 228, distance: 100, numberOfTracks: 10,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -455,7 +455,7 @@ func getDataSourceInitialValue() -> [Season] {
             statistics:
                 [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 80),
                  Statistics(title: "расстояние", image: "Distance", value: 1200),
-                 Statistics(title: "спусков", image: "NumberOfTracks", value: 17),
+                 Statistics(title: "спуски", image: "NumberOfTracks", value: 17),
                  Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                  Statistics(title: "на горе", image: "ActivityTime", value: 80),
                  Statistics(title: "skill coin", image: "SkillCoin", value: 110)]
@@ -467,7 +467,7 @@ func getDataSourceInitialValue() -> [Season] {
                 [Trip(title: "Куршевель, Франция", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 5),
-                             Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 10),
+                             Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 10),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 900),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 11),
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 43),
@@ -477,7 +477,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
-                                         Statistics(title: "спусков", image: "NumberOfTracksWhite", value: 20),
+                                         Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                                          Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
                                          Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
@@ -513,7 +513,7 @@ func getDataSourceInitialValue() -> [Season] {
             statistics:
                 [Statistics(title: "макс. скорость", image: "MaxSpeed", value: 75),
                  Statistics(title: "расстояние", image: "Distance", value: 600),
-                 Statistics(title: "спусков", image: "NumberOfTracks", value: 8),
+                 Statistics(title: "спуски", image: "NumberOfTracks", value: 8),
                  Statistics(title: "время спуска", image: "ActivityTime", value: 10),
                  Statistics(title: "на горе", image: "ActivityTime", value: 40),
                  Statistics(title: "skill coin", image: "SkillCoin", value: 55)]
