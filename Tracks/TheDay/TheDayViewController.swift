@@ -20,6 +20,11 @@ class TheDayViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func goToMapSummaryButton(_ sender: Any) {
+        let mapSummaryViewController = self.storyboard?.instantiateViewController(withIdentifier: "MapSummaryViewController") as! MapSummaryViewController
+        mapSummaryViewController.setDay(day: day)
+        self.navigationController?.pushViewController(mapSummaryViewController, animated: true)
+    }
     
     var day: Day!
     var feedItems: [UIDayFeedItem] = []

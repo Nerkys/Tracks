@@ -46,7 +46,15 @@ struct Day {
     let numberOfTracks: Int
     let statistics: [Statistics]
     let feedItems: [DayFeedItem]
+    let coordinates: Coordinates
+    
+    struct Coordinates {
+        let latitude: Double
+        let longitude: Double
+    }
 }
+
+
 
 struct DayFeedItem {
     let title: String
