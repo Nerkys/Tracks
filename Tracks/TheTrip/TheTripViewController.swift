@@ -49,9 +49,9 @@ class TheTripViewController: UIViewController {
         coverLayer.backgroundColor = UIColor.black.cgColor
         coverLayer.opacity = 0.25
         tripImage.layer.addSublayer(coverLayer)
-        statisticsView.layer.cornerRadius = 10.0
+        //statisticsView.layer.cornerRadius = 10.0
         statisticsView.clipsToBounds = true
-        statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        //statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         
         
@@ -94,16 +94,23 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
+        if trip.resorts.count == 1 {
+            return nil
+        } else {
             let header = tableView.dequeueReusableCell(withIdentifier: "TheResortHeaderCell") as! TheResortHeaderCell
 
             header.titleLabel.text = trip.resorts[section].title
 
             return header
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if trip.resorts.count == 1 {
+            return 0
+        } else {
             return 30
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

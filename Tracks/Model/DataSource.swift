@@ -18,8 +18,8 @@ func getDataSourceInitialValue() -> [Season] {
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
-                             Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
-                             Statistics(title: "на горе", image: "OnMountainWhite", value: 40),
+                             Statistics(title: "макс. скорость", image: "MaxSpeed", value: 90),
+                             Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 40),
                              Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                       resorts:
                             [Resort(title: "Сольдэу - Эль-Тартер", days:
@@ -464,7 +464,7 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2019/20",
             trip:
-                [Trip(title: "Куршевель, Франция", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
+                [Trip(title: "Куршевель", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 5),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 10),
@@ -473,7 +473,7 @@ func getDataSourceInitialValue() -> [Season] {
                              Statistics(title: "на горе", image: "OnMountainWhite", value: 43),
                              Statistics(title: "skill coin", image: "SkillCoinWhite", value: 60)],
                       resorts:
-                            [Resort(title: "Сольдэу - Эль-Тартер", days:
+                            [Resort(title: "Куршевель", days:
                                 [Day(date: "13.02.2020", maxSpeed: 75, distance: 400, numberOfTracks: 3,
                                      statistics:
                                         [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
