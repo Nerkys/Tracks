@@ -29,7 +29,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          Statistics(title: "спуски", image: "NumberOfTracks", value: 20),
                                          Statistics(title: "расстояние", image: "Distance", value: 700),
                                          Statistics(title: "время спуска", image: "ActivityTime", value: 10),
-                                         Statistics(title: "на горе", image: "ActivityTime", value: 40),
+                                         Statistics(title: "на горе", image: "TimeOnMountain", value: 40),
                                          Statistics(title: "skill coin", image: "SkillCoin", value: 55)],
                                      feedItems: [
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВЫХОД ИЗ КУРОРТА", resortName:
