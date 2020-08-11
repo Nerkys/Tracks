@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -20,76 +20,91 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE117886B13E373DFA5F778EA2A83AC /* CLLocationManager+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A0C2B8810E2D80D0AADCDF158F2693 /* MMEEventLogReportViewController.m */; };
-		10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F898C3E95D7F5DF9079033794B4B33 /* MMETimerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B2643FF5AD507A46591A5054BD76BDB6 /* MMEEventLogger.m */; };
-		13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6462B71800A60EE1F6D3C108E4561 /* MMENSURLSessionWrapper.m */; };
-		184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B789530C1C3BE6A0089BCB70BE81D1B2 /* NSUserDefaults+MMEConfiguration_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4ED26857210D6752F8F69EF70613D5 /* NSData+MMEGZIP.m */; };
-		19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D63A11C45D304331C5C7E058123DF83C /* MMEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 2771033AEC585AB8D4516631E5A4343A /* NSUserDefaults+MMEConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CEE2EA0559EB20CBF8876AB195768F /* NSUserDefaults+MMEConfiguration.m */; };
-		1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF580D92C5649FADDDC25A84A0A5DADA /* MapboxMobileEvents-dummy.m */; };
-		1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD516257A3B2EF0CA2A6E92169B7D1B0 /* MapboxMobileEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E4385E202587F2EB2784BEE9E8AA15 /* MMEDate.m */; };
-		22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 512F5204964E2A34839DB2E482C137B4 /* MMEMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BE5BB7C8F71B36ED6E0C455A24B741B /* MMEEventsManager_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC2B65888FD61051AF346A0FE3EEB7C /* MMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB07FDA6CD486F812958EF3779B04A09 /* NSString+MMEVersions.m */; };
-		35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AB27E16709ED74A24280F79413D4E8 /* MMEAPIClient.m */; };
-		38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E18376376D214BA4536D762D73BD3C2E /* MMEDispatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E6959108FACF00828B59921E14FEAF /* MMECommonEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CDCDA06A18B957D39A974CFBA1A66E /* MMEReachability.m */; };
-		41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 820BD47AE47764530EE1B98A8F3A075D /* MMECertPin.m */; };
-		4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 9428981E046E7D9F28D38EE0DF39DFA5 /* CLLocation+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC0ADD0EE117A31CEB2DBEF38E91BA /* MMEMetrics.m */; };
-		53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = A169B86CB8B1B5F00D87361DA8B90ECD /* MMECategoryLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD3F9811317118E5214F34DB66CD330 /* MMECertPin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C890101C1A05975DCB2365EDA02241 /* MMECategoryLoader.m */; };
-		5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D640C801ED17D150B814592B860CBD7 /* MMEEventsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5203BBE61F08D20EBAE6CCF70A348CE0 /* MMEDependencyManager.m */; };
-		661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AE58C92C51C67D691652408E77A7A0D5 /* MMEAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F9FB01B9D2BAFA5230B20929AD62E4 /* MMEUINavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE364AFF8F60C1C6B28CBEC7EA8F8BE /* MMEEventLogReportViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8EEF054C992EBD2C9038F0AFCAD47B /* MapboxMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE859F455F08D729F149E38BA6BD556 /* NSString+MMEVersions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 826E97DD36BC38CB1D1CA0ADA3986140 /* UIKit+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AFF9DD74675975E86172BD6615FE6E /* MMEAPIClient_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65AF81E43CCBE3B00A7198446F60B /* MMETimerManager.m */; };
-		9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A32E22B0E9535834113D7E0D58BC13 /* MMEMetricsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F2DFDF479B7E12A4543AB27F2CEF5 /* MMEUINavigation.m */; };
-		A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A74B5F6E4A00F9F4F661175F2ECA3D /* MMEEventsManager.m */; };
-		A4793FC5B5B15B221654CAE9BE245E3E /* Pods-Tracks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB84C0BF82FD3218D97FC4A6E54DE5B /* Pods-Tracks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = E67033FDE1DD873B1331276019F8F6C4 /* CLLocation+MMEMobileEvents.m */; };
-		AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF9FA8BCEFC00C95BB088CF10FE53B4 /* MMEDependencyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 252CE192ABFFF38D7750B2C163678BBB /* MMELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64A50F8D9D0A9E0DF5FEC2EBBEE640 /* UIKit+MMEMobileEvents.m */; };
-		B208593D9CD43CC916C78EA5A9D0B3B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3231418B016FE3E53993F3258491A328 /* MMEMetricsManager.m */; };
-		BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B94C2D1A3ECE576A7F40DBC4CCE1C7A /* MMEDispatchManager.m */; };
-		BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A28DA3AEBBC39DF9FACE003FDD28E8 /* MMEEvent.m */; };
-		CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = EFAFAB82BA7BA87C40DF4E106693B625 /* MMEEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA4F7C4F86D04533CB02CACC1EB50CA /* MMEUniqueIdentifier.m */; };
-		D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5F06DC32AAAF29024132936F32E1BF /* MMEUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D59E7F14400254E778330167EADC088B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D740F49A90AE2FC5A2CCF87A680710A /* logger.html */; };
-		DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3FCA028049CCA2271481F7C256396A /* NSData+MMEGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A3854A34E43570CC6469FAA31B5B7D /* MMELocationManager.m */; };
-		DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC189F148663A2E6B89D4933FCF55E6A /* MMEUIApplicationWrapper.m */; };
-		E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F42EE60BFF174C289D2A2C5145EDB9F /* CLLocationManager+MMEMobileEvents.m */; };
-		E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE1A8EF3FE935A574E06A38DD52A2A3 /* MMEUIApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA693AE4C748F0FA551FD3D701A4FD9 /* MMEDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA0F51407C32BCEF361DC320FDB38E24 /* Pods-Tracks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02F1202F6104053832D5A06E5A50DF /* Pods-Tracks-dummy.m */; };
-		F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3BA9BEC8844FA82BD45ED4A454366 /* MMEConstants.m */; };
-		F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 803DB9C169DDF450BC78835EBA6CC00F /* MMENSURLSessionWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDF551F24CB5BEB7B1ABB910BA32B8E /* MMECommonEventData.m */; };
-		FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = CA464D3F106CEC357AAC8ADC0EBE46E1 /* MMEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FE08A39511BB5CB2899A5C26205EAE28 /* MMEEventLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E20C8EE95AB0F492BD70658B4D5CCB7 /* CLLocationManager+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		071D52F82B602FB85E35CA8583EEF456 /* FloatingPanelSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5684DE0D5D3B425C6BB4DA91A272F3C /* FloatingPanelSurfaceView.swift */; };
+		0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67554E7EF876C3FCC35308B1CFB3F97 /* MMEEventLogReportViewController.m */; };
+		10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C962EEAD1274A5B5EC4B2BF0A66FCB /* MMETimerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF4D706A88ACE9E50D0251C74991AB /* MMEEventLogger.m */; };
+		13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B1BD4D59EBBD3629776FF3FC38672F /* MMENSURLSessionWrapper.m */; };
+		184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4ECAF4F5C7226716C9D648BC726038 /* NSUserDefaults+MMEConfiguration_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE362C132CA9FD270CDEA24ACA165D /* NSData+MMEGZIP.m */; };
+		19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D58829FD0AE0DC18CF4757D8D88C72C /* MMEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C837FD4CED4EB5BF80E0B78B5DCDC2E2 /* NSUserDefaults+MMEConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA9281C92B728DEAA367E08AFB4A8EE /* NSUserDefaults+MMEConfiguration.m */; };
+		1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA44A34A2BB45688D67AC820EB434B2 /* MapboxMobileEvents-dummy.m */; };
+		1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4166B968171803E677438280B29206 /* MapboxMobileEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE032EB2BBF4F4ECBBA7A5526BA893C4 /* MMEDate.m */; };
+		22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = B827F323F371ECB4CA70812C80B1549A /* MMEMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DB51BC8445E86FA60F0CCDCDD720CC87 /* MMEEventsManager_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F044BBE51D5DFBEA0AC887F893E14C3 /* MMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C000FFD2D40FD9F728E1F83134FDB1B /* FloatingPanel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F08EDC6E2B73D54299154D8CEFE8EFA /* FloatingPanel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D058DE79C4FC8B5D6CD6E5D6615B3 /* NSString+MMEVersions.m */; };
+		35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5E061778D8A462D46AE37139659720 /* MMEAPIClient.m */; };
+		38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FCF9D78A6C99869B3B1975DA7380B53 /* MMEDispatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = 56C18105C94DC22D3CEE0EE886E75B55 /* MMECommonEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D408305B29250792B2CDDC90990ECAC /* FloatingPanelCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99272EB49CCF66BB2DECC1E75D44D563 /* FloatingPanelCore.swift */; };
+		3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F924D90061E60F8A576EC3A815A419F6 /* MMEReachability.m */; };
+		41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 739647DF2072FC1FBC5EFB2162A647F7 /* MMECertPin.m */; };
+		441F18275B50E1393CC34685A8B879BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 276CC2A11A9517ABF21E27105C74CD6E /* CLLocation+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DDF72DCD9D2979FE400C44779CA6759 /* Pods-Tracks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02F1202F6104053832D5A06E5A50DF /* Pods-Tracks-dummy.m */; };
+		52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = AD69DC1A4B028F56EB9F0C130FFDC949 /* MMEMetrics.m */; };
+		53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E57798EEFC72E9505D2D649777B8135B /* MMECategoryLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAE211AFDB4640D6939AF9F1D35D9B /* MMECertPin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB37BD83E5FC3386898754028CE20E /* MMECategoryLoader.m */; };
+		5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7DFC8DB4D8A8C066787DF1A06824F3 /* MMEEventsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE658105C0C85C9E1825EC96BE5EF75 /* MMEDependencyManager.m */; };
+		661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C89EB104593E41F31E5E1AAF2102152 /* MMEAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5708E22FB0988419E52E590BE44B85 /* MMEUINavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 584B41D8525875469B2AC4A2D8967588 /* MMEEventLogReportViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 14740938BD0B450FFB1B648A6C8E7A75 /* MapboxMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA2F6F6EA29C85C2CD80987E88D7B6D /* NSString+MMEVersions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = F32DDCE742D6FBD81E5F82ADDD420A65 /* UIKit+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FA96F5D3B8F4CE9C95C35D1CD4D6A91 /* FloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A9901C78C5754678EACBE814E6780 /* FloatingPanelController.swift */; };
+		852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CF29C099B5542EB5CE7C1973FB8B9B1 /* MMEAPIClient_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA7608AE2D38B7045528D362930AD0B /* MMETimerManager.m */; };
+		970E5351EB7A3C92CD346BCDCC6652A3 /* FloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C63CA0BB03DB0E024CBC8DF0729EB /* FloatingPanelLayout.swift */; };
+		9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E7A33206CC0ABC5B8D03975BA44D880F /* MMEMetricsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D4179364E9E01F59017EABD6BCA4432D /* MMEUINavigation.m */; };
+		A04D8B3B3650926C5F7D42B22A67DE7D /* FloatingPanelBackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45869E266382F7A41AE22A8CA438DE83 /* FloatingPanelBackdropView.swift */; };
+		A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DD86089C7CC97DEC4212573C8F7186 /* MMEEventsManager.m */; };
+		A3673FD39025DE753731C568DB5E23B9 /* FloatingPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D88930376914A7072D7FD400FEA987 /* FloatingPanelView.swift */; };
+		A49977EF1D94933CE588A5F237D5DD7C /* GrabberHandleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D881C2FF6C6EBF3482034C6D4012755E /* GrabberHandleView.swift */; };
+		A696FE118006841FB09A5E76C11B8978 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE211D37C9B9FD65C782F2B1A1ED6A /* Logger.swift */; };
+		A6DB10D310FD18E8B6C25EA33D81DF4E /* FloatingPanel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 851547335EE06215BEAC53F3E4C3F003 /* FloatingPanel-dummy.m */; };
+		A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA1EE95DCD618444988858AD793507C /* CLLocation+MMEMobileEvents.m */; };
+		AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E73B2357EFA2A992E6035B96674CD0B /* MMEDependencyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE1B9134D32C7B612C5CEAE638F0D9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8584283E287FFF89446CDB1B22B1B067 /* MMELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 7377B6BD838C593E679118CDBDE1E4E5 /* UIKit+MMEMobileEvents.m */; };
+		BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CA988607D4CCBCF0D67E0C4DCB2193 /* MMEMetricsManager.m */; };
+		BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F84F48EADA5CF623C9A8079AE4270 /* MMEDispatchManager.m */; };
+		BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 324991014C71CEE04DAE9A0EE4A874B3 /* MMEEvent.m */; };
+		C17DD90FDB535CC886156FEA4A17B02C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		C544625A977357843B35D2BFD0478BF0 /* Pods-Tracks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB84C0BF82FD3218D97FC4A6E54DE5B /* Pods-Tracks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A53F73021616919E9290367F501046 /* MMEEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF925E8C4C99A77E1C9FE0049826FCE4 /* FloatingPanelBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA98224474EBFEA5FB71FBC20B59922 /* FloatingPanelBehavior.swift */; };
+		D13AC4B3EDF1F6A5973A039FCE488B92 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9401FEB27802B01D81BB082C81F1F9 /* UIExtensions.swift */; };
+		D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 91499A90DAB19D6458AFC729F52B1F83 /* MMEUniqueIdentifier.m */; };
+		D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = F9FE407456375B855071219001635EB1 /* MMEUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D59E7F14400254E778330167EADC088B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */ = {isa = PBXBuildFile; fileRef = E54C1833447FA1DDEAB6D78DB56D61C9 /* logger.html */; };
+		DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BD6A77E7C8C74B303AE11D1A921E4F /* NSData+MMEGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B69D633357D80EE24AA4F426CAF6FFB4 /* MMELocationManager.m */; };
+		DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0C644DE00F11B5668D5182E15572D /* MMEUIApplicationWrapper.m */; };
+		E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A1F44F20A1A3C25BEE667F5B823CA3 /* CLLocationManager+MMEMobileEvents.m */; };
+		E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FD327FA7E6CF62DF21CC643DF1DA3D88 /* MMEUIApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E62E543CA9182791942A0DE76D3E6C6C /* FloatingPanelTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E1DDBD0A9A1FA73F6C68394561F2CE /* FloatingPanelTransitioning.swift */; };
+		E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */ = {isa = PBXBuildFile; fileRef = A1196C9EA30C438CC04F186149F604AF /* MMEDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D8A46277FB0B1CD3C26FEB655E344A /* MMEConstants.m */; };
+		F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 462BCCDFC9210CA7DC5ACC0855ED7450 /* MMENSURLSessionWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252A61BFE029217EF8A643FC4EF5599 /* MMECommonEventData.m */; };
+		FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 830483AA4703B8656522F75964FF013F /* MMEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 530BE182A9F08F4328C64661BD216643 /* MMEEventLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5714ACF6D66BE74297C9DC3D1B87EA77 /* PBXContainerItemProxy */ = {
+		347114892D53F09267720061E4265675 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -103,7 +118,14 @@
 			remoteGlobalIDString = F20E041B920E9DD7BA087321915E730F;
 			remoteInfo = MapboxMobileEvents;
 		};
-		6B48BD11768DC9D793340EF97E2C9880 /* PBXContainerItemProxy */ = {
+		9F4E8930BFDEFD4DE0DE4D8C2C336557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4874E7E655CEB4C01E4572AD903AEA21;
+			remoteInfo = FloatingPanel;
+		};
+		C383833FE6969CEE5A43520025CB8745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -113,92 +135,121 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A1F44F20A1A3C25BEE667F5B823CA3 /* CLLocationManager+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		029A9901C78C5754678EACBE814E6780 /* FloatingPanelController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelController.swift; path = Framework/Sources/FloatingPanelController.swift; sourceTree = "<group>"; };
+		05EE362C132CA9FD270CDEA24ACA165D /* NSData+MMEGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MMEGZIP.m"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.m"; sourceTree = "<group>"; };
 		06401509966DD2942BFCBE17ED3E093F /* Pods-Tracks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tracks.modulemap"; sourceTree = "<group>"; };
-		09A0C2B8810E2D80D0AADCDF158F2693 /* MMEEventLogReportViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogReportViewController.m; path = MapboxMobileEvents/MMEEventLogReportViewController.m; sourceTree = "<group>"; };
-		16F9FB01B9D2BAFA5230B20929AD62E4 /* MMEUINavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUINavigation.h; path = MapboxMobileEvents/MMEUINavigation.h; sourceTree = "<group>"; };
-		1B94C2D1A3ECE576A7F40DBC4CCE1C7A /* MMEDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDispatchManager.m; path = MapboxMobileEvents/MMEDispatchManager.m; sourceTree = "<group>"; };
-		1CA693AE4C748F0FA551FD3D701A4FD9 /* MMEDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDate.h; path = MapboxMobileEvents/MMEDate.h; sourceTree = "<group>"; };
-		1EC2B65888FD61051AF346A0FE3EEB7C /* MMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETypes.h; path = MapboxMobileEvents/MMETypes.h; sourceTree = "<group>"; };
-		1F5F06DC32AAAF29024132936F32E1BF /* MMEUniqueIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUniqueIdentifier.h; path = MapboxMobileEvents/MMEUniqueIdentifier.h; sourceTree = "<group>"; };
-		21AFF9DD74675975E86172BD6615FE6E /* MMEAPIClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient_Private.h; path = MapboxMobileEvents/MMEAPIClient_Private.h; sourceTree = "<group>"; };
+		07EAE211AFDB4640D6939AF9F1D35D9B /* MMECertPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECertPin.h; path = MapboxMobileEvents/MMECertPin.h; sourceTree = "<group>"; };
+		0E20C8EE95AB0F492BD70658B4D5CCB7 /* CLLocationManager+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		0E6F84F48EADA5CF623C9A8079AE4270 /* MMEDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDispatchManager.m; path = MapboxMobileEvents/MMEDispatchManager.m; sourceTree = "<group>"; };
+		0EF65B0E89A14ABE968D0570CC8AA524 /* FloatingPanel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-prefix.pch"; sourceTree = "<group>"; };
+		1252A61BFE029217EF8A643FC4EF5599 /* MMECommonEventData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECommonEventData.m; path = MapboxMobileEvents/MMECommonEventData.m; sourceTree = "<group>"; };
+		14740938BD0B450FFB1B648A6C8E7A75 /* MapboxMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMobileEvents.h; path = MapboxMobileEvents/MapboxMobileEvents.h; sourceTree = "<group>"; };
+		14B2B0AA8C32F87572F8E82CEFCBB542 /* FloatingPanel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingPanel-Info.plist"; sourceTree = "<group>"; };
+		15E1DDBD0A9A1FA73F6C68394561F2CE /* FloatingPanelTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelTransitioning.swift; path = Framework/Sources/FloatingPanelTransitioning.swift; sourceTree = "<group>"; };
+		198C63CA0BB03DB0E024CBC8DF0729EB /* FloatingPanelLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelLayout.swift; path = Framework/Sources/FloatingPanelLayout.swift; sourceTree = "<group>"; };
+		1AE658105C0C85C9E1825EC96BE5EF75 /* MMEDependencyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDependencyManager.m; path = MapboxMobileEvents/MMEDependencyManager.m; sourceTree = "<group>"; };
+		1CA2F6F6EA29C85C2CD80987E88D7B6D /* NSString+MMEVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MMEVersions.h"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.h"; sourceTree = "<group>"; };
+		225A35E31F33BA32170DA3BEC197873A /* FloatingPanel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.debug.xcconfig; sourceTree = "<group>"; };
 		232AD20295BE6FC83527CCC612A5C50F /* Pods-Tracks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tracks.debug.xcconfig"; sourceTree = "<group>"; };
-		23C890101C1A05975DCB2365EDA02241 /* MMECategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECategoryLoader.m; path = MapboxMobileEvents/Categories/MMECategoryLoader.m; sourceTree = "<group>"; };
-		252CE192ABFFF38D7750B2C163678BBB /* MMELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMELocationManager.h; path = MapboxMobileEvents/MMELocationManager.h; sourceTree = "<group>"; };
-		2771033AEC585AB8D4516631E5A4343A /* NSUserDefaults+MMEConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.h"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3231418B016FE3E53993F3258491A328 /* MMEMetricsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetricsManager.m; path = MapboxMobileEvents/MMEMetricsManager.m; sourceTree = "<group>"; };
-		3DE117886B13E373DFA5F778EA2A83AC /* CLLocationManager+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		3FDC0ADD0EE117A31CEB2DBEF38E91BA /* MMEMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetrics.m; path = MapboxMobileEvents/MMEMetrics.m; sourceTree = "<group>"; };
-		46A74B5F6E4A00F9F4F661175F2ECA3D /* MMEEventsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventsManager.m; path = MapboxMobileEvents/MMEEventsManager.m; sourceTree = "<group>"; };
-		4A3FF9BA27905AF3BC9889A259EAD145 /* Mapbox-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		276CC2A11A9517ABF21E27105C74CD6E /* CLLocation+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocation+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		27BD6A77E7C8C74B303AE11D1A921E4F /* NSData+MMEGZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MMEGZIP.h"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.h"; sourceTree = "<group>"; };
+		2B4ECAF4F5C7226716C9D648BC726038 /* NSUserDefaults+MMEConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration_Private.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration_Private.h"; sourceTree = "<group>"; };
+		2D58829FD0AE0DC18CF4757D8D88C72C /* MMEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEConstants.h; path = MapboxMobileEvents/MMEConstants.h; sourceTree = "<group>"; };
+		2EA44A34A2BB45688D67AC820EB434B2 /* MapboxMobileEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxMobileEvents-dummy.m"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		324991014C71CEE04DAE9A0EE4A874B3 /* MMEEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEvent.m; path = MapboxMobileEvents/MMEEvent.m; sourceTree = "<group>"; };
+		38D88930376914A7072D7FD400FEA987 /* FloatingPanelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelView.swift; path = Framework/Sources/FloatingPanelView.swift; sourceTree = "<group>"; };
+		3BD0C644DE00F11B5668D5182E15572D /* MMEUIApplicationWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUIApplicationWrapper.m; path = MapboxMobileEvents/MMEUIApplicationWrapper.m; sourceTree = "<group>"; };
+		3FFB37BD83E5FC3386898754028CE20E /* MMECategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECategoryLoader.m; path = MapboxMobileEvents/Categories/MMECategoryLoader.m; sourceTree = "<group>"; };
+		40D8A46277FB0B1CD3C26FEB655E344A /* MMEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEConstants.m; path = MapboxMobileEvents/MMEConstants.m; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45869E266382F7A41AE22A8CA438DE83 /* FloatingPanelBackdropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelBackdropView.swift; path = Framework/Sources/FloatingPanelBackdropView.swift; sourceTree = "<group>"; };
+		462BCCDFC9210CA7DC5ACC0855ED7450 /* MMENSURLSessionWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMENSURLSessionWrapper.h; path = MapboxMobileEvents/MMENSURLSessionWrapper.h; sourceTree = "<group>"; };
+		46D96661A544D9638F6590DC4B7962AE /* MapboxMobileEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.debug.xcconfig; sourceTree = "<group>"; };
 		4AB0E0A3C557472EA30A488504E5723F /* Pods-Tracks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tracks-acknowledgements.markdown"; sourceTree = "<group>"; };
-		512F5204964E2A34839DB2E482C137B4 /* MMEMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetrics.h; path = MapboxMobileEvents/MMEMetrics.h; sourceTree = "<group>"; };
-		5203BBE61F08D20EBAE6CCF70A348CE0 /* MMEDependencyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDependencyManager.m; path = MapboxMobileEvents/MMEDependencyManager.m; sourceTree = "<group>"; };
-		52A28DA3AEBBC39DF9FACE003FDD28E8 /* MMEEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEvent.m; path = MapboxMobileEvents/MMEEvent.m; sourceTree = "<group>"; };
+		4C4166B968171803E677438280B29206 /* MapboxMobileEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-umbrella.h"; sourceTree = "<group>"; };
+		530BE182A9F08F4328C64661BD216643 /* MMEEventLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogger.h; path = MapboxMobileEvents/MMEEventLogger.h; sourceTree = "<group>"; };
+		53CA988607D4CCBCF0D67E0C4DCB2193 /* MMEMetricsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetricsManager.m; path = MapboxMobileEvents/MMEMetricsManager.m; sourceTree = "<group>"; };
 		55E1C8E66B7436E33F36A5D8D176743F /* Pods-Tracks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tracks.release.xcconfig"; sourceTree = "<group>"; };
+		56C18105C94DC22D3CEE0EE886E75B55 /* MMECommonEventData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECommonEventData.h; path = MapboxMobileEvents/MMECommonEventData.h; sourceTree = "<group>"; };
 		5798A31571DCA3A65A9F61522F7634D9 /* Pods-Tracks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tracks-acknowledgements.plist"; sourceTree = "<group>"; };
-		58E6959108FACF00828B59921E14FEAF /* MMECommonEventData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECommonEventData.h; path = MapboxMobileEvents/MMECommonEventData.h; sourceTree = "<group>"; };
-		5D16C3CC25523589EA519AED42A97F43 /* MapboxMobileEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxMobileEvents.modulemap; sourceTree = "<group>"; };
-		5F4ED26857210D6752F8F69EF70613D5 /* NSData+MMEGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MMEGZIP.m"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.m"; sourceTree = "<group>"; };
+		584B41D8525875469B2AC4A2D8967588 /* MMEEventLogReportViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogReportViewController.h; path = MapboxMobileEvents/MMEEventLogReportViewController.h; sourceTree = "<group>"; };
+		5E73B2357EFA2A992E6035B96674CD0B /* MMEDependencyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDependencyManager.h; path = MapboxMobileEvents/MMEDependencyManager.h; sourceTree = "<group>"; };
 		5FB84C0BF82FD3218D97FC4A6E54DE5B /* Pods-Tracks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tracks-umbrella.h"; sourceTree = "<group>"; };
-		6B3FCA028049CCA2271481F7C256396A /* NSData+MMEGZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MMEGZIP.h"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.h"; sourceTree = "<group>"; };
-		6BE5BB7C8F71B36ED6E0C455A24B741B /* MMEEventsManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager_Private.h; path = MapboxMobileEvents/MMEEventsManager_Private.h; sourceTree = "<group>"; };
-		6D5F2DFDF479B7E12A4543AB27F2CEF5 /* MMEUINavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUINavigation.m; path = MapboxMobileEvents/MMEUINavigation.m; sourceTree = "<group>"; };
-		6F42EE60BFF174C289D2A2C5145EDB9F /* CLLocationManager+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		5FCF9D78A6C99869B3B1975DA7380B53 /* MMEDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDispatchManager.h; path = MapboxMobileEvents/MMEDispatchManager.h; sourceTree = "<group>"; };
+		60A53F73021616919E9290367F501046 /* MMEEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEvent.h; path = MapboxMobileEvents/MMEEvent.h; sourceTree = "<group>"; };
+		64B441419B9C67F1ECDE03E9CB14D30A /* Mapbox-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		66DD86089C7CC97DEC4212573C8F7186 /* MMEEventsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventsManager.m; path = MapboxMobileEvents/MMEEventsManager.m; sourceTree = "<group>"; };
+		6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingPanel.framework; path = FloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7377B6BD838C593E679118CDBDE1E4E5 /* UIKit+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		739647DF2072FC1FBC5EFB2162A647F7 /* MMECertPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECertPin.m; path = MapboxMobileEvents/MMECertPin.m; sourceTree = "<group>"; };
+		74C962EEAD1274A5B5EC4B2BF0A66FCB /* MMETimerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETimerManager.h; path = MapboxMobileEvents/MMETimerManager.h; sourceTree = "<group>"; };
 		75A948B8F58445ED5522E2EB31AF2359 /* Pods-Tracks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tracks-Info.plist"; sourceTree = "<group>"; };
-		7BD3F9811317118E5214F34DB66CD330 /* MMECertPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECertPin.h; path = MapboxMobileEvents/MMECertPin.h; sourceTree = "<group>"; };
+		7C89EB104593E41F31E5E1AAF2102152 /* MMEAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient.h; path = MapboxMobileEvents/MMEAPIClient.h; sourceTree = "<group>"; };
+		7C9895188965839043CD1354807B2615 /* MapboxMobileEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxMobileEvents.modulemap; sourceTree = "<group>"; };
 		7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxMobileEvents.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DF3BA9BEC8844FA82BD45ED4A454366 /* MMEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEConstants.m; path = MapboxMobileEvents/MMEConstants.m; sourceTree = "<group>"; };
+		7CF29C099B5542EB5CE7C1973FB8B9B1 /* MMEAPIClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient_Private.h; path = MapboxMobileEvents/MMEAPIClient_Private.h; sourceTree = "<group>"; };
 		7E8D7B53A0B6BF4FFBA7354C9A559144 /* Pods-Tracks-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tracks-frameworks.sh"; sourceTree = "<group>"; };
-		803DB9C169DDF450BC78835EBA6CC00F /* MMENSURLSessionWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMENSURLSessionWrapper.h; path = MapboxMobileEvents/MMENSURLSessionWrapper.h; sourceTree = "<group>"; };
-		820BD47AE47764530EE1B98A8F3A075D /* MMECertPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECertPin.m; path = MapboxMobileEvents/MMECertPin.m; sourceTree = "<group>"; };
-		826E97DD36BC38CB1D1CA0ADA3986140 /* UIKit+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		83A269F047C9D279D7F40B5787296229 /* MapboxMobileEvents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMobileEvents-Info.plist"; sourceTree = "<group>"; };
-		8C2FE1BE7A20B9FB6AAA3CF4D9DA9745 /* MapboxMobileEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.release.xcconfig; sourceTree = "<group>"; };
-		8CB6462B71800A60EE1F6D3C108E4561 /* MMENSURLSessionWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMENSURLSessionWrapper.m; path = MapboxMobileEvents/MMENSURLSessionWrapper.m; sourceTree = "<group>"; };
-		8E64A50F8D9D0A9E0DF5FEC2EBBEE640 /* UIKit+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.m"; sourceTree = "<group>"; };
-		8EDC997C708690127CB381023080E974 /* MapboxMobileEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.debug.xcconfig; sourceTree = "<group>"; };
-		8FDF551F24CB5BEB7B1ABB910BA32B8E /* MMECommonEventData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECommonEventData.m; path = MapboxMobileEvents/MMECommonEventData.m; sourceTree = "<group>"; };
-		913830FE4E9272444FEFEC30529FFE87 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = dynamic/Mapbox.framework; sourceTree = "<group>"; };
-		9428981E046E7D9F28D38EE0DF39DFA5 /* CLLocation+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocation+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		95CDCDA06A18B957D39A974CFBA1A66E /* MMEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEReachability.m; path = MapboxMobileEvents/Reachability/MMEReachability.m; sourceTree = "<group>"; };
-		96DA9112AF82B041F546005B48BF448A /* MapboxMobileEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-prefix.pch"; sourceTree = "<group>"; };
-		9D640C801ED17D150B814592B860CBD7 /* MMEEventsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager.h; path = MapboxMobileEvents/MMEEventsManager.h; sourceTree = "<group>"; };
-		9D740F49A90AE2FC5A2CCF87A680710A /* logger.html */ = {isa = PBXFileReference; includeInIndex = 1; name = logger.html; path = MapboxMobileEvents/Resources/logger.html; sourceTree = "<group>"; };
+		7EAF4D706A88ACE9E50D0251C74991AB /* MMEEventLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogger.m; path = MapboxMobileEvents/MMEEventLogger.m; sourceTree = "<group>"; };
+		7F044BBE51D5DFBEA0AC887F893E14C3 /* MMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETypes.h; path = MapboxMobileEvents/MMETypes.h; sourceTree = "<group>"; };
+		81B1BD4D59EBBD3629776FF3FC38672F /* MMENSURLSessionWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMENSURLSessionWrapper.m; path = MapboxMobileEvents/MMENSURLSessionWrapper.m; sourceTree = "<group>"; };
+		830483AA4703B8656522F75964FF013F /* MMEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEReachability.h; path = MapboxMobileEvents/Reachability/MMEReachability.h; sourceTree = "<group>"; };
+		851547335EE06215BEAC53F3E4C3F003 /* FloatingPanel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingPanel-dummy.m"; sourceTree = "<group>"; };
+		8584283E287FFF89446CDB1B22B1B067 /* MMELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMELocationManager.h; path = MapboxMobileEvents/MMELocationManager.h; sourceTree = "<group>"; };
+		8A5708E22FB0988419E52E590BE44B85 /* MMEUINavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUINavigation.h; path = MapboxMobileEvents/MMEUINavigation.h; sourceTree = "<group>"; };
+		8EA7608AE2D38B7045528D362930AD0B /* MMETimerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMETimerManager.m; path = MapboxMobileEvents/MMETimerManager.m; sourceTree = "<group>"; };
+		91499A90DAB19D6458AFC729F52B1F83 /* MMEUniqueIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUniqueIdentifier.m; path = MapboxMobileEvents/MMEUniqueIdentifier.m; sourceTree = "<group>"; };
+		969B08F2D35CC1908102A804967D5AE3 /* MapboxMobileEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-prefix.pch"; sourceTree = "<group>"; };
+		99272EB49CCF66BB2DECC1E75D44D563 /* FloatingPanelCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelCore.swift; path = Framework/Sources/FloatingPanelCore.swift; sourceTree = "<group>"; };
+		9A5E061778D8A462D46AE37139659720 /* MMEAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEAPIClient.m; path = MapboxMobileEvents/MMEAPIClient.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A169B86CB8B1B5F00D87361DA8B90ECD /* MMECategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECategoryLoader.h; path = MapboxMobileEvents/Categories/MMECategoryLoader.h; sourceTree = "<group>"; };
-		A9E4385E202587F2EB2784BEE9E8AA15 /* MMEDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDate.m; path = MapboxMobileEvents/MMEDate.m; sourceTree = "<group>"; };
-		AAE364AFF8F60C1C6B28CBEC7EA8F8BE /* MMEEventLogReportViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogReportViewController.h; path = MapboxMobileEvents/MMEEventLogReportViewController.h; sourceTree = "<group>"; };
-		AD516257A3B2EF0CA2A6E92169B7D1B0 /* MapboxMobileEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-umbrella.h"; sourceTree = "<group>"; };
-		AE58C92C51C67D691652408E77A7A0D5 /* MMEAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient.h; path = MapboxMobileEvents/MMEAPIClient.h; sourceTree = "<group>"; };
-		AF580D92C5649FADDDC25A84A0A5DADA /* MapboxMobileEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxMobileEvents-dummy.m"; sourceTree = "<group>"; };
-		B2643FF5AD507A46591A5054BD76BDB6 /* MMEEventLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogger.m; path = MapboxMobileEvents/MMEEventLogger.m; sourceTree = "<group>"; };
-		B35575198151B753FC2C4B4221E8C789 /* Mapbox-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
-		B4AB27E16709ED74A24280F79413D4E8 /* MMEAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEAPIClient.m; path = MapboxMobileEvents/MMEAPIClient.m; sourceTree = "<group>"; };
-		B789530C1C3BE6A0089BCB70BE81D1B2 /* NSUserDefaults+MMEConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration_Private.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration_Private.h"; sourceTree = "<group>"; };
-		BC189F148663A2E6B89D4933FCF55E6A /* MMEUIApplicationWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUIApplicationWrapper.m; path = MapboxMobileEvents/MMEUIApplicationWrapper.m; sourceTree = "<group>"; };
-		BDE1A8EF3FE935A574E06A38DD52A2A3 /* MMEUIApplicationWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUIApplicationWrapper.h; path = MapboxMobileEvents/MMEUIApplicationWrapper.h; sourceTree = "<group>"; };
-		BFF9FA8BCEFC00C95BB088CF10FE53B4 /* MMEDependencyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDependencyManager.h; path = MapboxMobileEvents/MMEDependencyManager.h; sourceTree = "<group>"; };
-		CA464D3F106CEC357AAC8ADC0EBE46E1 /* MMEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEReachability.h; path = MapboxMobileEvents/Reachability/MMEReachability.h; sourceTree = "<group>"; };
-		CCE859F455F08D729F149E38BA6BD556 /* NSString+MMEVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MMEVersions.h"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.h"; sourceTree = "<group>"; };
-		D1A32E22B0E9535834113D7E0D58BC13 /* MMEMetricsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetricsManager.h; path = MapboxMobileEvents/MMEMetricsManager.h; sourceTree = "<group>"; };
-		D63A11C45D304331C5C7E058123DF83C /* MMEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEConstants.h; path = MapboxMobileEvents/MMEConstants.h; sourceTree = "<group>"; };
+		9F08EDC6E2B73D54299154D8CEFE8EFA /* FloatingPanel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-umbrella.h"; sourceTree = "<group>"; };
+		A1196C9EA30C438CC04F186149F604AF /* MMEDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDate.h; path = MapboxMobileEvents/MMEDate.h; sourceTree = "<group>"; };
+		ACA98224474EBFEA5FB71FBC20B59922 /* FloatingPanelBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelBehavior.swift; path = Framework/Sources/FloatingPanelBehavior.swift; sourceTree = "<group>"; };
+		AD69DC1A4B028F56EB9F0C130FFDC949 /* MMEMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetrics.m; path = MapboxMobileEvents/MMEMetrics.m; sourceTree = "<group>"; };
+		AEC7F83E391D953085914DF3B593F9E7 /* MapboxMobileEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.release.xcconfig; sourceTree = "<group>"; };
+		B42D058DE79C4FC8B5D6CD6E5D6615B3 /* NSString+MMEVersions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MMEVersions.m"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.m"; sourceTree = "<group>"; };
+		B69D633357D80EE24AA4F426CAF6FFB4 /* MMELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMELocationManager.m; path = MapboxMobileEvents/MMELocationManager.m; sourceTree = "<group>"; };
+		B827F323F371ECB4CA70812C80B1549A /* MMEMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetrics.h; path = MapboxMobileEvents/MMEMetrics.h; sourceTree = "<group>"; };
+		B8F4B29E905BCC9E7D8D0A5EA1D3B5A4 /* FloatingPanel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingPanel.release.xcconfig; sourceTree = "<group>"; };
+		C837FD4CED4EB5BF80E0B78B5DCDC2E2 /* NSUserDefaults+MMEConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.h"; sourceTree = "<group>"; };
+		D36893616BD2E345559236BAE826A66A /* Mapbox-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		D4179364E9E01F59017EABD6BCA4432D /* MMEUINavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUINavigation.m; path = MapboxMobileEvents/MMEUINavigation.m; sourceTree = "<group>"; };
+		D4CE211D37C9B9FD65C782F2B1A1ED6A /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Framework/Sources/Logger.swift; sourceTree = "<group>"; };
+		D881C2FF6C6EBF3482034C6D4012755E /* GrabberHandleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrabberHandleView.swift; path = Framework/Sources/GrabberHandleView.swift; sourceTree = "<group>"; };
 		DB02F1202F6104053832D5A06E5A50DF /* Pods-Tracks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tracks-dummy.m"; sourceTree = "<group>"; };
-		E18376376D214BA4536D762D73BD3C2E /* MMEDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDispatchManager.h; path = MapboxMobileEvents/MMEDispatchManager.h; sourceTree = "<group>"; };
+		DB51BC8445E86FA60F0CCDCDD720CC87 /* MMEEventsManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager_Private.h; path = MapboxMobileEvents/MMEEventsManager_Private.h; sourceTree = "<group>"; };
+		DBA9281C92B728DEAA367E08AFB4A8EE /* NSUserDefaults+MMEConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MMEConfiguration.m"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.m"; sourceTree = "<group>"; };
+		DE032EB2BBF4F4ECBBA7A5526BA893C4 /* MMEDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDate.m; path = MapboxMobileEvents/MMEDate.m; sourceTree = "<group>"; };
+		DEA1EE95DCD618444988858AD793507C /* CLLocation+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.m"; sourceTree = "<group>"; };
 		E5299E3914B5CF018C000EADA85709CD /* Pods_Tracks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tracks.framework; path = "Pods-Tracks.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E67033FDE1DD873B1331276019F8F6C4 /* CLLocation+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.m"; sourceTree = "<group>"; };
-		E9A3854A34E43570CC6469FAA31B5B7D /* MMELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMELocationManager.m; path = MapboxMobileEvents/MMELocationManager.m; sourceTree = "<group>"; };
-		EB07FDA6CD486F812958EF3779B04A09 /* NSString+MMEVersions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MMEVersions.m"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.m"; sourceTree = "<group>"; };
-		EFAFAB82BA7BA87C40DF4E106693B625 /* MMEEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEvent.h; path = MapboxMobileEvents/MMEEvent.h; sourceTree = "<group>"; };
-		F3E65AF81E43CCBE3B00A7198446F60B /* MMETimerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMETimerManager.m; path = MapboxMobileEvents/MMETimerManager.m; sourceTree = "<group>"; };
-		F5CEE2EA0559EB20CBF8876AB195768F /* NSUserDefaults+MMEConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MMEConfiguration.m"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.m"; sourceTree = "<group>"; };
-		F5F898C3E95D7F5DF9079033794B4B33 /* MMETimerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETimerManager.h; path = MapboxMobileEvents/MMETimerManager.h; sourceTree = "<group>"; };
-		FE08A39511BB5CB2899A5C26205EAE28 /* MMEEventLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogger.h; path = MapboxMobileEvents/MMEEventLogger.h; sourceTree = "<group>"; };
-		FE8EEF054C992EBD2C9038F0AFCAD47B /* MapboxMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMobileEvents.h; path = MapboxMobileEvents/MapboxMobileEvents.h; sourceTree = "<group>"; };
-		FEA4F7C4F86D04533CB02CACC1EB50CA /* MMEUniqueIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUniqueIdentifier.m; path = MapboxMobileEvents/MMEUniqueIdentifier.m; sourceTree = "<group>"; };
+		E54C1833447FA1DDEAB6D78DB56D61C9 /* logger.html */ = {isa = PBXFileReference; includeInIndex = 1; name = logger.html; path = MapboxMobileEvents/Resources/logger.html; sourceTree = "<group>"; };
+		E57798EEFC72E9505D2D649777B8135B /* MMECategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECategoryLoader.h; path = MapboxMobileEvents/Categories/MMECategoryLoader.h; sourceTree = "<group>"; };
+		E697FA24CCE8C1FBC0AC4B78BF78C4C5 /* FloatingPanel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingPanel.modulemap; sourceTree = "<group>"; };
+		E7A33206CC0ABC5B8D03975BA44D880F /* MMEMetricsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetricsManager.h; path = MapboxMobileEvents/MMEMetricsManager.h; sourceTree = "<group>"; };
+		F32DDCE742D6FBD81E5F82ADDD420A65 /* UIKit+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		F5684DE0D5D3B425C6BB4DA91A272F3C /* FloatingPanelSurfaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPanelSurfaceView.swift; path = Framework/Sources/FloatingPanelSurfaceView.swift; sourceTree = "<group>"; };
+		F67554E7EF876C3FCC35308B1CFB3F97 /* MMEEventLogReportViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogReportViewController.m; path = MapboxMobileEvents/MMEEventLogReportViewController.m; sourceTree = "<group>"; };
+		F924D90061E60F8A576EC3A815A419F6 /* MMEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEReachability.m; path = MapboxMobileEvents/Reachability/MMEReachability.m; sourceTree = "<group>"; };
+		F99085C23F9ACA33947CB106BF5C65F8 /* MapboxMobileEvents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMobileEvents-Info.plist"; sourceTree = "<group>"; };
+		F9FE407456375B855071219001635EB1 /* MMEUniqueIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUniqueIdentifier.h; path = MapboxMobileEvents/MMEUniqueIdentifier.h; sourceTree = "<group>"; };
+		FAE17DC047546834C7A8E794627C358A /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = dynamic/Mapbox.framework; sourceTree = "<group>"; };
+		FC9401FEB27802B01D81BB082C81F1F9 /* UIExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIExtensions.swift; path = Framework/Sources/UIExtensions.swift; sourceTree = "<group>"; };
+		FD327FA7E6CF62DF21CC643DF1DA3D88 /* MMEUIApplicationWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUIApplicationWrapper.h; path = MapboxMobileEvents/MMEUIApplicationWrapper.h; sourceTree = "<group>"; };
+		FF7DFC8DB4D8A8C066787DF1A06824F3 /* MMEEventsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager.h; path = MapboxMobileEvents/MMEEventsManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E25907FC421D8E714ADD71C47A8FDC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE1B9134D32C7B612C5CEAE638F0D9B /* Foundation.framework in Frameworks */,
+				C17DD90FDB535CC886156FEA4A17B02C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		193ADCDBCB9CB3F69649A8357E352292 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,11 +258,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D67C78A093796D1CB5D540124414688 /* Frameworks */ = {
+		FC5E59A335B3A582F34448E835D2B937 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B208593D9CD43CC916C78EA5A9D0B3B5 /* Foundation.framework in Frameworks */,
+				441F18275B50E1393CC34685A8B879BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,124 +286,57 @@
 			path = "Target Support Files/Pods-Tracks";
 			sourceTree = "<group>";
 		};
-		04C54C00BB7FA714C0428E0B9ED1BBF7 /* Pods */ = {
+		084B3598066FF4C10BFDEF6DFE4C0E02 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				78A73B16CDE8CE939B87DD0AFC879EF3 /* Mapbox-iOS-SDK */,
-				3C5DAFB8B795FB4921129ECC7DF9DB2F /* MapboxMobileEvents */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3C5DAFB8B795FB4921129ECC7DF9DB2F /* MapboxMobileEvents */ = {
-			isa = PBXGroup;
-			children = (
-				9428981E046E7D9F28D38EE0DF39DFA5 /* CLLocation+MMEMobileEvents.h */,
-				E67033FDE1DD873B1331276019F8F6C4 /* CLLocation+MMEMobileEvents.m */,
-				3DE117886B13E373DFA5F778EA2A83AC /* CLLocationManager+MMEMobileEvents.h */,
-				6F42EE60BFF174C289D2A2C5145EDB9F /* CLLocationManager+MMEMobileEvents.m */,
-				FE8EEF054C992EBD2C9038F0AFCAD47B /* MapboxMobileEvents.h */,
-				AE58C92C51C67D691652408E77A7A0D5 /* MMEAPIClient.h */,
-				B4AB27E16709ED74A24280F79413D4E8 /* MMEAPIClient.m */,
-				21AFF9DD74675975E86172BD6615FE6E /* MMEAPIClient_Private.h */,
-				A169B86CB8B1B5F00D87361DA8B90ECD /* MMECategoryLoader.h */,
-				23C890101C1A05975DCB2365EDA02241 /* MMECategoryLoader.m */,
-				7BD3F9811317118E5214F34DB66CD330 /* MMECertPin.h */,
-				820BD47AE47764530EE1B98A8F3A075D /* MMECertPin.m */,
-				58E6959108FACF00828B59921E14FEAF /* MMECommonEventData.h */,
-				8FDF551F24CB5BEB7B1ABB910BA32B8E /* MMECommonEventData.m */,
-				D63A11C45D304331C5C7E058123DF83C /* MMEConstants.h */,
-				7DF3BA9BEC8844FA82BD45ED4A454366 /* MMEConstants.m */,
-				1CA693AE4C748F0FA551FD3D701A4FD9 /* MMEDate.h */,
-				A9E4385E202587F2EB2784BEE9E8AA15 /* MMEDate.m */,
-				BFF9FA8BCEFC00C95BB088CF10FE53B4 /* MMEDependencyManager.h */,
-				5203BBE61F08D20EBAE6CCF70A348CE0 /* MMEDependencyManager.m */,
-				E18376376D214BA4536D762D73BD3C2E /* MMEDispatchManager.h */,
-				1B94C2D1A3ECE576A7F40DBC4CCE1C7A /* MMEDispatchManager.m */,
-				EFAFAB82BA7BA87C40DF4E106693B625 /* MMEEvent.h */,
-				52A28DA3AEBBC39DF9FACE003FDD28E8 /* MMEEvent.m */,
-				FE08A39511BB5CB2899A5C26205EAE28 /* MMEEventLogger.h */,
-				B2643FF5AD507A46591A5054BD76BDB6 /* MMEEventLogger.m */,
-				AAE364AFF8F60C1C6B28CBEC7EA8F8BE /* MMEEventLogReportViewController.h */,
-				09A0C2B8810E2D80D0AADCDF158F2693 /* MMEEventLogReportViewController.m */,
-				9D640C801ED17D150B814592B860CBD7 /* MMEEventsManager.h */,
-				46A74B5F6E4A00F9F4F661175F2ECA3D /* MMEEventsManager.m */,
-				6BE5BB7C8F71B36ED6E0C455A24B741B /* MMEEventsManager_Private.h */,
-				252CE192ABFFF38D7750B2C163678BBB /* MMELocationManager.h */,
-				E9A3854A34E43570CC6469FAA31B5B7D /* MMELocationManager.m */,
-				512F5204964E2A34839DB2E482C137B4 /* MMEMetrics.h */,
-				3FDC0ADD0EE117A31CEB2DBEF38E91BA /* MMEMetrics.m */,
-				D1A32E22B0E9535834113D7E0D58BC13 /* MMEMetricsManager.h */,
-				3231418B016FE3E53993F3258491A328 /* MMEMetricsManager.m */,
-				803DB9C169DDF450BC78835EBA6CC00F /* MMENSURLSessionWrapper.h */,
-				8CB6462B71800A60EE1F6D3C108E4561 /* MMENSURLSessionWrapper.m */,
-				CA464D3F106CEC357AAC8ADC0EBE46E1 /* MMEReachability.h */,
-				95CDCDA06A18B957D39A974CFBA1A66E /* MMEReachability.m */,
-				F5F898C3E95D7F5DF9079033794B4B33 /* MMETimerManager.h */,
-				F3E65AF81E43CCBE3B00A7198446F60B /* MMETimerManager.m */,
-				1EC2B65888FD61051AF346A0FE3EEB7C /* MMETypes.h */,
-				BDE1A8EF3FE935A574E06A38DD52A2A3 /* MMEUIApplicationWrapper.h */,
-				BC189F148663A2E6B89D4933FCF55E6A /* MMEUIApplicationWrapper.m */,
-				16F9FB01B9D2BAFA5230B20929AD62E4 /* MMEUINavigation.h */,
-				6D5F2DFDF479B7E12A4543AB27F2CEF5 /* MMEUINavigation.m */,
-				1F5F06DC32AAAF29024132936F32E1BF /* MMEUniqueIdentifier.h */,
-				FEA4F7C4F86D04533CB02CACC1EB50CA /* MMEUniqueIdentifier.m */,
-				6B3FCA028049CCA2271481F7C256396A /* NSData+MMEGZIP.h */,
-				5F4ED26857210D6752F8F69EF70613D5 /* NSData+MMEGZIP.m */,
-				CCE859F455F08D729F149E38BA6BD556 /* NSString+MMEVersions.h */,
-				EB07FDA6CD486F812958EF3779B04A09 /* NSString+MMEVersions.m */,
-				2771033AEC585AB8D4516631E5A4343A /* NSUserDefaults+MMEConfiguration.h */,
-				F5CEE2EA0559EB20CBF8876AB195768F /* NSUserDefaults+MMEConfiguration.m */,
-				B789530C1C3BE6A0089BCB70BE81D1B2 /* NSUserDefaults+MMEConfiguration_Private.h */,
-				826E97DD36BC38CB1D1CA0ADA3986140 /* UIKit+MMEMobileEvents.h */,
-				8E64A50F8D9D0A9E0DF5FEC2EBBEE640 /* UIKit+MMEMobileEvents.m */,
-				6BD1BA77743F045530D8A2870AD75054 /* Resources */,
-				5FC8399F34898B070AD2D69C4C686C2A /* Support Files */,
-			);
-			name = MapboxMobileEvents;
-			path = MapboxMobileEvents;
-			sourceTree = "<group>";
-		};
-		5FC8399F34898B070AD2D69C4C686C2A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5D16C3CC25523589EA519AED42A97F43 /* MapboxMobileEvents.modulemap */,
-				AF580D92C5649FADDDC25A84A0A5DADA /* MapboxMobileEvents-dummy.m */,
-				83A269F047C9D279D7F40B5787296229 /* MapboxMobileEvents-Info.plist */,
-				96DA9112AF82B041F546005B48BF448A /* MapboxMobileEvents-prefix.pch */,
-				AD516257A3B2EF0CA2A6E92169B7D1B0 /* MapboxMobileEvents-umbrella.h */,
-				8EDC997C708690127CB381023080E974 /* MapboxMobileEvents.debug.xcconfig */,
-				8C2FE1BE7A20B9FB6AAA3CF4D9DA9745 /* MapboxMobileEvents.release.xcconfig */,
+				64B441419B9C67F1ECDE03E9CB14D30A /* Mapbox-iOS-SDK.debug.xcconfig */,
+				D36893616BD2E345559236BAE826A66A /* Mapbox-iOS-SDK.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MapboxMobileEvents";
+			path = "../Target Support Files/Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		6BD1BA77743F045530D8A2870AD75054 /* Resources */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D740F49A90AE2FC5A2CCF87A680710A /* logger.html */,
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
 			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		717D65704B2A744F19ACCEA46E26F73B /* Products */ = {
+		48A7C41140606F0E4B3365BDF5A8CD51 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				E697FA24CCE8C1FBC0AC4B78BF78C4C5 /* FloatingPanel.modulemap */,
+				851547335EE06215BEAC53F3E4C3F003 /* FloatingPanel-dummy.m */,
+				14B2B0AA8C32F87572F8E82CEFCBB542 /* FloatingPanel-Info.plist */,
+				0EF65B0E89A14ABE968D0570CC8AA524 /* FloatingPanel-prefix.pch */,
+				9F08EDC6E2B73D54299154D8CEFE8EFA /* FloatingPanel-umbrella.h */,
+				225A35E31F33BA32170DA3BEC197873A /* FloatingPanel.debug.xcconfig */,
+				B8F4B29E905BCC9E7D8D0A5EA1D3B5A4 /* FloatingPanel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FloatingPanel";
+			sourceTree = "<group>";
+		};
+		63EA209F8851F870B679A23137CB527A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */,
 				7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */,
 				E5299E3914B5CF018C000EADA85709CD /* Pods_Tracks.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		78A73B16CDE8CE939B87DD0AFC879EF3 /* Mapbox-iOS-SDK */ = {
+		667DA82F02D3DD380096F15F6755FFA7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B624204D732208FE428A9412F4A590CD /* Frameworks */,
-				EB56668F234B6A8B0DE926220A846586 /* Support Files */,
+				B6A8AAFF99FAB35465599230A145B29D /* FloatingPanel */,
+				CA5D89EACA22EFC44C8A903A69572BFF /* Mapbox-iOS-SDK */,
+				EFD8FE10DA734C82A8EA26FA6F5E3307 /* MapboxMobileEvents */,
 			);
-			name = "Mapbox-iOS-SDK";
-			path = "Mapbox-iOS-SDK";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		78CD642E67C44BF7EADA9AC7A835AE0F /* Targets Support Files */ = {
@@ -363,54 +347,175 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B624204D732208FE428A9412F4A590CD /* Frameworks */ = {
+		7CED258A65511E6DED3E24A9C3F601F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				913830FE4E9272444FEFEC30529FFE87 /* Mapbox.framework */,
+				E54C1833447FA1DDEAB6D78DB56D61C9 /* logger.html */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		B6A8AAFF99FAB35465599230A145B29D /* FloatingPanel */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				45869E266382F7A41AE22A8CA438DE83 /* FloatingPanelBackdropView.swift */,
+				ACA98224474EBFEA5FB71FBC20B59922 /* FloatingPanelBehavior.swift */,
+				029A9901C78C5754678EACBE814E6780 /* FloatingPanelController.swift */,
+				99272EB49CCF66BB2DECC1E75D44D563 /* FloatingPanelCore.swift */,
+				198C63CA0BB03DB0E024CBC8DF0729EB /* FloatingPanelLayout.swift */,
+				F5684DE0D5D3B425C6BB4DA91A272F3C /* FloatingPanelSurfaceView.swift */,
+				15E1DDBD0A9A1FA73F6C68394561F2CE /* FloatingPanelTransitioning.swift */,
+				38D88930376914A7072D7FD400FEA987 /* FloatingPanelView.swift */,
+				D881C2FF6C6EBF3482034C6D4012755E /* GrabberHandleView.swift */,
+				D4CE211D37C9B9FD65C782F2B1A1ED6A /* Logger.swift */,
+				FC9401FEB27802B01D81BB082C81F1F9 /* UIExtensions.swift */,
+				48A7C41140606F0E4B3365BDF5A8CD51 /* Support Files */,
 			);
-			name = iOS;
+			name = FloatingPanel;
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		BCAA7C6D8CC481AB21867BD1B13A6B36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C9895188965839043CD1354807B2615 /* MapboxMobileEvents.modulemap */,
+				2EA44A34A2BB45688D67AC820EB434B2 /* MapboxMobileEvents-dummy.m */,
+				F99085C23F9ACA33947CB106BF5C65F8 /* MapboxMobileEvents-Info.plist */,
+				969B08F2D35CC1908102A804967D5AE3 /* MapboxMobileEvents-prefix.pch */,
+				4C4166B968171803E677438280B29206 /* MapboxMobileEvents-umbrella.h */,
+				46D96661A544D9638F6590DC4B7962AE /* MapboxMobileEvents.debug.xcconfig */,
+				AEC7F83E391D953085914DF3B593F9E7 /* MapboxMobileEvents.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MapboxMobileEvents";
+			sourceTree = "<group>";
+		};
+		CA5D89EACA22EFC44C8A903A69572BFF /* Mapbox-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				FFA96B7D818654306F7D43A5A2626A28 /* Frameworks */,
+				084B3598066FF4C10BFDEF6DFE4C0E02 /* Support Files */,
+			);
+			name = "Mapbox-iOS-SDK";
+			path = "Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				04C54C00BB7FA714C0428E0B9ED1BBF7 /* Pods */,
-				717D65704B2A744F19ACCEA46E26F73B /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				667DA82F02D3DD380096F15F6755FFA7 /* Pods */,
+				63EA209F8851F870B679A23137CB527A /* Products */,
 				78CD642E67C44BF7EADA9AC7A835AE0F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		EB56668F234B6A8B0DE926220A846586 /* Support Files */ = {
+		EFD8FE10DA734C82A8EA26FA6F5E3307 /* MapboxMobileEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4A3FF9BA27905AF3BC9889A259EAD145 /* Mapbox-iOS-SDK.debug.xcconfig */,
-				B35575198151B753FC2C4B4221E8C789 /* Mapbox-iOS-SDK.release.xcconfig */,
+				276CC2A11A9517ABF21E27105C74CD6E /* CLLocation+MMEMobileEvents.h */,
+				DEA1EE95DCD618444988858AD793507C /* CLLocation+MMEMobileEvents.m */,
+				0E20C8EE95AB0F492BD70658B4D5CCB7 /* CLLocationManager+MMEMobileEvents.h */,
+				01A1F44F20A1A3C25BEE667F5B823CA3 /* CLLocationManager+MMEMobileEvents.m */,
+				14740938BD0B450FFB1B648A6C8E7A75 /* MapboxMobileEvents.h */,
+				7C89EB104593E41F31E5E1AAF2102152 /* MMEAPIClient.h */,
+				9A5E061778D8A462D46AE37139659720 /* MMEAPIClient.m */,
+				7CF29C099B5542EB5CE7C1973FB8B9B1 /* MMEAPIClient_Private.h */,
+				E57798EEFC72E9505D2D649777B8135B /* MMECategoryLoader.h */,
+				3FFB37BD83E5FC3386898754028CE20E /* MMECategoryLoader.m */,
+				07EAE211AFDB4640D6939AF9F1D35D9B /* MMECertPin.h */,
+				739647DF2072FC1FBC5EFB2162A647F7 /* MMECertPin.m */,
+				56C18105C94DC22D3CEE0EE886E75B55 /* MMECommonEventData.h */,
+				1252A61BFE029217EF8A643FC4EF5599 /* MMECommonEventData.m */,
+				2D58829FD0AE0DC18CF4757D8D88C72C /* MMEConstants.h */,
+				40D8A46277FB0B1CD3C26FEB655E344A /* MMEConstants.m */,
+				A1196C9EA30C438CC04F186149F604AF /* MMEDate.h */,
+				DE032EB2BBF4F4ECBBA7A5526BA893C4 /* MMEDate.m */,
+				5E73B2357EFA2A992E6035B96674CD0B /* MMEDependencyManager.h */,
+				1AE658105C0C85C9E1825EC96BE5EF75 /* MMEDependencyManager.m */,
+				5FCF9D78A6C99869B3B1975DA7380B53 /* MMEDispatchManager.h */,
+				0E6F84F48EADA5CF623C9A8079AE4270 /* MMEDispatchManager.m */,
+				60A53F73021616919E9290367F501046 /* MMEEvent.h */,
+				324991014C71CEE04DAE9A0EE4A874B3 /* MMEEvent.m */,
+				530BE182A9F08F4328C64661BD216643 /* MMEEventLogger.h */,
+				7EAF4D706A88ACE9E50D0251C74991AB /* MMEEventLogger.m */,
+				584B41D8525875469B2AC4A2D8967588 /* MMEEventLogReportViewController.h */,
+				F67554E7EF876C3FCC35308B1CFB3F97 /* MMEEventLogReportViewController.m */,
+				FF7DFC8DB4D8A8C066787DF1A06824F3 /* MMEEventsManager.h */,
+				66DD86089C7CC97DEC4212573C8F7186 /* MMEEventsManager.m */,
+				DB51BC8445E86FA60F0CCDCDD720CC87 /* MMEEventsManager_Private.h */,
+				8584283E287FFF89446CDB1B22B1B067 /* MMELocationManager.h */,
+				B69D633357D80EE24AA4F426CAF6FFB4 /* MMELocationManager.m */,
+				B827F323F371ECB4CA70812C80B1549A /* MMEMetrics.h */,
+				AD69DC1A4B028F56EB9F0C130FFDC949 /* MMEMetrics.m */,
+				E7A33206CC0ABC5B8D03975BA44D880F /* MMEMetricsManager.h */,
+				53CA988607D4CCBCF0D67E0C4DCB2193 /* MMEMetricsManager.m */,
+				462BCCDFC9210CA7DC5ACC0855ED7450 /* MMENSURLSessionWrapper.h */,
+				81B1BD4D59EBBD3629776FF3FC38672F /* MMENSURLSessionWrapper.m */,
+				830483AA4703B8656522F75964FF013F /* MMEReachability.h */,
+				F924D90061E60F8A576EC3A815A419F6 /* MMEReachability.m */,
+				74C962EEAD1274A5B5EC4B2BF0A66FCB /* MMETimerManager.h */,
+				8EA7608AE2D38B7045528D362930AD0B /* MMETimerManager.m */,
+				7F044BBE51D5DFBEA0AC887F893E14C3 /* MMETypes.h */,
+				FD327FA7E6CF62DF21CC643DF1DA3D88 /* MMEUIApplicationWrapper.h */,
+				3BD0C644DE00F11B5668D5182E15572D /* MMEUIApplicationWrapper.m */,
+				8A5708E22FB0988419E52E590BE44B85 /* MMEUINavigation.h */,
+				D4179364E9E01F59017EABD6BCA4432D /* MMEUINavigation.m */,
+				F9FE407456375B855071219001635EB1 /* MMEUniqueIdentifier.h */,
+				91499A90DAB19D6458AFC729F52B1F83 /* MMEUniqueIdentifier.m */,
+				27BD6A77E7C8C74B303AE11D1A921E4F /* NSData+MMEGZIP.h */,
+				05EE362C132CA9FD270CDEA24ACA165D /* NSData+MMEGZIP.m */,
+				1CA2F6F6EA29C85C2CD80987E88D7B6D /* NSString+MMEVersions.h */,
+				B42D058DE79C4FC8B5D6CD6E5D6615B3 /* NSString+MMEVersions.m */,
+				C837FD4CED4EB5BF80E0B78B5DCDC2E2 /* NSUserDefaults+MMEConfiguration.h */,
+				DBA9281C92B728DEAA367E08AFB4A8EE /* NSUserDefaults+MMEConfiguration.m */,
+				2B4ECAF4F5C7226716C9D648BC726038 /* NSUserDefaults+MMEConfiguration_Private.h */,
+				F32DDCE742D6FBD81E5F82ADDD420A65 /* UIKit+MMEMobileEvents.h */,
+				7377B6BD838C593E679118CDBDE1E4E5 /* UIKit+MMEMobileEvents.m */,
+				7CED258A65511E6DED3E24A9C3F601F9 /* Resources */,
+				BCAA7C6D8CC481AB21867BD1B13A6B36 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Mapbox-iOS-SDK";
+			name = MapboxMobileEvents;
+			path = MapboxMobileEvents;
+			sourceTree = "<group>";
+		};
+		FFA96B7D818654306F7D43A5A2626A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAE17DC047546834C7A8E794627C358A /* Mapbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		762B49C0AF1BD4B956053A6E4C37A52C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C000FFD2D40FD9F728E1F83134FDB1B /* FloatingPanel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7C2C6DC78669B772DEAA57E6A7E80B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C544625A977357843B35D2BFD0478BF0 /* Pods-Tracks-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A82618C2877600798DECF1377C21F424 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,31 +556,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9815372D5552790AFC1172C2E672BE8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4793FC5B5B15B221654CAE9BE245E3E /* Pods-Tracks-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		722F1959B53301D38B7E0BE483DD5AC1 /* Pods-Tracks */ = {
+		4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD3B65EF64CD0419B61A3047474A7243 /* Build configuration list for PBXNativeTarget "Pods-Tracks" */;
+			buildConfigurationList = 6044DE3C7C1CBDBFC5A9C046CA3BD8D7 /* Build configuration list for PBXNativeTarget "FloatingPanel" */;
 			buildPhases = (
-				F9815372D5552790AFC1172C2E672BE8 /* Headers */,
-				323821D5DE4A27AC453A1608119D8A24 /* Sources */,
-				2D67C78A093796D1CB5D540124414688 /* Frameworks */,
-				4446A2C5AA2C937E8CB7AD72A5DB88B3 /* Resources */,
+				762B49C0AF1BD4B956053A6E4C37A52C /* Headers */,
+				AAD82367C4E6F146582EDE6D9A440D57 /* Sources */,
+				0E25907FC421D8E714ADD71C47A8FDC9 /* Frameworks */,
+				5FDD3CD220FC9D412FCF202F7E122871 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9591FA1C8ACD106836CCB539CA9E4BFC /* PBXTargetDependency */,
-				BF466195413795BD56A2138A07C2F2F8 /* PBXTargetDependency */,
+			);
+			name = FloatingPanel;
+			productName = FloatingPanel;
+			productReference = 6FAAB7D3DE9B2564509ABD18687E938E /* FloatingPanel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		722F1959B53301D38B7E0BE483DD5AC1 /* Pods-Tracks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6656E85209BE74097E72506F518D1FB0 /* Build configuration list for PBXNativeTarget "Pods-Tracks" */;
+			buildPhases = (
+				9C7C2C6DC78669B772DEAA57E6A7E80B /* Headers */,
+				9FACD393C295B5974E559113F41C10EB /* Sources */,
+				FC5E59A335B3A582F34448E835D2B937 /* Frameworks */,
+				366BD5E8FDD01A3F51171A225795F40D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909A0BE42F7A6ECBCDF0F36062355085 /* PBXTargetDependency */,
+				63CB52750A7568EF100A319092724300 /* PBXTargetDependency */,
+				FB099B7158266EC709B5A4A20E8C5367 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tracks";
 			productName = "Pods-Tracks";
@@ -510,7 +626,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -518,10 +634,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 717D65704B2A744F19ACCEA46E26F73B /* Products */;
+			productRefGroup = 63EA209F8851F870B679A23137CB527A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */,
 				6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */,
 				F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */,
 				722F1959B53301D38B7E0BE483DD5AC1 /* Pods-Tracks */,
@@ -530,7 +647,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4446A2C5AA2C937E8CB7AD72A5DB88B3 /* Resources */ = {
+		366BD5E8FDD01A3F51171A225795F40D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FDD3CD220FC9D412FCF202F7E122871 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,14 +672,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		323821D5DE4A27AC453A1608119D8A24 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA0F51407C32BCEF361DC320FDB38E24 /* Pods-Tracks-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4536D8E00AFACF1221626B8E034A2137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,6 +707,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FACD393C295B5974E559113F41C10EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDF72DCD9D2979FE400C44779CA6759 /* Pods-Tracks-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAD82367C4E6F146582EDE6D9A440D57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DB10D310FD18E8B6C25EA33D81DF4E /* FloatingPanel-dummy.m in Sources */,
+				A04D8B3B3650926C5F7D42B22A67DE7D /* FloatingPanelBackdropView.swift in Sources */,
+				CF925E8C4C99A77E1C9FE0049826FCE4 /* FloatingPanelBehavior.swift in Sources */,
+				7FA96F5D3B8F4CE9C95C35D1CD4D6A91 /* FloatingPanelController.swift in Sources */,
+				3D408305B29250792B2CDDC90990ECAC /* FloatingPanelCore.swift in Sources */,
+				970E5351EB7A3C92CD346BCDCC6652A3 /* FloatingPanelLayout.swift in Sources */,
+				071D52F82B602FB85E35CA8583EEF456 /* FloatingPanelSurfaceView.swift in Sources */,
+				E62E543CA9182791942A0DE76D3E6C6C /* FloatingPanelTransitioning.swift in Sources */,
+				A3673FD39025DE753731C568DB5E23B9 /* FloatingPanelView.swift in Sources */,
+				A49977EF1D94933CE588A5F237D5DD7C /* GrabberHandleView.swift in Sources */,
+				A696FE118006841FB09A5E76C11B8978 /* Logger.swift in Sources */,
+				D13AC4B3EDF1F6A5973A039FCE488B92 /* UIExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -600,17 +743,23 @@
 			target = F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */;
 			targetProxy = 608EE8617FFD494B9586AAEB3E556B49 /* PBXContainerItemProxy */;
 		};
-		9591FA1C8ACD106836CCB539CA9E4BFC /* PBXTargetDependency */ = {
+		63CB52750A7568EF100A319092724300 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mapbox-iOS-SDK";
 			target = 6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */;
-			targetProxy = 5714ACF6D66BE74297C9DC3D1B87EA77 /* PBXContainerItemProxy */;
+			targetProxy = 347114892D53F09267720061E4265675 /* PBXContainerItemProxy */;
 		};
-		BF466195413795BD56A2138A07C2F2F8 /* PBXTargetDependency */ = {
+		909A0BE42F7A6ECBCDF0F36062355085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FloatingPanel;
+			target = 4874E7E655CEB4C01E4572AD903AEA21 /* FloatingPanel */;
+			targetProxy = 9F4E8930BFDEFD4DE0DE4D8C2C336557 /* PBXContainerItemProxy */;
+		};
+		FB099B7158266EC709B5A4A20E8C5367 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MapboxMobileEvents;
 			target = F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */;
-			targetProxy = 6B48BD11768DC9D793340EF97E2C9880 /* PBXContainerItemProxy */;
+			targetProxy = C383833FE6969CEE5A43520025CB8745 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -677,7 +826,7 @@
 		};
 		4550700699BE16A87090969B946E60F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EDC997C708690127CB381023080E974 /* MapboxMobileEvents.debug.xcconfig */;
+			baseConfigurationReference = 46D96661A544D9638F6590DC4B7962AE /* MapboxMobileEvents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -711,7 +860,7 @@
 		};
 		7346D9C302B87B1557BDA7CB01513E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A3FF9BA27905AF3BC9889A259EAD145 /* Mapbox-iOS-SDK.debug.xcconfig */;
+			baseConfigurationReference = 64B441419B9C67F1ECDE03E9CB14D30A /* Mapbox-iOS-SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -725,9 +874,46 @@
 			};
 			name = Debug;
 		};
+		8C99E11C628E1D571F2070B959E5AB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F4B29E905BCC9E7D8D0A5EA1D3B5A4 /* FloatingPanel.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B13A6132779C011CC56EFD1BC2949ECD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35575198151B753FC2C4B4221E8C789 /* Mapbox-iOS-SDK.release.xcconfig */;
+			baseConfigurationReference = D36893616BD2E345559236BAE826A66A /* Mapbox-iOS-SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -806,7 +992,7 @@
 			};
 			name = Debug;
 		};
-		C9F7F0E47AE702944F865E277830607E /* Release */ = {
+		CBC8858994C70E5BE72AFF27AE1DDF35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55E1C8E66B7436E33F36A5D8D176743F /* Pods-Tracks.release.xcconfig */;
 			buildSettings = {
@@ -845,7 +1031,43 @@
 			};
 			name = Release;
 		};
-		DAD48A37273371DFE2D210149D5C310B /* Debug */ = {
+		EC041AABABF9CC69FAC10B0017CC53DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225A35E31F33BA32170DA3BEC197873A /* FloatingPanel.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingPanel/FloatingPanel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FloatingPanel/FloatingPanel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingPanel/FloatingPanel.modulemap";
+				PRODUCT_MODULE_NAME = FloatingPanel;
+				PRODUCT_NAME = FloatingPanel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F68EEA4A0DD9AD25AB3E206E66172ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 232AD20295BE6FC83527CCC612A5C50F /* Pods-Tracks.debug.xcconfig */;
 			buildSettings = {
@@ -885,7 +1107,7 @@
 		};
 		FD3F97F1BC7F64249E64913BBBFDBCC2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C2FE1BE7A20B9FB6AAA3CF4D9DA9745 /* MapboxMobileEvents.release.xcconfig */;
+			baseConfigurationReference = AEC7F83E391D953085914DF3B593F9E7 /* MapboxMobileEvents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -930,6 +1152,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6044DE3C7C1CBDBFC5A9C046CA3BD8D7 /* Build configuration list for PBXNativeTarget "FloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC041AABABF9CC69FAC10B0017CC53DF /* Debug */,
+				8C99E11C628E1D571F2070B959E5AB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6656E85209BE74097E72506F518D1FB0 /* Build configuration list for PBXNativeTarget "Pods-Tracks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68EEA4A0DD9AD25AB3E206E66172ADF /* Debug */,
+				CBC8858994C70E5BE72AFF27AE1DDF35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDB07C907CA5DE84E11225D277A8756B /* Build configuration list for PBXNativeTarget "MapboxMobileEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -944,15 +1184,6 @@
 			buildConfigurations = (
 				7346D9C302B87B1557BDA7CB01513E6F /* Debug */,
 				B13A6132779C011CC56EFD1BC2949ECD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD3B65EF64CD0419B61A3047474A7243 /* Build configuration list for PBXNativeTarget "Pods-Tracks" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DAD48A37273371DFE2D210149D5C310B /* Debug */,
-				C9F7F0E47AE702944F865E277830607E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,4 +7,5 @@ target 'Tracks' do
 
   # Pods for Tracks
 	pod 'Mapbox-iOS-SDK', '~> 6.0.0'
+	pod 'FloatingPanel'
 end

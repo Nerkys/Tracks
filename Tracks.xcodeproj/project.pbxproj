@@ -29,6 +29,8 @@
 		694AD75F24B81F12007783E7 /* TheDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */; };
 		695811CC24D7D58A00F3ED59 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695811CB24D7D58A00F3ED59 /* TransitionManager.swift */; };
 		6975CAD324B4776B00FBBAA1 /* TheTripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */; };
+		6980FD1924E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */; };
+		6980FD1B24E29AA200CA5415 /* TrackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */; };
 		698BB1E924C5B9A000C5EC67 /* DayFeedFullRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */; };
 		6993A42D24DA8DB900505BA4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42C24DA8DB900505BA4 /* Animations.swift */; };
 		6993A42F24DA8DE500505BA4 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42E24DA8DE500505BA4 /* Animator.swift */; };
@@ -67,6 +69,8 @@
 		694AD75E24B81F12007783E7 /* TheDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		695811CB24D7D58A00F3ED59 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripCollectionViewCell.swift; sourceTree = "<group>"; };
+		6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSummaryCollectionViewCells.swift; sourceTree = "<group>"; };
+		6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCollectionViewCell.xib; sourceTree = "<group>"; };
 		698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayFeedFullRestCell.xib; sourceTree = "<group>"; };
 		6993A42C24DA8DB900505BA4 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		6993A42E24DA8DE500505BA4 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		6900030A24E1399200AFBC27 /* MapSummary */ = {
 			isa = PBXGroup;
 			children = (
+				6980FD1724E299CC00CA5415 /* MapSummaryCollectionViewCells */,
 				6900030B24E13A2500AFBC27 /* MapSummaryViewController.swift */,
 			);
 			path = MapSummary;
@@ -200,6 +205,15 @@
 			path = TheDay;
 			sourceTree = "<group>";
 		};
+		6980FD1724E299CC00CA5415 /* MapSummaryCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */,
+				6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */,
+			);
+			path = MapSummaryCollectionViewCells;
+			sourceTree = "<group>";
+		};
 		6993A42B24DA8DA100505BA4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6980FD1B24E29AA200CA5415 /* TrackCollectionViewCell.xib in Resources */,
 				6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */,
 				6924E04C24A1BD26001CDBB7 /* Assets.xcassets in Resources */,
 				6924E04A24A1BD23001CDBB7 /* Main.storyboard in Resources */,
@@ -379,6 +394,7 @@
 				694AD75624B71920007783E7 /* TheResortHeaderCell.swift in Sources */,
 				6900030C24E13A2500AFBC27 /* MapSummaryViewController.swift in Sources */,
 				694AD75D24B81A57007783E7 /* TheDayStatisticsCell.swift in Sources */,
+				6980FD1924E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift in Sources */,
 				6993A42F24DA8DE500505BA4 /* Animator.swift in Sources */,
 				6993A42D24DA8DB900505BA4 /* Animations.swift in Sources */,
 			);

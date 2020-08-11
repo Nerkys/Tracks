@@ -1,20 +1,24 @@
 PODS:
+  - FloatingPanel (1.7.5)
   - Mapbox-iOS-SDK (6.0.0):
     - MapboxMobileEvents (= 0.10.2)
   - MapboxMobileEvents (0.10.2)
 
 DEPENDENCIES:
+  - FloatingPanel
   - Mapbox-iOS-SDK (~> 6.0.0)
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
 
 SPEC CHECKSUMS:
+  FloatingPanel: bb17fd6fc7ae519f877f7bd30f4f6115a78acf07
   Mapbox-iOS-SDK: 48ff7550bd459b8494da8ef4d660a668e9187ef0
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
 
-PODFILE CHECKSUM: 7ec3c10ad5de18f03c9506b21d8afe88356f657d
+PODFILE CHECKSUM: a630940584df414b2d98a9d748de9ada10c92844
 
 COCOAPODS: 1.9.3

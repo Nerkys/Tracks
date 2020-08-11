@@ -18,7 +18,7 @@ func getDataSourceInitialValue() -> [Season] {
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 700),
-                             Statistics(title: "макс. скорость", image: "MaxSpeed", value: 90),
+                             Statistics(title: "макс. скорость", image: "MaxSpeedWhite", value: 90),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 40),
                              Statistics(title: "skill coin", image: "SkillCoinWhite", value: 55)],
                       resorts:

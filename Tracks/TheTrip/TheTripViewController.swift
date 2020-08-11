@@ -166,6 +166,8 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
                 cell.valueLabel?.text = "\(statistics.value) мин"
             case "время спуска":
                 cell.valueLabel?.text = "\(statistics.value) мин"
+            case "макс. скорость":
+                cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
             default:
                 cell.valueLabel?.text = String(statistics.value)
             }
