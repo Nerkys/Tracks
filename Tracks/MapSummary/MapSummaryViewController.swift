@@ -38,7 +38,7 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         
         fpc.surfaceView.backgroundColor = .clear
         fpc.panGestureRecognizer.isEnabled = false
-        //fpc.surfaceView.grabberHandle.isHidden = true
+        fpc.surfaceView.grabberHandle.isHidden = true
         //fpc.isRemovalInteractionEnabled = false
         
         contentVC = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as? ContentViewController
@@ -82,6 +82,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var viewOnScrollView: UIView!
     
     private let sectionInsets = UIEdgeInsets(top: 0.0,
                                         left: 4.0,
