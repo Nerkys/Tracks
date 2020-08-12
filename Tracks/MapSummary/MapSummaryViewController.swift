@@ -93,6 +93,10 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        5
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
     }

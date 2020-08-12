@@ -172,7 +172,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QOr-vA-QID" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sp2-cX-Ma6" secondAttribute="trailing" constant="20" id="0uN-BT-a7b"/>
                             <constraint firstItem="Qit-Gg-huM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="213-Ee-X1f" secondAttribute="trailing" constant="5" id="1gU-hB-UDS"/>
@@ -200,6 +200,8 @@
                             <constraint firstItem="tjs-N7-PJ9" firstAttribute="top" secondItem="Sp2-cX-Ma6" secondAttribute="bottom" constant="3" id="UE0-Te-V1c"/>
                             <constraint firstAttribute="trailing" secondItem="NUa-WG-NaG" secondAttribute="trailing" constant="45" id="UyW-XQ-Avr"/>
                             <constraint firstItem="pYY-aj-mGg" firstAttribute="top" secondItem="jkk-83-VnK" secondAttribute="bottom" constant="3" id="VfR-G1-6wJ"/>
+                            <constraint firstAttribute="bottom" secondItem="2GM-lw-kdB" secondAttribute="bottom" constant="5.5" id="WaB-YZ-Uvg"/>
+                            <constraint firstAttribute="bottom" secondItem="Bup-Bz-72q" secondAttribute="bottom" constant="5.5" id="Wl6-KV-BXB"/>
                             <constraint firstItem="NUa-WG-NaG" firstAttribute="top" secondItem="h6b-VO-oRi" secondAttribute="top" id="Y34-bq-2f4"/>
                             <constraint firstItem="AI7-Rf-VAL" firstAttribute="top" secondItem="tjs-N7-PJ9" secondAttribute="bottom" id="ZYV-gs-gQ7"/>
                             <constraint firstItem="213-Ee-X1f" firstAttribute="top" secondItem="7P3-at-bPn" secondAttribute="bottom" constant="3" id="ZfF-zr-ved"/>
@@ -209,6 +211,7 @@
                             <constraint firstItem="Qit-Gg-huM" firstAttribute="centerX" secondItem="qjD-Uv-3Lb" secondAttribute="centerX" id="f2q-Nn-nFm"/>
                             <constraint firstItem="2GM-lw-kdB" firstAttribute="centerX" secondItem="wop-Dl-yWM" secondAttribute="centerX" id="f7P-dH-Tos"/>
                             <constraint firstItem="ndY-01-coa" firstAttribute="top" secondItem="dyJ-NU-Qm6" secondAttribute="bottom" constant="7" id="feN-Py-vba"/>
+                            <constraint firstAttribute="bottom" secondItem="AI7-Rf-VAL" secondAttribute="bottom" constant="5.5" id="gxb-pk-TK2"/>
                             <constraint firstItem="dLc-Dw-MdM" firstAttribute="top" secondItem="ndY-01-coa" secondAttribute="bottom" constant="7" id="h64-Ji-gdF"/>
                             <constraint firstItem="Sp2-cX-Ma6" firstAttribute="centerX" secondItem="qjD-Uv-3Lb" secondAttribute="centerX" id="ioF-ES-Zmx"/>
                             <constraint firstItem="ndY-01-coa" firstAttribute="centerX" secondItem="qjD-Uv-3Lb" secondAttribute="centerX" id="mfj-Mc-oZy"/>
