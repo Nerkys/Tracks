@@ -378,7 +378,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="El-Tarter" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-k6-ILT">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
                                                 </imageView>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-q8-sZh">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-q8-sZh">
                                                     <rect key="frame" x="0.0" y="149" width="414" height="51"/>
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -722,7 +722,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cUJ-f2-Sel">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cUJ-f2-Sel">
                                                     <rect key="frame" x="0.0" y="43" width="406" height="45"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -951,14 +951,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASV-3r-k0d">
-                                <rect key="frame" x="8" y="44" width="398" height="918"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-LE-9Oe">
+                                <rect key="frame" x="0.0" y="34" width="414" height="828"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9LU-K2-d9W">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="210"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <collectionView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9LU-K2-d9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="210" id="jNd-R9-4gd"/>
+                                            <constraint firstAttribute="height" constant="220" id="jNd-R9-4gd"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SjJ-TX-en7">
                                             <size key="itemSize" width="414" height="128"/>
@@ -969,26 +969,28 @@
                                         <cells/>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="leading" secondItem="ASV-3r-k0d" secondAttribute="leading" id="9c4-0g-o22"/>
-                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="centerX" secondItem="ASV-3r-k0d" secondAttribute="centerX" id="V1a-NL-Wgv"/>
-                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="top" secondItem="ASV-3r-k0d" secondAttribute="top" id="w5t-3b-1R7"/>
+                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="leading" secondItem="TaP-LE-9Oe" secondAttribute="leading" id="0t5-nS-oUw"/>
+                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="top" secondItem="TaP-LE-9Oe" secondAttribute="top" id="IeG-n9-ezB"/>
+                                    <constraint firstItem="9LU-K2-d9W" firstAttribute="centerX" secondItem="TaP-LE-9Oe" secondAttribute="centerX" id="UyM-4y-8Rw"/>
+                                    <constraint firstAttribute="bottom" secondItem="9LU-K2-d9W" secondAttribute="bottom" constant="608" id="m28-Xl-aGu"/>
+                                    <constraint firstAttribute="trailing" secondItem="9LU-K2-d9W" secondAttribute="trailing" id="zhF-hI-hdW"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="P2o-MV-o9j" firstAttribute="bottom" secondItem="ASV-3r-k0d" secondAttribute="bottom" constant="-100" id="0Fq-K8-ga2"/>
-                            <constraint firstItem="P2o-MV-o9j" firstAttribute="trailing" secondItem="ASV-3r-k0d" secondAttribute="trailing" constant="8" id="4GF-3m-Nca"/>
-                            <constraint firstItem="ASV-3r-k0d" firstAttribute="top" secondItem="P2o-MV-o9j" secondAttribute="top" id="5qn-2N-YNE"/>
-                            <constraint firstItem="ASV-3r-k0d" firstAttribute="leading" secondItem="P2o-MV-o9j" secondAttribute="leading" constant="8" id="ewz-AJ-I6L"/>
+                            <constraint firstItem="TaP-LE-9Oe" firstAttribute="leading" secondItem="P2o-MV-o9j" secondAttribute="leading" id="3c3-DY-HF7"/>
+                            <constraint firstItem="TaP-LE-9Oe" firstAttribute="bottom" secondItem="P2o-MV-o9j" secondAttribute="bottom" id="JfK-eD-hhJ"/>
+                            <constraint firstItem="TaP-LE-9Oe" firstAttribute="centerY" secondItem="t8f-Wq-Qon" secondAttribute="centerY" id="gPQ-IJ-fSL"/>
+                            <constraint firstItem="P2o-MV-o9j" firstAttribute="trailing" secondItem="TaP-LE-9Oe" secondAttribute="trailing" id="uo1-a6-Lek"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P2o-MV-o9j"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="9LU-K2-d9W" id="rpl-sK-NQ7"/>
-                        <outlet property="mainView" destination="ASV-3r-k0d" id="TyR-fx-KgE"/>
+                        <outlet property="scrollView" destination="TaP-LE-9Oe" id="Vdg-Wl-kjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2E-Fh-anv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

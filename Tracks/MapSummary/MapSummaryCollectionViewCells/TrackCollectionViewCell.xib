@@ -27,10 +27,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GrayLine" translatesAutoresizingMaskIntoConstraints="NO" id="dyJ-NU-Qm6">
-                                <rect key="frame" x="160.5" y="7" width="30" height="2"/>
+                                <rect key="frame" x="158" y="6" width="35" height="3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="Etj-Zj-zPJ"/>
-                                    <constraint firstAttribute="width" constant="30" id="IFx-nx-ic7"/>
+                                    <constraint firstAttribute="height" constant="3" id="Etj-Zj-zPJ"/>
+                                    <constraint firstAttribute="width" constant="35" id="IFx-nx-ic7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:33 - 19:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLc-Dw-MdM">
@@ -172,7 +172,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QOr-vA-QID" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sp2-cX-Ma6" secondAttribute="trailing" constant="20" id="0uN-BT-a7b"/>
                             <constraint firstItem="Qit-Gg-huM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="213-Ee-X1f" secondAttribute="trailing" constant="5" id="1gU-hB-UDS"/>
@@ -191,7 +191,7 @@
                             <constraint firstItem="h6b-VO-oRi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7P3-at-bPn" secondAttribute="trailing" constant="30" id="MPq-0n-m46"/>
                             <constraint firstItem="NUa-WG-NaG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h6b-VO-oRi" secondAttribute="trailing" constant="30" id="Njc-zC-QvH"/>
                             <constraint firstItem="jkk-83-VnK" firstAttribute="leading" secondItem="qjD-Uv-3Lb" secondAttribute="leading" constant="45" id="NtO-wV-FiH"/>
-                            <constraint firstItem="dyJ-NU-Qm6" firstAttribute="top" secondItem="qjD-Uv-3Lb" secondAttribute="top" constant="7" id="OWI-PG-Bgs"/>
+                            <constraint firstItem="dyJ-NU-Qm6" firstAttribute="top" secondItem="qjD-Uv-3Lb" secondAttribute="top" constant="6" id="OWI-PG-Bgs"/>
                             <constraint firstItem="ISz-mu-noU" firstAttribute="top" secondItem="213-Ee-X1f" secondAttribute="bottom" id="Q3g-mk-L8j"/>
                             <constraint firstItem="h6b-VO-oRi" firstAttribute="top" secondItem="dLc-Dw-MdM" secondAttribute="bottom" constant="15" id="QAA-a1-nuC"/>
                             <constraint firstItem="kO0-Ru-g5W" firstAttribute="top" secondItem="TXS-Kd-l81" secondAttribute="bottom" id="QAd-Tj-h03"/>

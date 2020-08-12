@@ -37,11 +37,14 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         fpc.delegate = self
         
         fpc.surfaceView.backgroundColor = .clear
+        fpc.panGestureRecognizer.isEnabled = false
+        //fpc.surfaceView.grabberHandle.isHidden = true
+        //fpc.isRemovalInteractionEnabled = false
         
         contentVC = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as? ContentViewController
         
         fpc.set(contentViewController: contentVC)
-        fpc.track(scrollView: contentVC.collectionView)
+        fpc.track(scrollView: contentVC.scrollView)
         fpc.addPanel(toParent: self)
         //fpc.contentMode = .fitToBounds
 //        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
@@ -65,6 +68,9 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         return MyFloatingPanelLayout()
     }
     
+    func floatingPanel(_ vc: FloatingPanelController, behaviorFor newCollection: UITraitCollection) -> FloatingPanelBehavior? {
+        return MyFloatingPanelBehavior()
+    }
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        fpc.addPanel(toParent: self, animated: true)
@@ -73,8 +79,15 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
 
 class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var mainView: UIView!
+    
+    private let sectionInsets = UIEdgeInsets(top: 0.0,
+                                        left: 4.0,
+                                        bottom: 0.0,
+                                        right: 4.0)
+    private let itemsPerRow: CGFloat = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,15 +95,17 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        //scrollView.bounds.height = view.bounds.height
+        
         let trackCollectionViewCellNib = UINib(nibName: String(describing: TrackCollectionViewCell.self), bundle: nil)
         collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
-        mainView.layer.cornerRadius = 10.0
-        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        mainView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-        mainView.layer.shadowRadius = 3
-        mainView.layer.shadowOpacity = 0.2
-        mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        mainView.layer.cornerRadius = 10.0
+//        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        mainView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
+//        mainView.layer.shadowRadius = 3
+//        mainView.layer.shadowOpacity = 0.2
+//        mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -107,11 +122,31 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        //let widthPerItem = self.collectionView.frame.width
+//        return CGSize(width: self.collectionView.frame.width - 20, height: self.collectionView.frame.height)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+      //2
+        //let paddingSpace = 0
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = self.collectionView.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
         
-        //let widthPerItem = self.collectionView.frame.width
-        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+        return CGSize(width: widthPerItem, height: self.collectionView.frame.height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10.0
+//    }
 }
 
 class MapSummaryCollectionViewCell: UICollectionViewCell {
@@ -131,5 +166,12 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
             case .tip: return 145.0 // A bottom inset from the safe area
             default: return nil // Or `case .hidden: return nil`
         }
+    }
+}
+
+class MyFloatingPanelBehavior: FloatingPanelBehavior {
+    
+    func shouldProjectMomentum(_ fpc: FloatingPanelController, for proposedTargetPosition: FloatingPanelPosition) -> Bool {
+        return true
     }
 }
