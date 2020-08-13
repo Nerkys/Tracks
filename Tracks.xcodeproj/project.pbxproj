@@ -30,7 +30,7 @@
 		695811CC24D7D58A00F3ED59 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695811CB24D7D58A00F3ED59 /* TransitionManager.swift */; };
 		6975CAD324B4776B00FBBAA1 /* TheTripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */; };
 		6980FD1924E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */; };
-		6980FD1B24E29AA200CA5415 /* TrackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */; };
+		6980FD1B24E29AA200CA5415 /* DayStatisticsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6980FD1A24E29AA200CA5415 /* DayStatisticsCollectionViewCell.xib */; };
 		698BB1E924C5B9A000C5EC67 /* DayFeedFullRestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */; };
 		6993A42D24DA8DB900505BA4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42C24DA8DB900505BA4 /* Animations.swift */; };
 		6993A42F24DA8DE500505BA4 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6993A42E24DA8DE500505BA4 /* Animator.swift */; };
@@ -40,6 +40,7 @@
 		69B95A0C24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */; };
 		69B95A0E24BC247000A0CBBB /* DayFeedTrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B95A0D24BC247000A0CBBB /* DayFeedTrackCell.xib */; };
 		69D2517F24A49EAF00908C96 /* SeasonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */; };
+		69D67DB824E527B30038F9FC /* NewPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D67DB724E527B30038F9FC /* NewPageControl.swift */; };
 		69F7354F24AB39E3002A6668 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +71,7 @@
 		695811CB24D7D58A00F3ED59 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		6975CAD224B4776B00FBBAA1 /* TheTripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTripCollectionViewCell.swift; sourceTree = "<group>"; };
 		6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSummaryCollectionViewCells.swift; sourceTree = "<group>"; };
-		6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCollectionViewCell.xib; sourceTree = "<group>"; };
+		6980FD1A24E29AA200CA5415 /* DayStatisticsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayStatisticsCollectionViewCell.xib; sourceTree = "<group>"; };
 		698BB1E824C5B9A000C5EC67 /* DayFeedFullRestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayFeedFullRestCell.xib; sourceTree = "<group>"; };
 		6993A42C24DA8DB900505BA4 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		6993A42E24DA8DE500505BA4 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		69B95A0B24BC246700A0CBBB /* DayFeedEnterLeftResortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedEnterLeftResortCell.xib; sourceTree = "<group>"; };
 		69B95A0D24BC247000A0CBBB /* DayFeedTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayFeedTrackCell.xib; sourceTree = "<group>"; };
 		69D2517E24A49EAF00908C96 /* SeasonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonHeaderCell.swift; path = Tracks/SeasonCells/SeasonHeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		69D67DB724E527B30038F9FC /* NewPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPageControl.swift; sourceTree = "<group>"; };
 		69F7354E24AB39E3002A6668 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		75D0C74DE38BF31BCD7387C1 /* Pods_Tracks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				690408B124C55FBF006C7D5C /* UIControlClosure.swift */,
 				695811CB24D7D58A00F3ED59 /* TransitionManager.swift */,
 				6993A43024DBF95C00505BA4 /* WorkWithDate.swift */,
+				69D67DB724E527B30038F9FC /* NewPageControl.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -209,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				6980FD1824E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift */,
-				6980FD1A24E29AA200CA5415 /* TrackCollectionViewCell.xib */,
+				6980FD1A24E29AA200CA5415 /* DayStatisticsCollectionViewCell.xib */,
 			);
 			path = MapSummaryCollectionViewCells;
 			sourceTree = "<group>";
@@ -312,7 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6980FD1B24E29AA200CA5415 /* TrackCollectionViewCell.xib in Resources */,
+				6980FD1B24E29AA200CA5415 /* DayStatisticsCollectionViewCell.xib in Resources */,
 				6924E04F24A1BD26001CDBB7 /* LaunchScreen.storyboard in Resources */,
 				6924E04C24A1BD26001CDBB7 /* Assets.xcassets in Resources */,
 				6924E04A24A1BD23001CDBB7 /* Main.storyboard in Resources */,
@@ -397,6 +400,7 @@
 				6980FD1924E29A0F00CA5415 /* MapSummaryCollectionViewCells.swift in Sources */,
 				6993A42F24DA8DE500505BA4 /* Animator.swift in Sources */,
 				6993A42D24DA8DB900505BA4 /* Animations.swift in Sources */,
+				69D67DB824E527B30038F9FC /* NewPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 237;
+				CURRENT_PROJECT_VERSION = 243;
 				DEVELOPMENT_TEAM = H698PLT4Q4;
 				INFOPLIST_FILE = tracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -564,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 237;
+				CURRENT_PROJECT_VERSION = 243;
 				DEVELOPMENT_TEAM = H698PLT4Q4;
 				INFOPLIST_FILE = tracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;

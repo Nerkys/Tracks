@@ -47,7 +47,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNQ-g5-wgD">
                                                 <rect key="frame" x="333" y="11.5" width="28" height="13"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                                <color key="textColor" red="0.58431372549019611" green="0.63529411764705879" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-DU-jy6">
@@ -71,19 +71,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="расстояние" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-97-ibA">
                                                 <rect key="frame" x="7" y="0.0" width="54.5" height="11"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ср. скорость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsA-KV-e1k">
                                                 <rect key="frame" x="141" y="0.0" width="60.5" height="12"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="время подъема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rk-eN-HaU">
                                                 <rect key="frame" x="273" y="0.0" width="78" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiftDistance" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-h0-Lzg">
@@ -195,6 +195,6 @@
         <image name="ArrangeSpeed" width="18" height="18"/>
         <image name="LiftDistance" width="18" height="18"/>
         <image name="LiftTime" width="18" height="18"/>
-        <image name="chairlift" width="24" height="25"/>
+        <image name="chairlift" width="24" height="24.5"/>
     </resources>
 </document>

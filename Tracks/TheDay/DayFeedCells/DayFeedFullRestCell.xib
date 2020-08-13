@@ -47,7 +47,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSJ-mQ-RYF">
                                                 <rect key="frame" x="333" y="11.5" width="28" height="13"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                                <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-5v-dNC">
@@ -71,7 +71,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="время отдыха" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXO-Iw-ohg">
                                                 <rect key="frame" x="7" y="0.0" width="66" height="11"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                <color key="textColor" red="0.58431372550000005" green="0.63529411759999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.41176470588235292" green="0.49803921568627452" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActivityTime" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-Fm-Ot6">
@@ -147,6 +147,6 @@
     </objects>
     <resources>
         <image name="ActivityTime" width="18" height="18"/>
-        <image name="rest" width="24" height="24"/>
+        <image name="rest" width="24.5" height="24"/>
     </resources>
 </document>

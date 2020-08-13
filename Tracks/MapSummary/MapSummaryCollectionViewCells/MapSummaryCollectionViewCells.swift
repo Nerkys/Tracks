@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrackCollectionViewCell: UICollectionViewCell {
+class DayStatisticsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var view: UIView!
     

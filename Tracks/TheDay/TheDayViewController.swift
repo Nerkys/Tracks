@@ -13,7 +13,7 @@ class TheDayViewController: UIViewController {
     @IBOutlet var theDayTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var theDayCollectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControl: NewPageControl!
     @IBOutlet weak var statisticsView: UIView!
     @IBOutlet weak var blackLineView: UIView!
     
@@ -66,8 +66,9 @@ class TheDayViewController: UIViewController {
         statisticsView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
         statisticsView.layer.shadowRadius = 3
         statisticsView.layer.shadowOpacity = 0.2
+        
         //view.clipsToBounds = false
-
+        
         //layer.zPosition = 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6, execute: {
             self.blackLineView.isHidden = false
@@ -88,6 +89,14 @@ class TheDayViewController: UIViewController {
         //animateTableViewAppearance()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        pageControl.setDotsWithBorder()
+    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(false)
+//        pageControl.setDotsWithBorder()
+//    }
 //    private func animateTableViewAppearance() {
 //        let originalY = theDayTableView.frame.origin.y
 //        theDayTableView.frame = CGRect(x: theDayTableView.frame.origin.x, y: theDayTableView.frame.origin.y - view.frame.height, width: theDayTableView.frame.width, height: theDayTableView.frame.height)
@@ -260,13 +269,13 @@ extension TheDayViewController: UICollectionViewDelegate, UICollectionViewDelega
         
         switch statistics.title {
         case "макс. скорость":
-            cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
+            cell.valueLabel?.text = "\(statistics.value) км/ч"
         case "расстояние":
-            cell.valueLabel?.text = "\(String(statistics.value)) м"
+            cell.valueLabel?.text = "\(Double(statistics.value) / 1000) км"
         case "на горе":
-            cell.valueLabel?.text = "\(String(statistics.value)) мин"
+            cell.valueLabel?.text = "\(statistics.value) мин"
         case "время спуска":
-            cell.valueLabel?.text = "\(String(statistics.value)) мин"
+            cell.valueLabel?.text = "\(statistics.value) мин"
         default:
             cell.valueLabel?.text = String(statistics.value)
         }
@@ -276,6 +285,14 @@ extension TheDayViewController: UICollectionViewDelegate, UICollectionViewDelega
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl?.currentPage = Int(ceil(theDayCollectionView.contentOffset.x / theDayCollectionView.frame.width))
+        let currentDot = pageControl.subviews[pageControl.currentPage]
+        pageControl.subviews.forEach {
+            // Apply the large scale of newly selected dot.
+            // Restore the small scale of previously selected dot.
+            $0.layer.borderWidth = $0 == currentDot ? 0 : 1.5
+            //$0.layer.borderColor = $0 == currentDot ?  : .black
+            
+        }
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -98,8 +98,8 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         
         //scrollView.bounds.height = view.bounds.height
         
-        let trackCollectionViewCellNib = UINib(nibName: String(describing: TrackCollectionViewCell.self), bundle: nil)
-        collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
+        let trackCollectionViewCellNib = UINib(nibName: String(describing: DayStatisticsCollectionViewCell.self), bundle: nil)
+        collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self))
         
 //        mainView.layer.cornerRadius = 10.0
 //        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -119,7 +119,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "MapSummaryCollectionViewCell", for: indexPath) as! MapSummaryCollectionViewCell)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TrackCollectionViewCell.self), for: indexPath) as! TrackCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self), for: indexPath) as! DayStatisticsCollectionViewCell
         return cell
     }
     
