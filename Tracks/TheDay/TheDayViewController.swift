@@ -86,48 +86,15 @@ class TheDayViewController: UIViewController {
         let dayFeedTrackCellNib = UINib(nibName: String(describing: DayFeedTrackCell.self), bundle: nil)
         theDayTableView.register(dayFeedTrackCellNib, forCellReuseIdentifier: String(describing: DayFeedTrackCell.self))
         
-        //animateTableViewAppearance()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         pageControl.setDotsWithBorder()
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(false)
-//        pageControl.setDotsWithBorder()
-//    }
-//    private func animateTableViewAppearance() {
-//        let originalY = theDayTableView.frame.origin.y
-//        theDayTableView.frame = CGRect(x: theDayTableView.frame.origin.x, y: theDayTableView.frame.origin.y - view.frame.height, width: theDayTableView.frame.width, height: theDayTableView.frame.height)
-//        theDayTableView.isHidden = false
-//        UIView.animate(withDuration: 3.0) { [weak self] in
-//            guard let self = self else { return }
-//
-//            self.theDayTableView.alpha = 1
-//            self.theDayTableView.frame = CGRect(x: self.theDayTableView.frame.origin.x, y: originalY, width: self.theDayTableView.frame.width, height: self.theDayTableView.frame.height)
-//        }
-//    }
 }
 
 extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
-    
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath == tableView.indexPathsForVisibleRows?.last {
-//            alreadySetup = true
-//        }
-//        if !alreadySetup {
-//            cell.alpha = 0
-//            cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y - view.frame.height, width: cell.frame.width, height: cell.frame.height)
-//            UIView.animate(
-//                withDuration: 0.5,
-//                delay: 0.05 * Double(indexPath.row),
-//                animations: {
-//                    cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: cell.frame.width, height: cell.frame.height)
-//                    cell.alpha = 1
-//            })
-//        }
-//    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -174,7 +141,7 @@ extension TheDayViewController: UITableViewDataSource, UITableViewDelegate {
             
             
         case .lift(let liftName):
-            cell = ((tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedLiftCell)!)
+            cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? DayFeedItemCell
             (cell as? DayFeedLiftCell)?.buttonTitleLabel.setTitle("Подъемник \(liftName)", for: .normal)
             (cell as? DayFeedLiftCell)?.bottomView.isHidden = !item.isExpanded
             (cell as? DayFeedLiftCell)?.lineTopConstraint.constant = indexPath.row == 0 ? -30 : -20

@@ -19,14 +19,14 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     }
     
     var day: Day!
-    var feedItems: [UIDayFeedItem] = []
+    var feedItems: [UIMapSummaryStatisticsItem] = []
     var fpc: FloatingPanelController!
     var contentVC: ContentViewController!
     
     func setDay(day: Day) {
         self.day = day
         feedItems = day.feedItems.map {
-            UIDayFeedItem(title: $0.title, type: $0.type, isExpanded: false)
+            UIMapSummaryStatisticsItem(title: $0.title, type: $0.type)
         }
     }
     
@@ -42,6 +42,7 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         //fpc.isRemovalInteractionEnabled = false
         
         contentVC = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as? ContentViewController
+        contentVC.setDay(day: day)
         
         fpc.set(contentViewController: contentVC)
         fpc.track(scrollView: contentVC.scrollView)
@@ -84,11 +85,18 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var viewOnScrollView: UIView!
     
-    private let sectionInsets = UIEdgeInsets(top: 0.0,
-                                        left: 4.0,
-                                        bottom: 0.0,
-                                        right: 4.0)
+    
+    var day: Day!
+    var feedItems: [UIDayFeedItem] = []
+    private let sectionInsets = UIEdgeInsets(top: 0.0, left: 4.0, bottom: 0.0, right: 4.0)
     private let itemsPerRow: CGFloat = 1
+    
+    func setDay(day: Day) {
+        self.day = day
+        feedItems = day.feedItems.map {
+            UIDayFeedItem(title: $0.title, type: $0.type, isExpanded: false)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,8 +106,14 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         
         //scrollView.bounds.height = view.bounds.height
         
-        let trackCollectionViewCellNib = UINib(nibName: String(describing: DayStatisticsCollectionViewCell.self), bundle: nil)
-        collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self))
+        let dayStatisticsCollectionViewCellNib = UINib(nibName: String(describing: DayStatisticsCollectionViewCell.self), bundle: nil)
+        collectionView.register(dayStatisticsCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self))
+        let restCollectionViewCellNib = UINib(nibName: String(describing: RestCollectionViewCell.self), bundle: nil)
+        collectionView.register(restCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: RestCollectionViewCell.self))
+        let liftCollectionViewCellNib = UINib(nibName: String(describing: LiftCollectionViewCell.self), bundle: nil)
+        collectionView.register(liftCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: LiftCollectionViewCell.self))
+        let trackCollectionViewCellNib = UINib(nibName: String(describing: TrackCollectionViewCell.self), bundle: nil)
+        collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
 //        mainView.layer.cornerRadius = 10.0
 //        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -118,9 +132,28 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "MapSummaryCollectionViewCell", for: indexPath) as! MapSummaryCollectionViewCell)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self), for: indexPath) as! DayStatisticsCollectionViewCell
-        return cell
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self), for: indexPath) as! DayStatisticsCollectionViewCell
+            return cell
+        } else {
+            var cell: MapSummaryStatiscticsItemCell!
+            let item = feedItems[indexPath.row]
+            
+            switch item.type {
+                
+            case .rest:
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                  
+            case .lift(let liftName):
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                
+            case .track(let difficultyImageName):
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TrackCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+            case .enterLeftResort(title: let title, resortName: let resortName):
+                <#code#>
+            }
+            return cell
+        }
     }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

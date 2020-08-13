@@ -69,4 +69,15 @@ struct UIDayFeedItem {
     let title: String
     let type: DayFeedItem.ItemType
     var isExpanded: Bool
+    
+}
+
+struct UIMapSummaryStatisticsItem {
+    let title: String
+    let type: ItemType
+    
+    enum ItemType {
+        case rest, lift(liftName: String), track(difficultyImageName: String)
+    }
+    
 }
