@@ -36,16 +36,18 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         fpc.delegate = self
         
         fpc.surfaceView.backgroundColor = .clear
-        fpc.panGestureRecognizer.isEnabled = false
         fpc.surfaceView.grabberHandle.isHidden = true
         //fpc.isRemovalInteractionEnabled = false
         
         contentVC = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as? ContentViewController
+        contentVC.mapSummaryVC = self
         contentVC.setDay(day: day)
+        
         
         fpc.set(contentViewController: contentVC)
         fpc.track(scrollView: contentVC.scrollView)
         fpc.addPanel(toParent: self)
+        //fpc.panGestureRecognizer.isEnabled = false
         //fpc.contentMode = .fitToBounds
 //        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
 //        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
@@ -59,11 +61,20 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         topView.layer.shadowRadius = 3
         topView.layer.shadowOpacity = 0.2
         //topView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        //clearTheData()
         
-        
-
     }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(false)
+//        fpc = FloatingPanelController()
+//        fpc.delegate = self
+//
+//        fpc.surfaceView.backgroundColor = .clear
+//        fpc.surfaceView.grabberHandle.isHidden = true
+//
+//        fpc.set(contentViewController: contentVC)
+//        fpc.track(scrollView: contentVC.scrollView)
+//        fpc.addPanel(toParent: self)
+//    }
 
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
         return MyFloatingPanelLayout()
@@ -79,10 +90,8 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var viewOnScrollView: UIView!
     
-    
+    var mapSummaryVC: MapSummaryViewController!
     var day: Day!
     var feedItems: [DayFeedItem] = []
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 4.0, bottom: 0.0, right: 4.0)
@@ -106,6 +115,8 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         
         collectionView.dataSource = self
         collectionView.delegate = self
+//        mapSummaryVC = storyboard?.instantiateViewController(withIdentifier: "MapSummaryViewController") as? MapSummaryViewController
+        //mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
         
         //scrollView.bounds.height = view.bounds.height
         
@@ -119,7 +130,53 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
     }
+//     override func viewWillLayoutSubviews() {
+//
+//        super.viewWillLayoutSubviews()
+//
+////          if (!collectionView.initialScrollDone) {
+////
+////             self.initialScrollDone = true
+////             self.testNameCollectionView.scrollToItem(at:selectedIndexPath, at: .centeredHorizontally, animated: true)
+////        }
+//        let indexPath = IndexPath(item: 0, section: 5)
+//        self.collectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
+//
+//    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(false)
+//        mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
+//    }
     
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if let gesture = cell.gestureRecognizers?.filter({ (gesture) -> Bool in return  gesture is UIPanGestureRecognizer }).first {
+//            cell.removeGestureRecognizer(gesture)
+//        }
+//    }
+    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let indexPath = collectionView.indexPathsForVisibleItems.
+//        print(indexPath)
+////        if let cell = collectionView.cellForItem(at: indexPath) as? RestCollectionViewCell {
+////            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
+////        }
+//    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath = (collectionView.indexPathForItem(at: visiblePoint))!
+        print(visibleIndexPath[0])
+        let cell = collectionView.cellForItem(at: visibleIndexPath)
+        if cell is LiftCollectionViewCell || cell is RestCollectionViewCell {
+            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
+        } else {
+            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = true
+        }
+       //let user = feedItems[indexPath.item]
+    }
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let indexPath = scr
+//    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         feedItems.count + 1
@@ -174,10 +231,6 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
 //    }
 }
 
-class MapSummaryCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var view: UIView!
-}
 
 class MyFloatingPanelLayout: FloatingPanelLayout {
     public var initialPosition: FloatingPanelPosition {
@@ -186,10 +239,10 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
 
     public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
         switch position {
-            case .full: return 0.0 // A top inset from safe area
-            case .half: return 220 // A bottom inset from the safe area
-            case .tip: return 145.0 // A bottom inset from the safe area
-            default: return nil // Or `case .hidden: return nil`
+        case .full: return 0.0 // A top inset from safe area
+        case .half: return 220.0 // A bottom inset from the safe area
+        case .tip: return 145.0 // A bottom inset from the safe area
+        default: return nil // Or `case .hidden: return nil`
         }
     }
 }
