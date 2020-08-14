@@ -86,11 +86,13 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     
 }
 
-class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, FloatingPanelControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var initialPosition: FloatingPanelPosition {
+        return .tip
+    }
     var mapSummaryVC: MapSummaryViewController!
     var day: Day!
     var feedItems: [DayFeedItem] = []
@@ -130,6 +132,16 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
     }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        //print(view.frame.width / 2)
+//        print(scrollView.contentOffset.x)
+//        if scrollView.contentOffset.x >= view.frame.width / 2 {
+//
+//            print("dfdknfwefewfjekfkenfknekwfnw \(scrollView.contentOffset.x)")
+//
+//        }
+//        //print(scrollView.contentOffset.x)
+//    }
 //     override func viewWillLayoutSubviews() {
 //
 //        super.viewWillLayoutSubviews()
@@ -165,13 +177,21 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = (collectionView.indexPathForItem(at: visiblePoint))!
-        print(visibleIndexPath[0])
         let cell = collectionView.cellForItem(at: visibleIndexPath)
+        self.mapSummaryVC.fpc.move(to: .tip, animated: true)
+        
+        
+//        UIView.animate(withDuration: 0.1) { [ unowned self ] in
+//            self.mapSummaryVC.fpc.move(to: .tip, animated: false)
+//        }
+        
         if cell is LiftCollectionViewCell || cell is RestCollectionViewCell {
             mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
         } else {
             mapSummaryVC.fpc.panGestureRecognizer.isEnabled = true
         }
+        
+        
        //let user = feedItems[indexPath.item]
     }
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
