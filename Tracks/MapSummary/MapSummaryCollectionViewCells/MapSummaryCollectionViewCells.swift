@@ -29,6 +29,8 @@ class DayStatisticsCollectionViewCell: UICollectionViewCell {
 class RestCollectionViewCell: UICollectionViewCell, MapSummaryStatiscticsItemCell {
     
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var numberOfTracks: UILabel!
     
     
     override func awakeFromNib() {
@@ -44,6 +46,10 @@ class RestCollectionViewCell: UICollectionViewCell, MapSummaryStatiscticsItemCel
 class LiftCollectionViewCell: UICollectionViewCell, MapSummaryStatiscticsItemCell {
     
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var averageSpeedLabel: UILabel!
+    @IBOutlet weak var climbTimeLabel: UILabel!
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0
@@ -59,6 +65,14 @@ class TrackCollectionViewCell: UICollectionViewCell, MapSummaryStatiscticsItemCe
     
     
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var difficultyImage: UIImageView!
+    @IBOutlet weak var maxSpeedLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var descentTimeLabel: UILabel!
+    @IBOutlet weak var averageSpeedLabel: UILabel!
+    @IBOutlet weak var differenceOfHeightLabel: UILabel!
+    @IBOutlet weak var numberOfSkillCoin: UILabel!
     
     override func awakeFromNib() {
         view.layer.cornerRadius = 10.0

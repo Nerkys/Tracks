@@ -149,6 +149,10 @@
             </collectionViewCellContentView>
             <size key="customSize" width="346" height="150"/>
             <connections>
+                <outlet property="averageSpeedLabel" destination="ZCq-8D-SWh" id="zLy-Nu-U72"/>
+                <outlet property="climbTimeLabel" destination="zuJ-K6-7oe" id="wSk-oW-ZM9"/>
+                <outlet property="distanceLabel" destination="qs2-tC-0U6" id="ZDq-Sv-Ii4"/>
+                <outlet property="titleLabel" destination="cub-Re-Qpu" id="zfA-IZ-9Ni"/>
                 <outlet property="view" destination="oKO-VP-Oeo" id="1ef-q2-661"/>
             </connections>
             <point key="canvasLocation" x="107.24637681159422" y="120.53571428571428"/>

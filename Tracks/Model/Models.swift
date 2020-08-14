@@ -56,11 +56,15 @@ struct Day {
 
 
 
-struct DayFeedItem {
+struct DayFeedItem: Equatable {
+    static func == (lhs: DayFeedItem, rhs: DayFeedItem) -> Bool {
+        if lhs.type == rhs.type { return true } else { return false }
+    }
+    
     let title: String
     let type: ItemType
 
-    enum ItemType {
+    enum ItemType: Equatable {
         case rest, lift(liftName: String), enterLeftResort(title: String, resortName: String), track(difficultyImageName: String)
     }
 }

@@ -19,15 +19,14 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     }
     
     var day: Day!
-    var feedItems: [UIMapSummaryStatisticsItem] = []
+    var feedItems: [DayFeedItem] = []
     var fpc: FloatingPanelController!
     var contentVC: ContentViewController!
+    var newFeedItems: [UIMapSummaryStatisticsItem] = []
     
     func setDay(day: Day) {
         self.day = day
-        feedItems = day.feedItems.map {
-            UIMapSummaryStatisticsItem(title: $0.title, type: $0.type)
-        }
+        feedItems = day.feedItems
     }
     
     override func viewDidLoad() {
@@ -60,11 +59,12 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         topView.layer.shadowRadius = 3
         topView.layer.shadowOpacity = 0.2
         //topView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        //clearTheData()
         
         
 
     }
-    
+
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
         return MyFloatingPanelLayout()
     }
@@ -72,10 +72,7 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     func floatingPanel(_ vc: FloatingPanelController, behaviorFor newCollection: UITraitCollection) -> FloatingPanelBehavior? {
         return MyFloatingPanelBehavior()
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        fpc.addPanel(toParent: self, animated: true)
-//    }
+    
 }
 
 class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -87,14 +84,20 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     
     
     var day: Day!
-    var feedItems: [UIDayFeedItem] = []
+    var feedItems: [DayFeedItem] = []
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 4.0, bottom: 0.0, right: 4.0)
     private let itemsPerRow: CGFloat = 1
     
     func setDay(day: Day) {
         self.day = day
-        feedItems = day.feedItems.map {
-            UIDayFeedItem(title: $0.title, type: $0.type, isExpanded: false)
+        feedItems = day.feedItems
+        feedItems = feedItems.filter() {
+            switch $0.type {
+            case .enterLeftResort:
+                return false
+            default:
+                return true
+            }
         }
     }
     
@@ -115,16 +118,11 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         let trackCollectionViewCellNib = UINib(nibName: String(describing: TrackCollectionViewCell.self), bundle: nil)
         collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
-//        mainView.layer.cornerRadius = 10.0
-//        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        mainView.layer.shadowColor = UIColor(red: 0.14, green: 0.18, blue: 0.37, alpha: 1).cgColor
-//        mainView.layer.shadowRadius = 3
-//        mainView.layer.shadowOpacity = 0.2
-//        mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        5
+        feedItems.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -132,41 +130,34 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self), for: indexPath) as! DayStatisticsCollectionViewCell
             return cell
         } else {
             var cell: MapSummaryStatiscticsItemCell!
-            let item = feedItems[indexPath.row]
+            let item = feedItems[indexPath.section - 1]
             
             switch item.type {
-                
             case .rest:
-                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayFeedLiftCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RestCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                (cell as? RestCollectionViewCell)?.titleLabel.text = "Отдых (\(indexPath.section)/\(feedItems.count))"
                   
             case .lift(let liftName):
-                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DayFeedEnterLeftResortCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: LiftCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
+                (cell as? LiftCollectionViewCell)?.titleLabel.text = "\(liftName) (\(indexPath.section)/\(feedItems.count))"
                 
             case .track(let difficultyImageName):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TrackCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
-            case .enterLeftResort(title: let title, resortName: let resortName):
-                <#code#>
+                (cell as? TrackCollectionViewCell)?.titleLabel.text = "Роза Блейд (\(indexPath.section)/\(feedItems.count))"
+                (cell as? TrackCollectionViewCell)?.difficultyImage.image = UIImage(named: difficultyImageName)
+            case .enterLeftResort:
+                break
             }
             return cell
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        //let widthPerItem = self.collectionView.frame.width
-//        return CGSize(width: self.collectionView.frame.width - 20, height: self.collectionView.frame.height)
-//    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-      //2
-        //let paddingSpace = 0
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = self.collectionView.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow

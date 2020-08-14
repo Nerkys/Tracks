@@ -56,6 +56,7 @@ func getDataSourceInitialValue() -> [Season] {
                                          DayFeedItem(title: "Трек", type: .track(difficultyImageName: "green")),
                                          DayFeedItem(title: "Отдых", type: .lift(liftName: "Нептун")),
                                          DayFeedItem(title: "Отдых", type: .rest),
+                                         DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш")),
                                          DayFeedItem(title: "Отдых", type: .enterLeftResort(title: "ВХОД В КУРОРТ", resortName: "Шерегеш"))],
                                      coordinates: Day.Coordinates(latitude: 43.683, longitude: 40.267)),
                                  Day(date: "15.02.2020", maxSpeed: 100, distance: 600, numberOfTracks: 5,

@@ -246,6 +246,14 @@
             </collectionViewCellContentView>
             <size key="customSize" width="351" height="217"/>
             <connections>
+                <outlet property="averageSpeedLabel" destination="0Oy-ui-9dH" id="TID-U4-hmf"/>
+                <outlet property="descentTimeLabel" destination="GFR-Gq-g4d" id="hn9-PJ-tCJ"/>
+                <outlet property="differenceOfHeightLabel" destination="dze-Tc-Rxi" id="4QK-dO-QGe"/>
+                <outlet property="difficultyImage" destination="2Pz-la-ThY" id="JAg-KB-EDi"/>
+                <outlet property="distanceLabel" destination="kde-yK-mij" id="pFe-Et-TeO"/>
+                <outlet property="maxSpeedLabel" destination="Zvm-C5-O58" id="Ueu-Nf-VtU"/>
+                <outlet property="numberOfSkillCoin" destination="DVC-VU-rt9" id="4jb-yG-Ad5"/>
+                <outlet property="titleLabel" destination="3NM-Dt-vMs" id="pC0-Dz-Fyt"/>
                 <outlet property="view" destination="nVD-XH-nSu" id="Nhz-N8-8KD"/>
             </connections>
             <point key="canvasLocation" x="110.86956521739131" y="142.96875"/>

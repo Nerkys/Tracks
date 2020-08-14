@@ -89,6 +89,8 @@
             </collectionViewCellContentView>
             <size key="customSize" width="353" height="144"/>
             <connections>
+                <outlet property="numberOfTracks" destination="EpP-Ks-xXY" id="Ave-Vc-O2A"/>
+                <outlet property="titleLabel" destination="8Vl-pB-iaF" id="hXL-D1-Z0V"/>
                 <outlet property="view" destination="AjM-k8-1C2" id="OHv-TP-fxc"/>
             </connections>
             <point key="canvasLocation" x="112.31884057971016" y="118.52678571428571"/>
