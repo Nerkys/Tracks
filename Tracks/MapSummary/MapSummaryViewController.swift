@@ -23,6 +23,7 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     var fpc: FloatingPanelController!
     var contentVC: ContentViewController!
     var newFeedItems: [UIMapSummaryStatisticsItem] = []
+    var indexPathForChoosenItem: Int?
     
     func setDay(day: Day) {
         self.day = day
@@ -132,6 +133,13 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.register(trackCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: TrackCollectionViewCell.self))
         
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: { [ unowned self ] in
+            if self.mapSummaryVC.indexPathForChoosenItem != nil {
+                self.collectionView.setContentOffset(CGPoint(x: self.collectionView.frame.width * CGFloat(self.mapSummaryVC.indexPathForChoosenItem!), y: 0), animated: false)
+            }
+        })
+        
+        
     }
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        //print(view.frame.width / 2)
@@ -143,39 +151,8 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
 //        }
 //        //print(scrollView.contentOffset.x)
 //    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        let indexPath = IndexPath(item: 0, section: 20)
-        self.collectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
-        //        self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        //self.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredHorizontally)
-    }
+
     
-//     override func viewWillLayoutSubviews() {
-//
-//        super.viewWillLayoutSubviews()
-//
-////          if (!collectionView.initialScrollDone) {
-////
-////             self.initialScrollDone = true
-////             self.testNameCollectionView.scrollToItem(at:selectedIndexPath, at: .centeredHorizontally, animated: true)
-////        }
-//        let indexPath = IndexPath(item: 0, section: 20)
-//        //self.collectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
-////        self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//        self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
-//    }
-    
-    
-    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let indexPath = collectionView.indexPathsForVisibleItems.
-//        print(indexPath)
-////        if let cell = collectionView.cellForItem(at: indexPath) as? RestCollectionViewCell {
-////            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
-////        }
-//    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
@@ -183,45 +160,14 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell = collectionView.cellForItem(at: visibleIndexPath)
         self.mapSummaryVC.fpc.move(to: .tip, animated: true)
 
-
-//        UIView.animate(withDuration: 0.1) { [ unowned self ] in
-//            self.mapSummaryVC.fpc.move(to: .tip, animated: false)
-//        }
-
         if cell is LiftCollectionViewCell || cell is RestCollectionViewCell {
             mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
         } else {
             mapSummaryVC.fpc.panGestureRecognizer.isEnabled = true
         }
-
-        //print("aaaaaaaaaaaaaaaaaaaddddddddddd")
-       //let user = feedItems[indexPath.item]
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-//        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-//        let visibleIndexPath = (collectionView.indexPathForItem(at: visiblePoint))!
-//        let cell = collectionView.cellForItem(at: visibleIndexPath)
-//        self.mapSummaryVC.fpc.move(to: .tip, animated: true)
-//
-//
-//        //        UIView.animate(withDuration: 0.1) { [ unowned self ] in
-//        //            self.mapSummaryVC.fpc.move(to: .tip, animated: false)
-//        //        }
-//
-//        if cell is LiftCollectionViewCell || cell is RestCollectionViewCell {
-//            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
-//        } else {
-//            mapSummaryVC.fpc.panGestureRecognizer.isEnabled = true
-//        }
-//
-//        print("aaaaaaaaaaaaaaaaaaaddddddddddd")
-//        //let user = feedItems[indexPath.item]
-//    }
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let indexPath = scr
-//    }
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         feedItems.count + 1
@@ -260,20 +206,22 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = self.collectionView.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        
-        return CGSize(width: widthPerItem, height: self.collectionView.frame.height)
+//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+//        let availableWidth = self.collectionView.frame.width - paddingSpace
+//        let widthPerItem = availableWidth / itemsPerRow
+
+        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+        //return CGSize(width: widthPerItem, height: self.collectionView.frame.height)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 10.0
+//        return 20.0
 //    }
+    
 }
 
 
@@ -296,5 +244,17 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
 //
 //    func shouldProjectMomentum(_ fpc: FloatingPanelController, for proposedTargetPosition: FloatingPanelPosition) -> Bool {
 //        return false
+//    }
+//}
+
+//extension UIScrollView {
+//    func scrollToTop(animated: Bool) {
+//        setContentOffset(CGPoint(x: 0, y: -contentInset.top),
+//                         animated: animated)
+//    }
+//
+//    func scrollToBottom(animated: Bool) {
+//        setContentOffset(CGPoint(x: 0, y: CGFloat.greatestFiniteMagnitude),
+//                     animated: animated)
 //    }
 //}

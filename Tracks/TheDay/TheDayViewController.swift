@@ -271,4 +271,22 @@ extension TheDayViewController: UICollectionViewDelegate, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //guard let selectedTripCell = tableView.cellForRow(at: indexPath) as? TripCell else { return }
+            
+            //if tableView.cellForRow(at: indexPath) != tableView.cellForRow(at: indexPath) as? StatisticsCell {
+        //let selectedItem = feedItems[indexPath.row]
+        
+        let mapSummaryViewController = self.storyboard?.instantiateViewController(withIdentifier: "MapSummaryViewController") as! MapSummaryViewController
+        
+        mapSummaryViewController.setDay(day: day)
+        mapSummaryViewController.indexPathForChoosenItem = indexPath.row
+        //theTripViewController.delegate = self
+        //
+        self.navigationController?.pushViewController(mapSummaryViewController, animated: true)
+                
+                
+            //}
+        } 
 }
