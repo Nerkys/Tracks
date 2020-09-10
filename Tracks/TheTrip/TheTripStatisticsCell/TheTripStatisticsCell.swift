@@ -28,7 +28,7 @@ class TheTripStatisticsCell: UITableViewCell, UICollectionViewDelegate, UICollec
     func configure(with model: Trip) {
         titleAndDateDataSource = model
         dataSource = model.statistics
-        tripImage.image = UIImage(named: model.image)
+        tripImage.image = UIImage(named: model.image[0])
         titleAndDateLabel.text = titleAndDateDataSource.title
     }
     

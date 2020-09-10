@@ -27,10 +27,14 @@ class TheTripViewController: UIViewController {
     private var dataSourceForColletionView = [Statistics]()
     private let coverLayer = CALayer()
     private var pageControlDotIncreased = true
+    //var myScrollView = UIScrollView()
     //weak var delegate: TheTripViewController?
+    @IBOutlet weak var myScrollView: UIScrollView!
+    var imageViewRect: CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         dataSourceForColletionView = trip.statistics
         
@@ -44,30 +48,57 @@ class TheTripViewController: UIViewController {
         theTripTableView.tableFooterView = UIView(frame: .zero)
         
         titleAndDateLabel.text = trip.title
-        tripImage.image = UIImage(named: trip.image)
+        //tripImage.image = UIImage(named: trip.image[0])
         
-        coverLayer.frame = tripImage.bounds
-        coverLayer.backgroundColor = UIColor.black.cgColor
-        coverLayer.opacity = 0.25
-        tripImage.layer.addSublayer(coverLayer)
+//        coverLayer.frame = tripImage.bounds
+//        coverLayer.backgroundColor = UIColor.black.cgColor
+//        coverLayer.opacity = 0.25
+//        tripImage.layer.addSublayer(coverLayer)
         //statisticsView.layer.cornerRadius = 10.0
         statisticsView.clipsToBounds = true
         //statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
-        //self.pageControl.subviews[1].transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        //pageControl.translatesAutoresizingMaskIntoConstraints = false
-//        let halfCount = CGFloat(pageControl.subviews.count) / 2
-//        let dot = pageControl.subviews.last!
-//        dot.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.deactivate(dot.constraints)
-//        NSLayoutConstraint.activate([
-//            dot.widthAnchor.constraint(equalToConstant: 7.0),
-//            dot.heightAnchor.constraint(equalToConstant: 7.0),
-//            dot.centerYAnchor.constraint(equalTo: pageControl.centerYAnchor, constant: 0),
-//            dot.centerXAnchor.constraint(equalTo: pageControl.centerXAnchor, constant: 16 * (CGFloat(1) - (halfCount - 0.5)))
-//        ])
+//        let scrollViewRect = statisticsView.bounds
+//
+//        //myScrollView = UIScrollView(frame: scrollViewRect)
+//        myScrollView.isPagingEnabled = true
+//        myScrollView.contentSize = CGSize(width: scrollViewRect.size.width * 3, height: scrollViewRect.size.height)
+//        //statisticsView.addSubview(myScrollView)
+//
+//        var imageViewRect = myScrollView.bounds
+//        let firstImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect)
+//        myScrollView.addSubview(firstImageView)
+//
+//        imageViewRect.origin.x += imageViewRect.size.width
+//        let secondImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect)
+//        myScrollView.addSubview(secondImageView)
+//
+//        imageViewRect.origin.x += imageViewRect.size.width
+//        let thirdImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[2])!, paramFrame: imageViewRect)
+//        myScrollView.addSubview(thirdImageView)
+        theTripCollectionView.contentSize = CGSize(width: statisticsView.bounds.size.width * 3, height: statisticsView.bounds.size.height)
+        imageViewRect = theTripCollectionView.bounds
+        //theTripCollectionView.backgroundView = newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!)
+        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!))
+        
+        imageViewRect!.origin.x += imageViewRect!.size.width
+        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect!))
+        
+        imageViewRect!.origin.x += imageViewRect!.size.width
+        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[2])!, paramFrame: imageViewRect!))
+        
+        theTripCollectionView.subviews.forEach {
+            $0.layer.zPosition = -1
+        }
         
         self.hideNavigationBar()
+    }
+    
+    func newImageViewWithImage(paramImage: UIImage, paramFrame: CGRect) -> UIImageView {
+        let result = UIImageView(frame: paramFrame)
+        result.contentMode = .scaleAspectFill
+        result.image = paramImage
+        return result
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -246,25 +277,22 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
     
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             pageControl?.currentPage = Int(ceil(theTripCollectionView.contentOffset.x / theTripCollectionView.frame.width))
-            
-//            for i in 0..<pageControl.subviews.count {
-//              pageControl.subviews[i].transform = pageControl.currentPage == i ? CGAffineTransform(scaleX: 1, y: 1) : CGAffineTransform(scaleX: 0.67, y: 0.67)
+            //imageViewRect!.origin.x += imageViewRect!.size.width
+            //theTripCollectionView.backgroundView = newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect!)
+//            if trip.image.count == dataSourceForColletionView.count / Int(itemsInSection) {
+//                tripImage.image = UIImage(named: trip.image[pageControl!.currentPage])
 //            }
+//            if trip.image.count > dataSourceForColletionView.count / Int(itemsInSection) {
+//                var number = Int.random(in: 0...2)
+//                while number == trip.image.firstIndex(of: <#T##String#>) {
+//                    number = Int.random(in: 0...2)
+//                }
 //
-//            let halfCount = CGFloat(pageControl.subviews.count) / 2
-//            pageControl.subviews.enumerated().forEach {
-//                print($0.offset)
-//                let dot = $0.element
-//                dot.translatesAutoresizingMaskIntoConstraints = false
-//                NSLayoutConstraint.deactivate(dot.constraints)
-//                NSLayoutConstraint.activate([
-//                    dot.widthAnchor.constraint(equalToConstant: 7.0),
-//                    dot.heightAnchor.constraint(equalToConstant: 7.0),
-//                    dot.centerYAnchor.constraint(equalTo: pageControl.centerYAnchor, constant: 0),
-//                    dot.centerXAnchor.constraint(equalTo: pageControl.centerXAnchor, constant: 16 * (CGFloat($0.offset) - (halfCount - 0.5)))
-//                ])
+//                tripImage.image = UIImage(named: trip.image[number])
 //            }
-            
+//            if trip.image.count < dataSourceForColletionView.count / Int(itemsInSection) {
+//                tripImage.image = UIImage(named: trip.image[0])
+//            }
             
             if pageControl?.currentPage == 0 {
                 titleAndDateLabel.text = trip.title

@@ -18,7 +18,7 @@ struct Trip {
     let title: String
     let startedAt: String
     let finishedAt: String
-    let image: String
+    let image: [String]
     let numberOfActiveDays: Int
     let numberOfTracks: Int
     let distance: Int

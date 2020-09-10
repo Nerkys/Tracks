@@ -13,7 +13,7 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2018/19",
             trip:
-                [Trip(title: "Красная Поляна", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: "El-Tarter", numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
+            [Trip(title: "Красная Поляна", startedAt: "13.02.2020", finishedAt: "20.02.2020", image: ["ElTarter1", "ElTarter2", "ElTarter3"], numberOfActiveDays: 7, numberOfTracks: 17, distance: 1200, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 7),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 20),
@@ -274,7 +274,7 @@ func getDataSourceInitialValue() -> [Season] {
                                 ])
                             ]),
                 
-                 Trip(title: "Уистлер-Блэккомб", startedAt: "03.03.2020", finishedAt: "10.03.2020", image: "Blackcomb", numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
+                 Trip(title: "Уистлер-Блэккомб", startedAt: "03.03.2020", finishedAt: "10.03.2020", image: ["Blackcomb", "ElTarter2"], numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 8),
@@ -476,7 +476,7 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2019/20",
             trip:
-                [Trip(title: "Куршевель", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: "Courchevel", numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
+                [Trip(title: "Куршевель", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: ["Courchevel", "ElTarter2"], numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
                             [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 5),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 10),

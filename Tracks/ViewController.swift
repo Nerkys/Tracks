@@ -87,7 +87,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let trip = dataSource[indexPath.section].trip[indexPath.row]
         
         cell.titleLabel?.text = trip.title
-        cell.tripImage?.image = UIImage(named: trip.image)
+        cell.tripImage?.image = UIImage(named: trip.image[0])
 //        cell.numberOfActiveDaysLabel?.text = String(dataSource[indexPath.section].trip[indexPath.row].resorts[indexPath.row].days.count)
         cell.numberOfActiveDaysLabel?.text = "\(getNumberOfActiveDays(indexPath: indexPath)) / \(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
         cell.numberOfTracksLabel?.text = String(trip.numberOfTracks)
