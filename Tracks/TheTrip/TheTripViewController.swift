@@ -74,8 +74,8 @@ class TheTripViewController: UIViewController {
     }
     
     func setImageForCollectionView(numberOfImages: Int) {
-        theTripCollectionView.contentSize = CGSize(width: statisticsView.bounds.size.width * CGFloat(numberOfImages), height: statisticsView.bounds.size.height)
-        imageViewRect = theTripCollectionView.bounds
+        theTripCollectionView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(numberOfImages), height: statisticsView.frame.size.height)
+        imageViewRect = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: statisticsView.frame.size.height)
         theTripCollectionView.addSubview(prepareImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!))
  
         if trip.image.count == 1 {
