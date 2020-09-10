@@ -375,7 +375,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Q8-el-Iho">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-q8-sZh">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-q8-sZh">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
                                                     <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cOa-Dq-g8z">
@@ -443,7 +443,7 @@
                                                     </cells>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbF-6u-nKm">
-                                                    <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="186" y="15.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -476,9 +476,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="kbK-q8-sZh" secondAttribute="bottom" id="4YM-yt-n1m"/>
                                                 <constraint firstItem="kbK-q8-sZh" firstAttribute="leading" secondItem="9Q8-el-Iho" secondAttribute="leading" id="LxF-GF-BzO"/>
+                                                <constraint firstItem="LbF-6u-nKm" firstAttribute="centerY" secondItem="3y8-fD-Td8" secondAttribute="centerY" id="NeI-UO-TMb"/>
                                                 <constraint firstAttribute="trailing" secondItem="kbK-q8-sZh" secondAttribute="trailing" id="Ors-9L-nmG"/>
                                                 <constraint firstItem="5Pf-qs-czw" firstAttribute="top" secondItem="9Q8-el-Iho" secondAttribute="top" constant="11" id="TVP-ov-bq7"/>
-                                                <constraint firstItem="LbF-6u-nKm" firstAttribute="top" secondItem="9Q8-el-Iho" secondAttribute="top" constant="11" id="UGo-6u-nMX"/>
                                                 <constraint firstItem="kbK-q8-sZh" firstAttribute="top" secondItem="9Q8-el-Iho" secondAttribute="top" id="UU1-7c-ne3"/>
                                                 <constraint firstAttribute="trailing" secondItem="5Pf-qs-czw" secondAttribute="trailing" constant="9" id="cc2-7E-P9D"/>
                                                 <constraint firstItem="3y8-fD-Td8" firstAttribute="leading" secondItem="9Q8-el-Iho" secondAttribute="leading" constant="9" id="eOs-kw-hGQ"/>

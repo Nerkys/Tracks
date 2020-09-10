@@ -25,11 +25,7 @@ class TheTripViewController: UIViewController {
     var trip: Trip!
     private let itemsInSection: CGFloat = 3
     private var dataSourceForColletionView = [Statistics]()
-    private let coverLayer = CALayer()
-    private var pageControlDotIncreased = true
-    //var myScrollView = UIScrollView()
     //weak var delegate: TheTripViewController?
-    @IBOutlet weak var myScrollView: UIScrollView!
     var imageViewRect: CGRect?
     
     override func viewDidLoad() {
@@ -48,79 +44,55 @@ class TheTripViewController: UIViewController {
         theTripTableView.tableFooterView = UIView(frame: .zero)
         
         titleAndDateLabel.text = trip.title
-        //tripImage.image = UIImage(named: trip.image[0])
         
-//        coverLayer.frame = tripImage.bounds
-//        coverLayer.backgroundColor = UIColor.black.cgColor
-//        coverLayer.opacity = 0.25
-//        tripImage.layer.addSublayer(coverLayer)
         //statisticsView.layer.cornerRadius = 10.0
         statisticsView.clipsToBounds = true
         //statisticsView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
-//        let scrollViewRect = statisticsView.bounds
-//
-//        //myScrollView = UIScrollView(frame: scrollViewRect)
-//        myScrollView.isPagingEnabled = true
-//        myScrollView.contentSize = CGSize(width: scrollViewRect.size.width * 3, height: scrollViewRect.size.height)
-//        //statisticsView.addSubview(myScrollView)
-//
-//        var imageViewRect = myScrollView.bounds
-//        let firstImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect)
-//        myScrollView.addSubview(firstImageView)
-//
-//        imageViewRect.origin.x += imageViewRect.size.width
-//        let secondImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect)
-//        myScrollView.addSubview(secondImageView)
-//
-//        imageViewRect.origin.x += imageViewRect.size.width
-//        let thirdImageView = self.newImageViewWithImage(paramImage: UIImage(named: trip.image[2])!, paramFrame: imageViewRect)
-//        myScrollView.addSubview(thirdImageView)
-        theTripCollectionView.contentSize = CGSize(width: statisticsView.bounds.size.width * 3, height: statisticsView.bounds.size.height)
-        imageViewRect = theTripCollectionView.bounds
-        //theTripCollectionView.backgroundView = newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!)
-        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!))
+
+        let emptyTheTripCollectionViewCell = UINib(nibName: String(describing: EmptyTheTripCollectionViewCell.self), bundle: nil)
+        theTripCollectionView.register(emptyTheTripCollectionViewCell, forCellWithReuseIdentifier: String(describing: EmptyTheTripCollectionViewCell.self))
         
-        imageViewRect!.origin.x += imageViewRect!.size.width
-        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect!))
-        
-        imageViewRect!.origin.x += imageViewRect!.size.width
-        theTripCollectionView.addSubview(newImageViewWithImage(paramImage: UIImage(named: trip.image[2])!, paramFrame: imageViewRect!))
-        
-        theTripCollectionView.subviews.forEach {
-            $0.layer.zPosition = -1
-        }
+        setImageForCollectionView(numberOfImages: trip.image.count)
         
         self.hideNavigationBar()
     }
     
-    func newImageViewWithImage(paramImage: UIImage, paramFrame: CGRect) -> UIImageView {
+    func prepareImage(paramImage: UIImage, paramFrame: CGRect) -> UIImageView {
         let result = UIImageView(frame: paramFrame)
+        
+        let coverLayer = CALayer()
+        coverLayer.frame = result.bounds
+        coverLayer.backgroundColor = UIColor.black.cgColor
+        coverLayer.opacity = 0.15
+        
         result.contentMode = .scaleAspectFill
         result.image = paramImage
+        result.layer.addSublayer(coverLayer)
+        
         return result
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(false)
-//        pageControl.subviews.last!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
-//        let halfCount = CGFloat(pageControl.subviews.count) / 2
-//        let dot = pageControl.subviews.last!
-//        dot.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.deactivate(dot.constraints)
-//        NSLayoutConstraint.activate([
-//            dot.widthAnchor.constraint(equalToConstant: 7.0),
-//            dot.heightAnchor.constraint(equalToConstant: 7.0),
-//            dot.centerYAnchor.constraint(equalTo: pageControl.centerYAnchor, constant: 0),
-//            dot.centerXAnchor.constraint(equalTo: pageControl.centerXAnchor, constant: 16 * (CGFloat(1) - (halfCount - 0.5)))
-//        ])
-//    }
-
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        pageControl.subviews.last!.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//    }
+    func setImageForCollectionView(numberOfImages: Int) {
+        theTripCollectionView.contentSize = CGSize(width: statisticsView.bounds.size.width * CGFloat(numberOfImages), height: statisticsView.bounds.size.height)
+        imageViewRect = theTripCollectionView.bounds
+        theTripCollectionView.addSubview(prepareImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!))
+ 
+        if trip.image.count == 1 {
+            pageControl.numberOfPages = 2
+            imageViewRect!.origin.x += imageViewRect!.size.width
+            theTripCollectionView.addSubview(prepareImage(paramImage: UIImage(named: trip.image[0])!, paramFrame: imageViewRect!))
+        } else {
+            pageControl.numberOfPages = trip.image.count
+            for i in 1..<numberOfImages {
+                imageViewRect!.origin.x += imageViewRect!.size.width
+                theTripCollectionView.addSubview(prepareImage(paramImage: UIImage(named: trip.image[i])!, paramFrame: imageViewRect!))
+            }
+        }
+        theTripCollectionView.subviews.forEach {
+            $0.layer.zPosition = -1
+        }
+    }
     
     func getNumberOfActiveDays(indexPath: IndexPath) -> Int {
         var count = 0
@@ -210,36 +182,48 @@ extension TheTripViewController: UITableViewDataSource, UITableViewDelegate {
 extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-            return dataSourceForColletionView.count / Int(itemsInSection)
+        //return dataSourceForColletionView.count / Int(itemsInSection)
+        if trip.image.count == 1 {
+            return 2
+        } else {
+            return trip.image.count
         }
+    }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return Int(itemsInSection)
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheTripCollectionViewCell", for: indexPath) as! TheTripCollectionViewCell
-            let statistics = dataSourceForColletionView[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
             
-            cell.titleLabel.text = statistics.title
-            cell.actionImage.image = UIImage(named: statistics.image)
-            
-            switch statistics.title {
-            case "активные дни":
-                cell.valueLabel?.text = "\(getNumberOfActiveDays(indexPath: indexPath)) / \(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
-            case "расстояние":
-                cell.valueLabel?.text = "\(Double(statistics.value) / 1000) км"
-            case "на горе":
-                cell.valueLabel?.text = "\(statistics.value) мин"
-            case "время спуска":
-                cell.valueLabel?.text = "\(statistics.value) мин"
-            case "макс. скорость":
-                cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
-            default:
-                cell.valueLabel?.text = String(statistics.value)
+            if indexPath.section <= 1 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TheTripCollectionViewCell", for: indexPath) as! TheTripCollectionViewCell
+                let statistics = dataSourceForColletionView[indexPath.item + ((indexPath.section) * Int(itemsInSection))]
+                cell.titleLabel.text = statistics.title
+                cell.actionImage.image = UIImage(named: statistics.image)
+                
+                switch statistics.title {
+                case "активные дни":
+                    cell.valueLabel?.text = "\(getNumberOfActiveDays(indexPath: indexPath)) / \(getNumberOfDaysForTripOnSeasonScreen(startedAt: trip.startedAt, finishedAt: trip.finishedAt))"
+                case "расстояние":
+                    cell.valueLabel?.text = "\(Double(statistics.value) / 1000) км"
+                case "на горе":
+                    cell.valueLabel?.text = "\(statistics.value) мин"
+                case "время спуска":
+                    cell.valueLabel?.text = "\(statistics.value) мин"
+                case "макс. скорость":
+                    cell.valueLabel?.text = "\(String(statistics.value)) км/ч"
+                default:
+                    cell.valueLabel?.text = String(statistics.value)
+                }
+                
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmptyTheTripCollectionViewCell", for: indexPath) as! EmptyTheTripCollectionViewCell
+                return cell
             }
             
-            return cell
+            
         }
         
 //        func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -277,22 +261,6 @@ extension TheTripViewController: UICollectionViewDelegate, UICollectionViewDeleg
     
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             pageControl?.currentPage = Int(ceil(theTripCollectionView.contentOffset.x / theTripCollectionView.frame.width))
-            //imageViewRect!.origin.x += imageViewRect!.size.width
-            //theTripCollectionView.backgroundView = newImageViewWithImage(paramImage: UIImage(named: trip.image[1])!, paramFrame: imageViewRect!)
-//            if trip.image.count == dataSourceForColletionView.count / Int(itemsInSection) {
-//                tripImage.image = UIImage(named: trip.image[pageControl!.currentPage])
-//            }
-//            if trip.image.count > dataSourceForColletionView.count / Int(itemsInSection) {
-//                var number = Int.random(in: 0...2)
-//                while number == trip.image.firstIndex(of: <#T##String#>) {
-//                    number = Int.random(in: 0...2)
-//                }
-//
-//                tripImage.image = UIImage(named: trip.image[number])
-//            }
-//            if trip.image.count < dataSourceForColletionView.count / Int(itemsInSection) {
-//                tripImage.image = UIImage(named: trip.image[0])
-//            }
             
             if pageControl?.currentPage == 0 {
                 titleAndDateLabel.text = trip.title

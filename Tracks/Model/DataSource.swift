@@ -276,7 +276,7 @@ func getDataSourceInitialValue() -> [Season] {
                 
                  Trip(title: "Уистлер-Блэккомб", startedAt: "03.03.2020", finishedAt: "10.03.2020", image: ["Blackcomb", "ElTarter2"], numberOfActiveDays: 3, numberOfTracks: 14, distance: 1000, flag: "KanadaFlag",
                       statistics:
-                            [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 3),
+                            [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 3),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 8),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 600),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 10),
@@ -476,9 +476,9 @@ func getDataSourceInitialValue() -> [Season] {
         Season(
             title: "СЕЗОН 2019/20",
             trip:
-                [Trip(title: "Куршевель", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: ["Courchevel", "ElTarter2"], numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
+                [Trip(title: "Куршевель", startedAt: "24.09.2020", finishedAt: "24.09.2020", image: ["Courchevel"], numberOfActiveDays: 4, numberOfTracks: 13, distance: 900, flag: "KanadaFlag",
                       statistics:
-                            [Statistics(title: "активные дни", image: "MaxSpNumberOfActiveDayseed", value: 5),
+                            [Statistics(title: "активные дни", image: "NumberOfActiveDays", value: 5),
                              Statistics(title: "спуски", image: "NumberOfTracksWhite", value: 10),
                              Statistics(title: "расстояние", image: "DistanceWhite", value: 900),
                              Statistics(title: "время спуска", image: "ActivityTimeWhite", value: 11),
