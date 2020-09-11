@@ -91,6 +91,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var viewUnderScrollView: UIView!
     var initialPosition: FloatingPanelPosition {
         return .tip
     }
@@ -139,7 +140,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         })
         
-        
+        //scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height - 500)
     }
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        //print(view.frame.width / 2)
