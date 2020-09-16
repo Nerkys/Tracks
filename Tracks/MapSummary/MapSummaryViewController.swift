@@ -48,8 +48,9 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
         fpc.set(contentViewController: contentVC)
         fpc.track(scrollView: contentVC.scrollView)
         fpc.addPanel(toParent: self)
+        //fpc.isRemovalInteractionEnabled = true
         //fpc.panGestureRecognizer.isEnabled = false
-        //fpc.contentMode = .fitToBounds
+        fpc.contentMode = .fitToBounds
 //        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
 //        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
         //mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -87,7 +88,7 @@ class MapSummaryViewController: UIViewController, FloatingPanelControllerDelegat
     
 }
 
-class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, FloatingPanelControllerDelegate {
+class ContentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, FloatingPanelControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -117,12 +118,18 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         collectionView.dataSource = self
         collectionView.delegate = self
 //        mapSummaryVC = storyboard?.instantiateViewController(withIdentifier: "MapSummaryViewController") as? MapSummaryViewController
         //mapSummaryVC.fpc.panGestureRecognizer.isEnabled = false
         
         //scrollView.bounds.height = view.bounds.height
+        let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom
+        viewUnderScrollView.heightAnchor.constraint(equalTo: scrollView.heightAnchor, constant: -bottomPadding! + 0.25).usingPriority(UILayoutPriority(rawValue: 999)).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: viewUnderScrollView.bottomAnchor, constant: bottomPadding!).usingPriority(UILayoutPriority(rawValue: 999)).isActive = true
+        
         
         let dayStatisticsCollectionViewCellNib = UINib(nibName: String(describing: DayStatisticsCollectionViewCell.self), bundle: nil)
         collectionView.register(dayStatisticsCollectionViewCellNib, forCellWithReuseIdentifier: String(describing: DayStatisticsCollectionViewCell.self))
@@ -173,7 +180,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         feedItems.count + 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
     }
@@ -185,16 +192,16 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         } else {
             var cell: MapSummaryStatiscticsItemCell!
             let item = feedItems[indexPath.section - 1]
-            
+
             switch item.type {
             case .rest:
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RestCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
                 (cell as? RestCollectionViewCell)?.titleLabel.text = "Отдых (\(indexPath.section)/\(feedItems.count))"
-                  
+
             case .lift(let liftName):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: LiftCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
                 (cell as? LiftCollectionViewCell)?.titleLabel.text = "\(liftName) (\(indexPath.section)/\(feedItems.count))"
-                
+
             case .track(let difficultyImageName):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TrackCollectionViewCell.self), for: indexPath) as? MapSummaryStatiscticsItemCell
                 (cell as? TrackCollectionViewCell)?.titleLabel.text = "Роза Блейд (\(indexPath.section)/\(feedItems.count))"
@@ -214,7 +221,7 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
         return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
         //return CGSize(width: widthPerItem, height: self.collectionView.frame.height)
     }
-//
+////
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return sectionInsets
 //    }
@@ -259,3 +266,28 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
 //                     animated: animated)
 //    }
 //}
+extension NSLayoutConstraint {
+    
+    /// Returns the constraint sender with the passed priority.
+    ///
+    /// - Parameter priority: The priority to be set.
+    /// - Returns: The sended constraint adjusted with the new priority.
+    func usingPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
+        self.priority = priority
+        return self
+    }
+    
+}
+
+extension UILayoutPriority {
+    
+    /// Creates a priority which is almost required, but not 100%.
+    static var almostRequired: UILayoutPriority {
+        return UILayoutPriority(rawValue: 999)
+    }
+    
+    /// Creates a priority which is not required at all.
+    static var notRequired: UILayoutPriority {
+        return UILayoutPriority(rawValue: 0)
+    }
+}
